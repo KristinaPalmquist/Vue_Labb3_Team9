@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <RouterLink class="navbar-brand" to="">CINEMAP</RouterLink>
+      <RouterLink class="navbar-brand" to="/">CINEMAP</RouterLink>
       <button
         class="navbar-toggler"
         type="button"
@@ -19,14 +19,22 @@ import { RouterLink, RouterView } from "vue-router";
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="">Movies</RouterLink>
+            <li class="nav-item">
+            <RouterLink
+              class="nav-link"
+              aria-current="page"
+              to="/"
+              >Home</RouterLink
+            >
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="">Cinemas</RouterLink>
+            <RouterLink class="nav-link" to="/film">Movies</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="">Feedback</RouterLink>
+            <RouterLink class="nav-link" to="/biograf">Cinemas</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" to="/feedback">Feedback</RouterLink>
           </li>
         </ul>
       </div>
