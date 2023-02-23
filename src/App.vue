@@ -1,11 +1,11 @@
 <script setup>
-import FotterFotter from "./components/FotterFotter.vue";
+import FooterFooter from "./components/FooterFooter.vue";
 import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
   <NavBar />
-  <FotterFotter />
+  <FooterFooter />
 </template>
 
 <style scoped>
