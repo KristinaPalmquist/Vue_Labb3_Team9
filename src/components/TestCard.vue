@@ -35,7 +35,7 @@ export default {
             <a class="card-text" :href="movie.trailer" target="_blank">
               Trailer
             </a>
-            <p class="card-text">premiere: {{ movie.premiere }}</p>
+            <p class="card-text">Premiere: {{ movie.premiere }}</p>
           </div>
         </div>
       </div>
