@@ -21,14 +21,14 @@ import { RouterLink, RouterView } from "vue-router";
         <ul class="navbar-nav">
           <li class="nav-item">
             <RouterLink class="nav-link" aria-current="page" to="/"
-              >Home</RouterLink
+              >Hem</RouterLink
             >
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/film">Movies</RouterLink>
+            <RouterLink class="nav-link" to="/film">Filmer</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/biograf">Cinemas</RouterLink>
+            <RouterLink class="nav-link" to="/biograf">Biografer</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" to="/feedback">Feedback</RouterLink>
