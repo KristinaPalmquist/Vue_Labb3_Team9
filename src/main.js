@@ -8,6 +8,7 @@ import axios from "axios";
 import "./assets/base.css";
 const app = createApp(App);
 app.config.globalProperties.axios = axios;
+
 app.use(createPinia());
 app.use(router);
 app.use(bootstrap);
