@@ -1,6 +1,11 @@
+<script setup>
+import TestCard from "../components/TestCard.vue";
+</script>
+
 <template>
   <div class="movie">
     <h1>Movie</h1>
+    <TestCard />
   </div>
 </template>
 
