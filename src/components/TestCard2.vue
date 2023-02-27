@@ -25,7 +25,10 @@ export default {
       <div class="row">
         <div class="col-md-4" v-for="movie in movies" :key="movie.id">
           <div class="container2">
-            <div class="card2" :style="{ backgroundImage: `url(${movie.img})`}">
+            <div
+              class="card2"
+              :style="{ backgroundImage: `url(${movie.img})` }"
+            >
               <div class="content2">
                 <h2>{{ movie.id }}</h2>
                 <h3>{{ movie.titleSweden }}</h3>
@@ -49,7 +52,7 @@ body {
   min-height: 100vh;
   background: #161623;
 }
-.container2{
+.container2 {
   position: relative;
   display: flex;
   justify-content: center;
