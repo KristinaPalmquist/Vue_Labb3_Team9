@@ -1,5 +1,6 @@
-{
-    "Cinemateket": {
+[
+    {
+        "name": "Cinemateket",
         "id": 1,
         "About": {
             "sv": "Cinemateket är en del av Svenska Filminstitutet och har till uppgift att tillgängliggöra Filminstitutets samlingar, levandegöra filmhistorien och öka intresset för filmen som konstform. Svenska Filminstitutet bildades 1963 och Cinemateket, eller Filmklubben som den då kallades, bildades året efter. Den allra första filmen som visades var Cirkus av Charles Chaplin, önskad av Ingmar Bergman. Allt började 1933, då Svenska Filmsamfundet bildades. Arvet från stumfilmstiden skulle räddas, och den svenska filmen måste bli bättre. Man ordnade debatter och seminarier, delade ut stipendier och priser, och la grunden till det som i dag är Filmarkivet: ett bibliotek och ett arkiv för manus, stillbilder, pressklipp och filmkopior. 1940 bytte samfundet namn till Filmhistoriska samlingarna och 1963 bildades Svenska Filminstitutet, resultatet av Harry Scheins idé att biografägarna skulle slippa nöjesskatten mot att 10 procent av biljettintäkterna gick till produktionen av svensk film (filmavtalet).Filmhistoriska samlingarna donerades till Filminstitutet. I september 1964 började Filminstitutet Filmklubb, som i dag är Cinemateket, visa film i Z-salen i ABF-huset på Sveavägen, ovanpå jazzklubben Gyllene Cirkeln. Man hade också visningar på Moderna Museet. Filmhuset invigdes 1970.",
@@ -17,7 +18,8 @@
             "sunday": "14:00"
         }
     },
-    "Victoria": {
+    {
+        "name": "Victoria",
         "id": 2,
         "About": {
             "sv": "Gemytliga kvartersbiografen Victoria invigdes den 18 september 1936 under bolaget Sandrew Film och Teater på pulserande Götgatan i hjärtat på Södermalm. Sedan ett tag tillbaka huserar även caféet Le Croissant i samma lokal. På Victoria kan du således numera alltid se filmer av hög kvalitet och dricka nyrostat kaffe varje dag. Det kan vara bra att känna till att biografen drivs av Svenska Bio och inte Filmstaden. Här gäller därför inte Filmstadens medlemskap. Du kan dock fortfarande boka dina biljetter på Filmstadens hemsida!",
@@ -35,7 +37,8 @@
             "sunday": "10:30-21:15"
         }
     },
-    "Capitol Biograf & Bistro": {
+    {
+        "name": "Capitol Biograf & Bistro",
         "id": 3,
         "About": {
             "sv": "Bio Capitol är Stockholms en av dom nyaste oberoende biograferna, med ett program av klassiker, internationella premiärer och smalare filmer. Med inspiration från filmpalats som Alamo Drafthouse i USA, är ambitionerna att bjuda på en lite vuxnare helhetsupplevelse med bio och restaurangbesök och kanske ett glas vin. På bistron kan du få en god bit mat och något att dricka antingen innan, efter eller under filmen!",
@@ -53,7 +56,8 @@
             "sunday": "10:45-22:00"
         }
     },
-    "Filmstaden Sergel": {
+    {
+        "name": "Filmstaden Sergel",
         "id": 4,
         "About": {
             "sv": "Filmstaden Sergel kanske inte lockar med sin mysfaktor men med 14 salong och totalt 2 667 platser är det en av dom största biograferna i Stockholm och bjuder därmed på ett stort utbud av filmer. I källarlokalerna under biografen finns Hötorgshallen samt ett parkeringsgarage. År 1995 byggdes Hötorgscitys fasad mot Hötorget till med Filmstaden Sergel och byggnaden fick så till slut den tänkta ljusa glasfasaden mot Hötorget som arkitekt Sven Markelius ursprungligen hade planerat. Hans önskan var att placera Stockholms Stadsteater här. Den nuvarande biografen har sitt namn efter den tidigare singelbiografen och scenteatern Sergelteatern på samma plats, som i sin tur var uppkallad efter skulptören Johan Tobias Sergel, som hade sin ateljé vid Sergelgatan. Den ursprungliga Sergelteatern från 1959 är idag komplexets stora salong, ombyggd med förhöjd komfort och förbättrad akustik, med bibehållande av 1950-talskänslan. Filmstaden Sergel ritades av arkitekten Per Kallstenius med inredning av Birgitte Baadsgaard.",
@@ -71,7 +75,8 @@
             "sunday": "10:30-22:45"
         }
     },
-    "Zita Folkets Bio": {
+    {
+        "name": "Zita Folkets Bio",
         "id": 5,
         "About": {
             "sv": "Folkets Bio Zita är Stockholms äldsta biograf i drift! 1913 invigdes Zita som då var en stumfilmsbio under namnet Vinter-Palatset. Dess långa historia är brokig och fascinerande. Efter viss ombyggnad återinvigdes bion under namnet Rita den 24 november 1930 av norrmannen Odd Biörnstad. Han skapade den framgångsrika biograf-kedjan Riteatrarna i Stockholm, inriktad på film från Hollywood. Efter att ha köpt Rialto och Ritz blev Rita hans tredje bio och namnet Riteatrarna böjade användas. Rita var under trettiotalet en av Riteatrarnas premiärbiografer. Men sedan man byggt större och elegantare sådana i grannskapet, som Rigoletto 1939 och Park-Teatern 1941, användes Rita mera sporadiskt som premiärbio. Ytterligare två Ri-biografer är ännu i drift: Riviera och Rival. På sjuttiotalet visades många danska s.k. mjukporrfilmer på Rita som då kallades Nya Rita. Därmed förebådades vad som komma skulle. År 1983 tog Europa Film över driften av Nya Rita, liksom av alla övriga Ri-biografer. Den 2 april 1984 hade Europa Film dragit sig ur och Rita återinvigdes som genuin porrbio under namnet Zita. Biljettkassan sålde poletter som besökaren lade i ett vändkors. De liderliga osedligheterna visades mer eller mindre nonstop, med hjälp av en Philips FP 30-projektor och s.k. non-rewind-system. 1992 övertog Folkets Bio Zita och satte igång med ombyggnaden av biografen. Man satsade på att behålla namnet Zita. Förmodligen bör dock inte detta tolkas som en hyllning till denna bios pornografiska epok. 1993 kunde besökarna möta Folkets Bios helrenoverade Zita-biograf med dess tre salonger och restaurangen Babs Kök & Bar. Folkets Bio har därmed i uppgift att förvalta Stockholms äldsta biograf. Den enda ursprungliga utsmyckning som tagits tillvara och alltjämt kan beundras är de gyllene amoriner som flankerar filmduken, högt uppe under taket. Fler av samma sort är bevarade på det som var balkongens bakre vägg - numera i en korridor i rikting mot salong 3.",
@@ -89,4 +94,4 @@
             "sunday": "13:00-21:00"
         }
     }
-}
+]

@@ -1,8 +1,10 @@
-<script setup></script>
+<script setup>
+import searchComp from "../components/searchComp.vue";
+</script>
 
 <template>
   <div>
-    <h1>HOME</h1>
+    <searchComp />
   </div>
 </template>
 
