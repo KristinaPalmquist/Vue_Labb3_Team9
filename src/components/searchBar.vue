@@ -33,8 +33,8 @@ export default {
     },
     computed: {
         searchFilter() {
-            return this.films[titleSweden].filter((data) => {
-            return data.toLowerCase().includes(this.searchinput.toLowerCase());
+            return this.films.filter((data) => {
+            return data.titleSweden.toLowerCase().includes(this.searchinput.toLowerCase());
         });
         }
     }
@@ -53,7 +53,7 @@ export default {
     class="listdiv"
     v-for="data in searchFilter"
     :key="data">
-    <td>{{ data }}</td>
+    <td>{{ data.titleSweden }}</td>
     </tr>
 </template>
 
