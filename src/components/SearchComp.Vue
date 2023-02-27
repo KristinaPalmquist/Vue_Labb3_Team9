@@ -1,4 +1,24 @@
-<script setup></script>
+<script>
+export default {
+  data () {
+    return {
+      films: [],
+      cinemas: [],
+    };
+  },
+  created() {
+    filmData()
+  },
+  methods: {
+    async filmData() {
+      const res = await fetch("movies.json");
+      const val = await res.json();
+      this.films = val.titleSweden
+      console.log(this.films)
+    }
+  }
+}
+</script>
 
 <template>
   <div class="search-container">
