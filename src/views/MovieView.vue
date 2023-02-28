@@ -1,17 +1,38 @@
 <script setup>
-import MoviePresentation from "../components/MoviePresentation.vue";
+import axios from "axios";
 import TestCard2 from "../components/TestCard2.vue";
 </script>
 
 <template>
   <div class="movie">
-    <MoviePresentation />
-    <TestCard2 />
+    <h2>{{ $route.params.id }}</h2>
+    <div v-for="movie in movies" :key="movie.id">
+      <router-link to="/film/`${movie.id}`">{{ movie.titleSweden }}</router-link>
+      <RouterView />
+    </div>
+
   </div>
+  <TestCard2 />
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      movies: [],
+    };
+  },
+  created() {
+    this.fetchMovies();
+  },
+  methods: {
+    fetchMovies() {
+      axios
+        .get("../../public/movies.json")
+        .then((movies) => (this.movies = movies.data));
+    },
+  },
+};
 </script>
 
 <style scoped>

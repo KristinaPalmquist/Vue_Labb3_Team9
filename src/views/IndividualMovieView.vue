@@ -46,11 +46,19 @@ import axios from "axios";
 
 <script>
 export default {
+    // props() {
+
+    // }
   data() {
     return {
       movies: [],
     };
   },
+  //   computed: {
+  //     movies() {
+  //         return this.movies.filter(())
+  //     }
+  //   },
   created() {
     this.fetchMovies();
   },

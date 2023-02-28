@@ -8,5 +8,4 @@ import searchComp from "../components/searchComp.vue";
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
