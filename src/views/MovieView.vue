@@ -7,10 +7,11 @@ import TestCard2 from "../components/TestCard2.vue";
   <div class="movie">
     <h2>{{ $route.params.id }}</h2>
     <div v-for="movie in movies" :key="movie.id">
-      <router-link to="/film/`${movie.id}`">{{ movie.titleSweden }}</router-link>
+      <router-link to="/film/`${movie.id}`">{{
+        movie.titleSweden
+      }}</router-link>
       <RouterView />
     </div>
-
   </div>
   <TestCard2 />
 </template>
