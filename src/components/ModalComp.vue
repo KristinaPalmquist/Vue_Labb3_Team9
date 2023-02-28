@@ -35,7 +35,7 @@ export default {
   background-color: black;
   border-radius: 5px;
   padding: 20px;
-  max-width: 300px;
+  max-width: 303px;
   max-height: auto;
   justify-content: center;
   color: white;
