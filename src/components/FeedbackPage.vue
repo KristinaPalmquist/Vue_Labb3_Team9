@@ -42,7 +42,6 @@ export default {
     submitFeedback() {
       if (this.name && this.email) {
         this.showModal = true;
-        this.$emit("Message-complete", { name: this.name, email: this.email });
       }
     },
   },
