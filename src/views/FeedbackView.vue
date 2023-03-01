@@ -1,6 +1,13 @@
+<script setup>
+import DateMonth from "../components/DateMonth.vue";
+</script>
+
 <template>
   <div class="">
     <FeedbackPage />
+  <div class="feedback">
+    <h1>Feedback</h1>
+    <DateMonth />
   </div>
 </template>
 <script>
@@ -19,3 +26,4 @@ body {
   overflow-x: hidden;
 }
 </style>
+<style scoped></style>
