@@ -1,10 +1,15 @@
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
+
 <script>
 import axios from "axios";
 
 export default {
   data() {
     return {
-      films: [],
+      key: [],
+      film: [],
       cinemas: [],
       searchinput: "",
       filmsResult: [],
@@ -16,6 +21,7 @@ export default {
   created() {
     this.filmSearch();
     this.cinemaSearch();
+    this.getMovie();
   },
   methods: {
     filmSearch() {
@@ -32,6 +38,9 @@ export default {
       this.searchinput = "";
       this.filmsHeader = "FILMER";
       this.cinemasHeader = "BIOGRAFER";
+    },
+    async getMovie() {
+      this.$emit("get-film", this.film);
     },
   },
   computed: {
@@ -75,36 +84,52 @@ export default {
     </tr>
   </div>
   <div class="row">
-        <div class="card mb-1 col-md-4 filmcard" style="width: 12rem" v-for="result in filmsResult" :key="result">
-          <img
-            :src="result.img"
-            class="card-img-top"
-            :alt="result.titleEnglish"
-          />
-          <div class="card-body">
-            <h5 class="card-title">{{ result.titleSweden }}</h5>
-            <p class="card-text">Ranking IMDB: {{ result.imdb }}</p>
-            <a class="card-text" :href="result.trailer" target="_blank">
-              Trailer
-            </a>
-          </div>
+    <a href="/Team9/listestview">
+      <div
+        class="card mb-1 col-md-4 filmcard"
+        style="width: 12rem"
+        v-for="result in filmsResult"
+        :key="result.id"
+        :film="result"
+        @click="getMovie"
+      >
+        <img
+          :src="result.img"
+          class="card-img-top"
+          :alt="result.titleEnglish"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ result.titleSweden }}</h5>
+          <p class="card-text">Ranking IMDB: {{ result.imdb }}</p>
+          <a class="card-text" :href="result.trailer" target="_blank">
+            Trailer
+          </a>
         </div>
       </div>
+    </a>
+  </div>
   <div class="column">
-  <div class="card mb-1 col-md-7 cinema-card" v-for="result in cinemasResult" :key="result">
-      <div class="card bg-dark text-white" >
-        <img class="card-img" :src="result.img" alt="Card image">
-           <div class="card-img-overlay">
-             <h5 class="card-title">{{ result.name }}</h5>
-             <p class="card-text">{{ result.Adress }}</p>
-           </div>
-          </div>
-</div>
-</div>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <div
+      class="card mb-1 col-md-7 cinema-card"
+      v-for="result in cinemasResult"
+      :key="result"
+    >
+      <div class="card bg-dark text-white">
+        <img class="card-img" :src="result.img" alt="Card image" />
+        <div class="card-img-overlay">
+          <h5 class="card-title">{{ result.name }}</h5>
+          <p class="card-text">{{ result.Adress }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+  />
 </template>
 
-<style>
+<style scoped>
 .cinema-card {
   margin: 45px 10px;
 }
