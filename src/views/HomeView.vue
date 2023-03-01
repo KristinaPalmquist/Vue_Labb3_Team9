@@ -1,11 +1,20 @@
 <script setup>
-import searchComp from "../components/searchComp.vue";
+import searchBar from "../components/searchBar.vue";
 </script>
 
 <template>
-  <div>
-    <searchComp />
+  <searchBar />
+  <div class="home">
+    <h1>HOME</h1>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media (min-width: 1024px) {
+  .home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+</style>

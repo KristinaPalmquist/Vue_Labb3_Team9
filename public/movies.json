@@ -4,8 +4,8 @@
         "titleEnglish": "Cairo Conspiracy",
         "titleOriginal": "Cairo Conspiracy",
         "titleSweden": "Boy from Heaven",
-        "category": ["drama","thriller"],
-        "director": "Tarek Saleh",
+        "category": ["Drama","Thriller"],
+        "director": ["Tarek Saleh"],
         "actors":
             [
                 "Fares Fares",
@@ -13,7 +13,7 @@
             ],
         "premiere": 2022,
         "minutes": 115,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 7.2,
         "rtTomatometer": 77,
         "rtAudienceScore": 100,
@@ -26,9 +26,9 @@
         "titleEnglish": "The Banshees of Inisherin",
         "titleOriginal": "The Banshees of Inisherin",
         "titleSweden": "The Banshees of Inisherin",
-        "category": ["comedy", "drama"],
+        "category": ["Komedi", "Drama"],
 
-        "director": "Martin McDonagh",
+        "director": ["Martin McDonagh"],
         "actors":
             [
                 "Colin Farrell",
@@ -38,7 +38,7 @@
             ],
         "premiere": 2023,
         "minutes": 114,
-        "age-limit": 15,
+        "ageLimit": 15,
         "imdb": 7.8,
         "rtTomatometer": 96,
         "rtAudienceScore": 75,
@@ -51,8 +51,8 @@
         "titleEnglish": "Dogborn",
         "titleOriginal": "Dogborn",
         "titleSweden": "Dogborn",
-        "category": ["drama","thriller"],
-        "director": "Isabella Carbonell",
+        "category": ["Drama","Thriller"],
+        "director": ["Isabella Carbonell"],
         "actors":
             [
                 "Silvana Imam",
@@ -60,7 +60,7 @@
             ],
         "premiere": 2023,
         "minutes": 84,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 6.0,
         "rtTomatometer": null,
         "rtAudienceScore": null,
@@ -73,8 +73,8 @@
         "titleEnglish": "The Conference",
         "titleOriginal": "Die Wannseekonferenz",
         "titleSweden": "Wannsee 1942",
-        "category": ["drama"],
-        "director": "Matti Geschonneck",
+        "category": ["Drama"],
+        "director": ["Matti Geschonneck"],
         "actors":
             [
                 "Philipp Hochmair",
@@ -86,7 +86,7 @@
             ],
         "premiere": 2023,
         "minutes": 107,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 7.4,
         "rtTomatometer": 100,
         "rtAudienceScore": null,
@@ -99,8 +99,8 @@
         "titleEnglish": "Women Talking",
         "titleOriginal": "Women Talking",
         "titleSweden": "Women Talking",
-        "category": ["drama"],
-        "director": "Sarah Polley",
+        "category": ["Drama"],
+        "director": ["Sarah Polley"],
         "actors":
             [
                 "Rooney Mara",
@@ -113,7 +113,7 @@
             ],
         "premiere": 2023,
         "minutes": 104,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 7.4,
         "rtTomatometer": 91,
         "rtAudienceScore": 80,
@@ -126,8 +126,8 @@
         "titleEnglish": "A Bookshop in Paris",
         "titleOriginal": "Il materiale emotivo",
         "titleSweden": "En liten bokhandel i Paris",
-        "category": ["drama","romance"],
-        "director": "Sergio Castellitto",
+        "category": ["Drama","Romantik"],
+        "director": ["Sergio Castellitto"],
         "actors":
             [
                 "Sergio Castellitto",
@@ -139,7 +139,7 @@
             ],
         "premiere": 2023,
         "minutes": 98,
-        "age-limit": 7,
+        "ageLimit": 7,
         "imdb": 5.5,
         "rtTomatometer": null,
         "rtAudienceScore": null,
@@ -152,12 +152,12 @@
         "titleEnglish": "Heart of Oak",
         "titleOriginal": "Le Chêne",
         "titleSweden": "Ekens rike",
-        "category": ["documentary"],
+        "category": ["Dokumentär"],
         "director": ["Laurent Charbonnier", "Michel Seydoux"],
         "actors": [],
         "premiere": 2023,
         "minutes": 81,
-        "age-limit": 0,
+        "ageLimit": 0,
         "imdb": 7.5,
         "rtTomatometer": null,
         "rtAudienceScore": null,
@@ -170,8 +170,8 @@
         "titleEnglish": "Return to Seoul",
         "titleOriginal": "Retour à Séoul",
         "titleSweden": "Tillbaka till Seoul",
-        "category": ["drama"],
-        "director": "Davy Chou",
+        "category": ["Drama"],
+        "director": ["Davy Chou"],
         "actors":
             [
                 "Ji-Min Park",
@@ -182,7 +182,7 @@
             ],
         "premiere": 2023,
         "minutes": 119,
-        "age-limit": 0,
+        "ageLimit": 0,
         "imdb": 7.1,
         "rtTomatometer": 98,
         "rtAudienceScore": 59,
@@ -195,8 +195,8 @@
         "titleEnglish": "Rose",
         "titleOriginal": "Rose",
         "titleSweden": "Rose",
-        "category": ["drama"],
-        "director": "Niels Arden Oplev",
+        "category": ["Drama"],
+        "director": ["Niels Arden Oplev"],
         "actors":
             [
                 "Sofie Gråbøl",
@@ -206,7 +206,7 @@
             ],
         "premiere": 2022,
         "minutes": 106,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 7.8,
         "rtTomatometer": null,
         "rtAudienceScore": null,
@@ -219,8 +219,8 @@
         "titleEnglish": "Holy Spider",
         "titleOriginal": "Holy Spider",
         "titleSweden": "Holy Spider",
-        "category": ["drama","thriller"],
-        "director": "Ali Abbasi",
+        "category": ["Drama","Thriller"],
+        "director": ["Ali Abbasi"],
         "actors":
             [
                 "Sara Fazilat",
@@ -230,7 +230,7 @@
             ],
         "premiere": 2023,
         "minutes": 117,
-        "age-limit": 15,
+        "ageLimit": 15,
         "imdb": 7.3,
         "rtTomatometer": 84,
         "rtAudienceScore": 69,
@@ -243,8 +243,8 @@
         "titleEnglish": "Lunana: A Yak in the Classroom",
         "titleOriginal": "Lunana: A Yak in the Classroom",
         "titleSweden": "Skolan vid världens ände",
-        "category": ["drama"],
-        "director": "Pawo Choyning Dorji",
+        "category": ["Drama"],
+        "director": ["Pawo Choyning Dorji"],
         "actors":
             [
                 "Sherab Dorji",
@@ -253,7 +253,7 @@
             ],
         "premiere": 2022,
         "minutes": 109,
-        "age-limit": 0,
+        "ageLimit": 0,
         "imdb": 7.4,
         "rtTomatometer": 98,
         "rtAudienceScore": 85,
@@ -266,8 +266,8 @@
         "titleEnglish": "Godland",
         "titleOriginal": "Vanskabte land",
         "titleSweden": "Godland",
-        "category": ["drama"],
-        "director": "Hlynur Palmason",
+        "category": ["Drama"],
+        "director": ["Hlynur Palmason"],
         "actors":
             [
                 "Elliott Crosset Hove",
@@ -276,7 +276,7 @@
             ],
         "premiere": 2023,
         "minutes": 142,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 7.2,
         "rtTomatometer": 90,
         "rtAudienceScore": 80,
@@ -289,8 +289,8 @@
         "titleEnglish": "The Fabelmans",
         "titleOriginal": "The Fabelmans",
         "titleSweden": "The Fabelmans",
-        "category": ["drama"],
-        "director": "Steven Spielberg",
+        "category": ["Drama"],
+        "director": ["Steven Spielberg"],
         "actors":
             [
                 "Michelle Williams",
@@ -301,7 +301,7 @@
             ],
         "premiere": 2023,
         "minutes": 151,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 7.6,
         "rtTomatometer": 92,
         "rtAudienceScore": 83,
@@ -314,7 +314,7 @@
         "titleEnglish": "Tori and Lokita",
         "titleOriginal": "Tori et Lokita",
         "titleSweden": "Tori och Lokita",
-        "category": ["drama"],
+        "category": ["Drama"],
         "director": ["Luc Dardenne", "Jean-Pierre Dardenne"],
         "actors":
             [
@@ -325,7 +325,7 @@
             ],
         "premiere": 2023,
         "minutes": 89,
-        "age-limit": 15,
+        "ageLimit": 15,
         "imdb": 7.0,
         "rtTomatometer": 89,
         "rtAudienceScore": null,
@@ -338,8 +338,8 @@
         "titleEnglish": "Aftersun",
         "titleOriginal": "Aftersun",
         "titleSweden": "Aftersun",
-        "category": ["drama"],
-        "director": "Charlotte Wells",
+        "category": ["Drama"],
+        "director": ["Charlotte Wells"],
         "actors":
             [
                 "Paul Mescal",
@@ -348,7 +348,7 @@
             ],
         "premiere": 2023,
         "minutes": 102,
-        "age-limit": 0,
+        "ageLimit": 0,
         "imdb": 7.7,
         "rtTomatometer": 95,
         "rtAudienceScore": 82,
@@ -361,8 +361,8 @@
         "titleEnglish": "No bears",
         "titleOriginal": "Khers nist",
         "titleSweden": "No bears",
-        "category": ["drama"],
-        "director": "Jafar Panahi",
+        "category": ["Drama"],
+        "director": ["Jafar Panahi"],
         "actors":
             [
                 "Naser Hashemi",
@@ -371,7 +371,7 @@
             ],
         "premiere": 2023,
         "minutes": 106,
-        "age-limit": 15,
+        "ageLimit": 15,
         "imdb": 7.5,
         "rtTomatometer": 100,
         "rtAudienceScore": 89,
@@ -384,15 +384,15 @@
         "titleEnglish": "Kungen",
         "titleOriginal": "Kungen",
         "titleSweden": "Kungen",
-        "category": ["documentary"],
-        "director": "Karin af Klintberg",
+        "category": ["Dokumentär"],
+        "director": ["Karin af Klintberg"],
         "actors":
             [
                 "kung Carl XVI Gustaf"
             ],
         "premiere": 2023,
         "minutes": 98,
-        "age-limit": 0,
+        "ageLimit": 0,
         "imdb": 8.0,
         "rtTomatometer": null,
         "rtAudienceScore": null,
@@ -405,8 +405,8 @@
         "titleEnglish": "R.M.N.",
         "titleOriginal": "R.M.N.",
         "titleSweden": "R.M.N. - Kall vinter",
-        "category": ["drama"],
-        "director": "Cristian Mungiu",
+        "category": ["Drama"],
+        "director": ["Cristian Mungiu"],
         "actors":
             [
                 "Marin Grigore",
@@ -414,7 +414,7 @@
             ],
         "premiere": 2023,
         "minutes": 125,
-        "age-limit": null,
+        "ageLimit": 11,
         "imdb": 7.5,
         "rtTomatometer": 95,
         "rtAudienceScore": null,
@@ -427,8 +427,8 @@
         "titleEnglish": "Touching Freedom",
         "titleOriginal": "Touching Freedom",
         "titleSweden": "Touching Freedom",
-        "category": ["documentary"],
-        "director": "Manal Masri",
+        "category": ["Dokumentär"],
+        "director": ["Manal Masri"],
         "actors":
             [
                 "Jenkidar",
@@ -436,7 +436,7 @@
             ],
         "premiere": 2023,
         "minutes": 72,
-        "age-limit": 15,
+        "ageLimit": 15,
         "imdb": 8.2,
         "rtTomatometer": null,
         "rtAudienceScore": null,
@@ -449,8 +449,8 @@
         "titleEnglish": "Zen in the ice rift",
         "titleOriginal": "Zen sul ghiaccio sottile",
         "titleSweden": "Zen in the ice rift",
-        "category": ["drama"],
-        "director": "Margherita Ferri",
+        "category": ["Drama"],
+        "director": ["Margherita Ferri"],
         "actors":
             [
                 "Susanna Acchiardi",
@@ -460,7 +460,7 @@
             ],
         "premiere": 2022,
         "minutes": 94,
-        "age-limit": 15,
+        "ageLimit": 15,
         "imdb": 5.9,
         "rtTomatometer": null,
         "rtAudienceScore": null,
@@ -473,8 +473,8 @@
         "titleEnglish": "Ant-Man and the Wasp: Quantumania",
         "titleOriginal": "Ant-Man and the Wasp: Quantumania",
         "titleSweden": "Ant-Man and the Wasp: Quantumania",
-        "category": ["action", "adventure", "comedy"],
-        "director": "Peyton Reed",
+        "category": ["Action", "Äventyr", "Komedi"],
+        "director": ["Peyton Reed"],
         "actors":
             [
                 "Paul Rudd",
@@ -488,7 +488,7 @@
             ],
         "premiere": 2023,
         "minutes": 125,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 6.6,
         "rtTomatometer": 47,
         "rtAudienceScore": 84,
@@ -501,8 +501,8 @@
         "titleEnglish": "Avatar: The Way of Water",
         "titleOriginal": "Avatar: The Way of Water",
         "titleSweden": "Avatar: The Way of Water",
-        "category": ["action","adventure", "sci-fi"],
-        "director": "James Cameron",
+        "category": ["Action","Äventyr", "Sci-Fi"],
+        "director": ["James Cameron"],
         "actors":
             [
                 "Michelle Yeoh",
@@ -516,7 +516,7 @@
             ],
         "premiere": 2022,
         "minutes": 192,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 7.8,
         "rtTomatometer": 76,
         "rtAudienceScore": 92,
@@ -529,8 +529,8 @@
         "titleEnglish": "Asterix & Obelix: The Middle Kingdom",
         "titleOriginal": "Astérix & Obélix: L'Empire du Milieu",
         "titleSweden": "Asterix & Obelix: I drakens rike",
-        "category": ["adventure","comedy", "family"],
-        "director": "Guillaume Canet",
+        "category": ["Äventyr","Komedi", "Familj"],
+        "director": ["Guillaume Canet"],
         "actors":
             [
                 "Marion Cotillard",
@@ -541,7 +541,7 @@
             ],
         "premiere": 2023,
         "minutes": 111,
-        "age-limit": 7,
+        "ageLimit": 7,
         "imdb": 4.5,
         "rtTomatometer": null,
         "rtAudienceScore": 34,
@@ -554,8 +554,8 @@
         "titleEnglish": "A Man Called Otto",
         "titleOriginal": "A Man Called Otto",
         "titleSweden": "A Man Called Otto",
-        "category": ["comedy","drama"],
-        "director": "Marc Forster",
+        "category": ["Komedi","Drama"],
+        "director": ["Marc Forster"],
         "actors":
             [
                 "Tom Hanks",
@@ -568,7 +568,7 @@
             ],
         "premiere": 2023,
         "minutes": 126,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 7.6,
         "rtTomatometer": 69,
         "rtAudienceScore": 97,
@@ -581,8 +581,8 @@
         "titleEnglish": "Bamse och vulkanön",
         "titleOriginal": "Bamse och vulkanön",
         "titleSweden": "Bamse och vulkanön",
-        "category": ["kids","family", "animated"],
-        "director": "Christian Ryltenius",
+        "category": ["Barn","Familj", "Animerat"],
+        "director": ["Christian Ryltenius"],
         "actors":
             [
                 "Rolf Lassgård",
@@ -591,7 +591,7 @@
             ],
         "premiere": 2021,
         "minutes": 69,
-        "age-limit": 0,
+        "ageLimit": 0,
         "imdb": 5.6,
         "rtTomatometer": null,
         "rtAudienceScore": null,
@@ -604,7 +604,7 @@
         "titleEnglish": "Dans & lek med Babblarna",
         "titleOriginal": "Dans & lek med Babblarna",
         "titleSweden": "Dans & lek med Babblarna",
-        "category": ["kids"],
+        "category": ["Barn"],
         "director": ["Anneli Tisell", "My Blomqvist Olsberg"],
         "actors":
             [
@@ -616,7 +616,7 @@
             ],
         "premiere": 2022,
         "minutes": 40,
-        "age-limit": 0,
+        "ageLimit": 0,
         "imdb": null,
         "rtTomatometer": null,
         "rtAudienceScore": null,
@@ -629,8 +629,8 @@
         "titleEnglish": "Moonbound",
         "titleOriginal": "Moonbound",
         "titleSweden": "Den magiska månresan",
-        "category": ["animated","family"],
-        "director": "Ali Samadi Ahadi",
+        "category": ["Animerat","Familj"],
+        "director": ["Ali Samadi Ahadi"],
         "actors":
             [
                 "Aleks Le",
@@ -639,7 +639,7 @@
             ],
         "premiere": 2022,
         "minutes": 84,
-        "age-limit": 0,
+        "ageLimit": 0,
         "imdb": 4.8,
         "rtTomatometer": 17,
         "rtAudienceScore": 83,
@@ -652,8 +652,8 @@
         "titleEnglish": "Where the Crawdads Sing",
         "titleOriginal": "Where the Crawdads Sing",
         "titleSweden": "Där kräftorna sjunger",
-        "category": ["drama","mystery"],
-        "director": "Olivia Newman",
+        "category": ["Drama","Mysterium"],
+        "director": ["Olivia Newman"],
         "actors":
             [
                 "Daisy Edgar-Jones",
@@ -665,7 +665,7 @@
             ],
         "premiere": 2022,
         "minutes": 125,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 7.2,
         "rtTomatometer": 34,
         "rtAudienceScore": 96,
@@ -678,8 +678,8 @@
         "titleEnglish": "En dag kommer allt det här bli ditt",
         "titleOriginal": "En dag kommer allt det här bli ditt",
         "titleSweden": "En dag kommer allt det här bli ditt",
-        "category": ["comedy","drama"],
-        "director": "Andreas Öhman",
+        "category": ["Komedi","Drama"],
+        "director": ["Andreas Öhman"],
         "actors":
             [
                 "Karin Franz Körlof",
@@ -693,7 +693,7 @@
             ],
         "premiere": 2023,
         "minutes": 165,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 7.0,
         "rtTomatometer": null,
         "rtAudienceScore": null,
@@ -706,7 +706,7 @@
         "titleEnglish": "Everything Everywhere All at Once",
         "titleOriginal": "Everything Everywhere All at Once",
         "titleSweden": "Everything Everywhere All at Once",
-        "category": ["action","adventure", "comedy"],
+        "category": ["Action","Äventyr", "Komedi"],
         "director": ["Daniel Kwan", "Daniel Scheinert"],
         "actors":
             [
@@ -718,7 +718,7 @@
             ],
         "premiere": 2023,
         "minutes": 139,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 8.0,
         "rtTomatometer": 95,
         "rtAudienceScore": 88,
@@ -731,8 +731,8 @@
         "titleEnglish": "LasseMajas detektivbyrå - Skorpionens gåta",
         "titleOriginal": "LasseMajas detektivbyrå - Skorpionens gåta",
         "titleSweden": "LasseMajas detektivbyrå - Skorpionens gåta",
-        "category": ["family"],
-        "director": "Tina Mackic",
+        "category": ["Familj"],
+        "director": ["Tina Mackic"],
         "actors":
             [
                 "Polly Stjärne",
@@ -743,7 +743,7 @@
             ],
         "premiere": 2022,
         "minutes": 143,
-        "age-limit": 7,
+        "ageLimit": 7,
         "imdb": 5.7,
         "rtTomatometer": null,
         "rtAudienceScore": null,
@@ -756,8 +756,8 @@
         "titleEnglish": "Brighton 4th",
         "titleOriginal": "Brighton 4th",
         "titleSweden": "Brighton 4:e gatan",
-        "category": ["drama"],
-        "director": "Levan Koguashvili",
+        "category": ["Drama"],
+        "director": ["Levan Koguashvili"],
         "actors":
             [
                 "Levan Tedaishvili",
@@ -766,7 +766,7 @@
             ],
         "premiere": 2023,
         "minutes": 95,
-        "age-limit": 7,
+        "ageLimit": 7,
         "imdb": 6.9,
         "rtTomatometer": 89,
         "rtAudienceScore": 38,
@@ -779,8 +779,8 @@
         "titleEnglish": "Second act",
         "titleOriginal": "Andra Akten",
         "titleSweden": "Andra Akten",
-        "category": ["drama","romance"],
-        "director": "Mårten Klingberg",
+        "category": ["Drama","Romantik"],
+        "director": ["Mårten Klingberg"],
         "actors":
             [
                 "Rolf Lassgård",
@@ -788,7 +788,7 @@
             ],
         "premiere": 2023,
         "minutes": 114,
-        "age-limit": 0,
+        "ageLimit": 0,
         "imdb": 7.3,
         "rtTomatometer": null,
         "rtAudienceScore": null,
@@ -801,8 +801,8 @@
         "titleEnglish": "Downton Abbey: A New Era",
         "titleOriginal": "Downton Abbey: A New Era",
         "titleSweden": "Downton Abbey: En ny era",
-        "category": ["drama","history", "romance"],
-        "director": "Simon Curtis",
+        "category": ["Drama","Historia", "Romantik"],
+        "director": ["Simon Curtis"],
         "actors":
             [
                 "Dominic West",
@@ -816,7 +816,7 @@
             ],
         "premiere": 2022,
         "minutes": 125,
-        "age-limit": 0,
+        "ageLimit": 0,
         "imdb": 7.4,
         "rtTomatometer": 86,
         "rtAudienceScore": 97,
@@ -829,8 +829,8 @@
         "titleEnglish": "Triangle of Sadness",
         "titleOriginal": "Triangle of Sadness",
         "titleSweden": "Triangle of Sadness",
-        "category": ["comedy","drama"],
-        "director": "Ruben Östlund",
+        "category": ["Komedi","Drama"],
+        "director": ["Ruben Östlund"],
         "actors":
             [
                 "Harris Dickson",
@@ -847,7 +847,7 @@
             ],
         "premiere": 2022,
         "minutes": 147,
-        "age-limit": 11,
+        "ageLimit": 11,
         "imdb": 7.4,
         "rtTomatometer": 72,
         "rtAudienceScore": 70,
@@ -860,8 +860,8 @@
         "titleEnglish": "Rocky Horror Picture Show",
         "titleOriginal": "Rocky Horror Picture Show",
         "titleSweden": "Rocky Horror Picture Show",
-        "category": ["comedy","horror", "musical"],
-        "director": "Jim Sharman",
+        "category": ["Komedi","Skräck", "Musikal"],
+        "director": ["Jim Sharman"],
         "actors":
             [
                 "Barry Bostwick",
@@ -870,7 +870,7 @@
             ],
         "premiere": 1975,
         "minutes": 100,
-        "age-limit": 15,
+        "ageLimit": 15,
         "imdb": 7.4,
         "rtTomatometer": 79,
         "rtAudienceScore": 85,
@@ -883,8 +883,8 @@
         "titleEnglish": "Cabaret",
         "titleOriginal": "Cabaret",
         "titleSweden": "Cabaret",
-        "category": ["drama","musical"],
-        "director": "Bob Fosse",
+        "category": ["Drama","Musikal"],
+        "director": ["Bob Fosse"],
         "actors":
             [
                 "Liza Minnelli",
@@ -894,7 +894,7 @@
             ],
         "premiere": 1972,
         "minutes": 124,
-        "age-limit": 15,
+        "ageLimit": 15,
         "imdb": 7.8,
         "rtTomatometer": 79,
         "rtAudienceScore": 85,
@@ -907,8 +907,8 @@
         "titleEnglish": "Vertigo",
         "titleOriginal": "Vertigo",
         "titleSweden": "Vertigo",
-        "category": ["drama","thriller"],
-        "director": "Alfred Hitchcock",
+        "category": ["Drama","Thriller"],
+        "director": ["Alfred Hitchcock"],
         "actors":
             [
                 "James Stewart",
@@ -917,7 +917,7 @@
             ],
         "premiere": 1958,
         "minutes": 129,
-        "age-limit": 15,
+        "ageLimit": 15,
         "imdb": 8.3,
         "rtTomatometer": 92,
         "rtAudienceScore": 93,
@@ -930,8 +930,8 @@
         "titleEnglish": "Hilma",
         "titleOriginal": "Hilma",
         "titleSweden": "Hilma",
-        "category": ["biography","drama"],
-        "director": "Lasse Hallström",
+        "category": ["Biografi","Drama"],
+        "director": ["Lasse Hallström"],
         "actors":
             [
                 "Tora Hallström",
@@ -940,7 +940,7 @@
             ],
         "premiere": 2022,
         "minutes": 120,
-        "age-limit": 7,
+        "ageLimit": 7,
         "imdb": 6.0,
         "rtTomatometer": 67,
         "rtAudienceScore": null,
@@ -953,8 +953,8 @@
         "titleEnglish": "Moulin Rouge",
         "titleOriginal": "Moulin Rouge",
         "titleSweden": "Moulin Rouge",
-        "category": ["drama","romance", "musical"],
-        "director": "Baz Luhrmann",
+        "category": ["Drama","Romantik", "Musikal"],
+        "director": ["Baz Luhrmann"],
         "actors":
             [
                 "Nicole Kidman",
@@ -965,7 +965,7 @@
             ],
         "premiere": 2001,
         "minutes": 127,
-        "age-limit": 7,
+        "ageLimit": 7,
         "imdb": 7.6,
         "rtTomatometer": 75,
         "rtAudienceScore": 89,
@@ -978,8 +978,8 @@
         "titleEnglish": "A Bug's Life",
         "titleOriginal": "A Bug's Life",
         "titleSweden": "Ett småkryps liv",
-        "category": ["animation","adventure", "comedy", "kids", "family"],
-        "director": "John Lasseter",
+        "category": ["Animerat","Äventyr", "Komedi", "Barn", "Familj"],
+        "director": ["John Lasseter"],
         "actors":
             [
                 "Kevin Spacey",
@@ -990,7 +990,7 @@
             ],
         "premiere": 1998,
         "minutes": 95,
-        "age-limit": 7,
+        "ageLimit": 7,
         "imdb": 7.2,
         "rtTomatometer": 92,
         "rtAudienceScore": 72,
@@ -1003,8 +1003,8 @@
         "titleEnglish": "A Farewell to Arms",
         "titleOriginal": "A Farewell to Arms",
         "titleSweden": "Farväl till vapnen",
-        "category": ["drama","romance", "war"],
-        "director": "Frank Borzage",
+        "category": ["Drama","Romantik", "Krig"],
+        "director": ["Frank Borzage"],
         "actors":
             [
                 "Gary Cooper",
@@ -1013,7 +1013,7 @@
             ],
         "premiere": 1932,
         "minutes": 140,
-        "age-limit": null,
+        "ageLimit": null,
         "imdb": 6.4,
         "rtTomatometer": 94,
         "rtAudienceScore": 53,
@@ -1026,8 +1026,8 @@
         "titleEnglish": "House by the River",
         "titleOriginal": "House by the River",
         "titleSweden": "Huset vid floden",
-        "category": ["crime","drama", "film-noir"],
-        "director": "Fritz Lang",
+        "category": ["Kriminal","Drama", "Film noir", "Thriller"],
+        "director": ["Fritz Lang"],
         "actors":
             [
                 "Louis Hayward",
@@ -1036,7 +1036,7 @@
             ],
         "premiere": 1950,
         "minutes": 83,
-        "age-limit": null,
+        "ageLimit": null,
         "imdb": 7.1,
         "rtTomatometer": 57,
         "rtAudienceScore": 70,
@@ -1049,8 +1049,8 @@
         "titleEnglish": "Annie",
         "titleOriginal": "Annie",
         "titleSweden": "Annie",
-        "category": ["comedy","drama", "family"],
-        "director": "John Huston",
+        "category": ["Komedi","Drama", "Familj"],
+        "director": ["John Huston"],
         "actors":
             [
                 "Aileen Quinn",
@@ -1059,7 +1059,7 @@
             ],
         "premiere": 1982,
         "minutes": 127,
-        "age-limit": 7,
+        "ageLimit": 7,
         "imdb": 6.6,
         "rtTomatometer": 49,
         "rtAudienceScore": 69,
@@ -1072,8 +1072,8 @@
         "titleEnglish": "Cloak and Dagger",
         "titleOriginal": "Cloak and Dagger",
         "titleSweden": "Dolken och kappan",
-        "category": ["adventure","film-noir", "romance"],
-        "director": " Fritz Lang",
+        "category": ["Äventyr","Film noir", "Thriller", "Romantik"],
+        "director": ["Fritz Lang"],
         "actors":
             [
                 "Gary Cooper",
@@ -1084,7 +1084,7 @@
             ],
         "premiere": 1946,
         "minutes": 106,
-        "age-limit": null,
+        "ageLimit": null,
         "imdb": 6.6,
         "rtTomatometer": 80,
         "rtAudienceScore": 41,
@@ -1097,8 +1097,8 @@
         "titleEnglish": "Zombie",
         "titleOriginal": "Zombie 2",
         "titleSweden": "Zombie Flesh Eaters",
-        "category": ["horror"],
-        "director": "Lucio Fulci",
+        "category": ["Skräck"],
+        "director": ["Lucio Fulci"],
         "actors":
             [
                 "Tisa Farrow",
@@ -1109,7 +1109,7 @@
             ],
         "premiere": 1979,
         "minutes": 91,
-        "age-limit": 15,
+        "ageLimit": 15,
         "imdb": 6.8,
         "rtTomatometer": 41,
         "rtAudienceScore": 69,

@@ -28,6 +28,7 @@ export default {
             <div
               class="card2"
               :style="{ backgroundImage: `url(${movie.img})` }"
+              :alt="movie.titleSweden"
             >
               <div class="content2">
                 <h2>{{ movie.id }}</h2>
