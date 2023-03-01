@@ -1,5 +1,5 @@
 <script setup>
-import moment from "moment/";
+import moment from "moment/min/moment-with-locales";
 // import se from "moment/locale/se.js";
 import axios from "axios";
 </script>
@@ -20,7 +20,6 @@ export default {
     return {
       today: moment().format("YYYY-MM-DD"),
       idag: moment().format("dddd MMMM YYYY"),
-      // idag: moment().format("dddd MMMM YYYY").locale(se),
       cinemas: [],
     };
   },
