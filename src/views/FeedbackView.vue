@@ -5,9 +5,10 @@ import DateMonth from "../components/DateMonth.vue";
 <template>
   <div class="">
     <FeedbackPage />
-  <div class="feedback">
-    <h1>Feedback</h1>
-    <DateMonth />
+    <div class="feedback">
+      <h1>Feedback</h1>
+      <DateMonth />
+    </div>
   </div>
 </template>
 <script>
