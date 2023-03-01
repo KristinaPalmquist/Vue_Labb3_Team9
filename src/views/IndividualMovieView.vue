@@ -67,7 +67,7 @@ export default {
   props: {
     movieId: {
       type: Number,
-      default: 30,
+      default: 6,
     },
   },
   data() {
