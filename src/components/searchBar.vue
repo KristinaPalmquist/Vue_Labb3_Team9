@@ -74,38 +74,46 @@ export default {
       <td>{{ data.name }}</td>
     </tr>
   </div>
-  <div class="result-div">
-    <div class="films-div">
-      <p>{{ filmsHeader }}</p>
-      <div v-for="result in filmsResult" :key="result">
-        <li>{{ result.titleSweden }}</li>
+  <div class="row">
+        <div class="card mb-1 col-md-4 filmcard" style="width: 12rem" v-for="result in filmsResult" :key="result">
+          <img
+            :src="result.img"
+            class="card-img-top"
+            :alt="result.titleEnglish"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ result.titleSweden }}</h5>
+            <p class="card-text">Ranking IMDB: {{ result.imdb }}</p>
+            <a class="card-text" :href="result.trailer" target="_blank">
+              Trailer
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="cinemas-div">
-      <p>{{ cinemasHeader }}</p>
-      <div v-for="result in cinemasResult" :key="result">
-        <li>{{ result.name }}</li>
-      </div>
-    </div>
-  </div>
+  <div class="column">
+  <div class="card mb-1 col-md-7 cinema-card" v-for="result in cinemasResult" :key="result">
+      <div class="card bg-dark text-white" >
+        <img class="card-img" :src="result.img" alt="Card image">
+           <div class="card-img-overlay">
+             <h5 class="card-title">{{ result.name }}</h5>
+             <p class="card-text">{{ result.Adress }}</p>
+           </div>
+          </div>
+</div>
+</div>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </template>
 
 <style>
-.films-div {
-  margin: 10px 10px;
+.cinema-card {
+  margin: 45px 10px;
 }
 
-.cinemas-div {
-  margin: 10px 10px;
+.filmcard {
+  margin: 45px 25px;
 }
 
-.result-div {
-  display: flex;
-  flex-direction: row;
-}
-
-#search-icon {
-  height: 25px;
+.card-img {
+  height: 60vh;
 }
 </style>
