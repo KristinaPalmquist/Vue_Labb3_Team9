@@ -17,7 +17,7 @@
         <button class="form-btn" type="submit">Skicka</button>
       </form>
       <ModalComp v-if="showModal" :name="name" @close="showModal = false">
-        <p>Tack för ditt medelande!</p>
+        <p>Tack för ditt meddelande!</p>
       </ModalComp>
     </div>
   </header>
