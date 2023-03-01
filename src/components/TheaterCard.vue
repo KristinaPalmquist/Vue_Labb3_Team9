@@ -28,6 +28,7 @@ export default {
             <div
               class="card2"
               :style="{ backgroundImage: `url(${theater.img})` }"
+              :alt="theater.name"
             >
               <div class="content2">
                 <h2>{{ theater.name }}</h2>

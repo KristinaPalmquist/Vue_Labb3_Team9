@@ -63,7 +63,7 @@ export default {
       @keydown.enter="onClick"
     />
     <span class="input-group-text border-0" @click="onClick" id="search-addon">
-      <img id="search-icon" src="../assets/img/search.png" />
+      <i class="bi bi-film"></i>
     </span>
   </div>
   <div v-if="this.searchinput != ''">
@@ -88,6 +88,7 @@ export default {
       </div>
     </div>
   </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </template>
 
 <style>
