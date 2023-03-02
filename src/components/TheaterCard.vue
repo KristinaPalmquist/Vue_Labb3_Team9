@@ -40,6 +40,7 @@ export default {
     </div>
   </body>
 </template>
+
 <style scoped>
 body {
   display: flex;

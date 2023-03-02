@@ -117,7 +117,7 @@
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="/feedback" class="text-white">Feedback</a>
+                  <a href="/Team9/feedback" class="text-white">Feedback</a>
                 </li>
               </ul>
             </div>
@@ -129,7 +129,7 @@
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="/biograf" class="text-white">Alla biografer</a>
+                  <a href="/Team9/biograf" class="text-white">Alla biografer</a>
                 </li>
                 <li>
                   <a href="/" class="text-white">Nu på bio</a>
