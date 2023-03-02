@@ -24,7 +24,7 @@ export default {
     };
   },
   mounted() {
-    axios.get("../../public/cinemas.json").then((response) => {
+    axios.get("/cinemas.json").then((response) => {
       this.cinemas = response.data;
     }),
       console.log(this.cinemas);
