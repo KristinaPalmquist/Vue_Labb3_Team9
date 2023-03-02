@@ -1,5 +1,5 @@
 <script setup>
-import moment from "moment/min/moment-with-locales";
+import moment from "moment";
 // import se from "moment/locale/se.js";
 import axios from "axios";
 </script>
@@ -11,6 +11,8 @@ import axios from "axios";
     {{ cinema.id }}
     {{ cinema.name }}
     {{ cinema.openingHours }}
+
+    <div></div>
   </div>
 </template>
 
@@ -24,7 +26,7 @@ export default {
     };
   },
   mounted() {
-    axios.get("/cinemas.json").then((response) => {
+    axios.get("../../public/cinemas.json").then((response) => {
       this.cinemas = response.data;
     }),
       console.log(this.cinemas);

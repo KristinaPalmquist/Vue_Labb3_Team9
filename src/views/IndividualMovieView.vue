@@ -3,8 +3,6 @@ import axios from "axios";
 </script>
 
 <template>
-  <!-- <p>{{ $route.params.movieId }}</p> -->
-
   <div v-if="!movie">
     Oj! Någonting har blivit fel, sidan för filmen du valt finns inte. Vänligen
     gå tillbaka och välj en annan film.
@@ -64,10 +62,9 @@ import axios from "axios";
 
 <script>
 export default {
-  props: {
-    movieId: {
-      type: Number,
-      default: 6,
+  computed: {
+    movieId() {
+      return this.$route.params.id;
     },
   },
   data() {
@@ -76,12 +73,11 @@ export default {
       movie: {},
     };
   },
-  mounted() {
+  created() {
     axios.get("../../public/movies.json").then((response) => {
       this.movies = response.data;
-
       this.movies = this.movies.filter((movie) => {
-        return movie.id === this.movieId;
+        return movie.id === parseInt(this.movieId);
       });
       if (this.movies.length > 0) {
         this.movie = this.movies[0];

@@ -30,8 +30,8 @@ const router = createRouter({
       component: FeedbackView,
     },
     {
-      path: "/film/id",
-      name: "film/id",
+      path: "/film/:id",
+      name: "film-id",
       component: IndividualMovieView,
     },
     {
