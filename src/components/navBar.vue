@@ -1,11 +1,19 @@
 <script setup>
+import { ref } from "vue";
+import VueDatePicker from "@vuepic/vue-datepicker";
+import "@vuepic/vue-datepicker/dist/main.css";
 import { RouterLink, RouterView } from "vue-router";
+const date = ref();
 </script>
 
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark">
     <div class="container-fluid">
       <RouterLink class="navbar-brand" to="/">CINEMAP</RouterLink>
+      <VueDatePicker
+        v-model="date"
+        class="datePickerMobile datePicker"
+      ></VueDatePicker>
       <button
         class="navbar-toggler"
         type="button"
@@ -35,7 +43,38 @@ import { RouterLink, RouterView } from "vue-router";
           </li>
         </ul>
       </div>
+      <VueDatePicker
+        v-model="date"
+        class="datePickerDesktop datePicker"
+      ></VueDatePicker>
     </div>
   </nav>
   <RouterView />
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      date: "",
+    };
+  },
+};
+</script>
+
+<style scoped>
+@media only screen and (max-width: 800px) {
+  .datePickerDesktop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .datePickerMobile {
+    display: none;
+  }
+}
+
+.datePicker {
+  width: 200px;
+}
+</style>
