@@ -7,8 +7,8 @@ import axios from "axios";
 import moment from "moment/min/moment-with-locales";
 import "./assets/base.css";
 import "bootstrap/dist/css/bootstrap.css";
-import VueDatePicker from '@vuepic/vue-datepicker';
-import '@vuepic/vue-datepicker/dist/main.css'
+import VueDatePicker from "@vuepic/vue-datepicker";
+import "@vuepic/vue-datepicker/dist/main.css";
 
 const app = createApp(App);
 app.config.globalProperties.axios = axios;
