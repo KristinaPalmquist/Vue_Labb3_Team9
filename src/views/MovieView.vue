@@ -1,6 +1,5 @@
 <script setup>
 import TestCard2 from "../components/TestCard2.vue";
-// import useRouter from "vue-router";
 </script>
 
 <template>
