@@ -33,7 +33,7 @@ export default {
       axios.get("movies.json").then((movies) => (this.movies = movies.data));
     },
     onClick(id) {
-      this.$router.push("/film/" + id);
+      this.$router.replace("/film/" + id);
     },
   },
 };
