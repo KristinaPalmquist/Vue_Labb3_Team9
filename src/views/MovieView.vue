@@ -1,7 +1,6 @@
 <script setup>
 import axios from "axios";
 import TestCard2 from "../components/TestCard2.vue";
-// import useRouter from "vue-router";
 </script>
 
 <template>
@@ -13,10 +12,6 @@ import TestCard2 from "../components/TestCard2.vue";
         @click="onClick(movie.id)"
         :value="`${movie.titleSweden}`"
       />
-      <!-- <router-link to="/film/`${movie.id}`">{{
-        movie.titleSweden
-      }}</router-link>
-      <RouterView /> -->
     </div>
   </div>
   <TestCard2 />
