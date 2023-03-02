@@ -3,7 +3,6 @@ import HomeView from "../views/HomeView.vue";
 import MovieView from "../views/MovieView.vue";
 import CinemaView from "../views/CinemaView.vue";
 import FeedbackView from "../views/FeedbackView.vue";
-import lisTestView from "../views/listestview.vue";
 import IndividualMovieView from "../views/IndividualMovieView.vue";
 
 const router = createRouter({
@@ -33,11 +32,6 @@ const router = createRouter({
       path: "/film/:id",
       name: "film-id",
       component: IndividualMovieView,
-    },
-    {
-      path: "/listestview",
-      name: "listestview",
-      component: lisTestView,
     },
   ],
 });

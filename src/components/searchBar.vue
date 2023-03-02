@@ -1,6 +1,4 @@
-<script setup>
-import { RouterLink } from "vue-router";
-</script>
+<script setup></script>
 
 <script>
 import axios from "axios";
@@ -8,8 +6,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      key: [],
-      film: [],
+      id: Number,
       cinemas: [],
       searchinput: "",
       filmsResult: [],
@@ -21,7 +18,6 @@ export default {
   created() {
     this.filmSearch();
     this.cinemaSearch();
-    this.getMovie();
   },
   methods: {
     filmSearch() {
@@ -32,15 +28,15 @@ export default {
         .get("cinemas.json")
         .then((response) => (this.cinemas = response.data));
     },
-    onClick() {
+    onClickOne() {
       this.cinemasResult = this.searchFilterMovies;
       this.filmsResult = this.searchFilterFilms;
       this.searchinput = "";
       this.filmsHeader = "FILMER";
       this.cinemasHeader = "BIOGRAFER";
     },
-    async getMovie() {
-      this.$emit("get-film", this.film);
+    onClick(id) {
+      this.$router.replace("film/" + id);
     },
   },
   computed: {
@@ -69,9 +65,13 @@ export default {
       aria-label="Search"
       aria-describedby="search-addon"
       v-model="searchinput"
-      @keydown.enter="onClick"
+      @keydown.enter="onClickOne"
     />
-    <span class="input-group-text border-0" @click="onClick" id="search-addon">
+    <span
+      class="input-group-text border-0"
+      @click="onClickOne"
+      id="search-addon"
+    >
       <i class="bi bi-film"></i>
     </span>
   </div>
@@ -84,29 +84,22 @@ export default {
     </tr>
   </div>
   <div class="row">
-    <a href="/Team9/listestview">
-      <div
-        class="card mb-1 col-md-4 filmcard"
-        style="width: 12rem"
-        v-for="result in filmsResult"
-        :key="result.id"
-        :film="result"
-        @click="getMovie"
-      >
-        <img
-          :src="result.img"
-          class="card-img-top"
-          :alt="result.titleEnglish"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ result.titleSweden }}</h5>
-          <p class="card-text">Ranking IMDB: {{ result.imdb }}</p>
-          <a class="card-text" :href="result.trailer" target="_blank">
-            Trailer
-          </a>
-        </div>
+    <div
+      class="card mb-1 col-md-4 filmcard"
+      style="width: 12rem"
+      v-for="result in filmsResult"
+      :key="result.id"
+      @click="onClick(result.id)"
+    >
+      <img :src="result.img" class="card-img-top" :alt="result.titleEnglish" />
+      <div class="card-body">
+        <h5 class="card-title">{{ result.titleSweden }}</h5>
+        <p class="card-text">Ranking IMDB: {{ result.imdb }}</p>
+        <a class="card-text" :href="result.trailer" target="_blank">
+          Trailer
+        </a>
       </div>
-    </a>
+    </div>
   </div>
   <div class="column">
     <div
