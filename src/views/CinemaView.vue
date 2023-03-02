@@ -8,12 +8,4 @@ import TheaterCard from "../components/TheaterCard.vue";
   </div>
 </template>
 
-<style scoped>
-@media (min-width: 1024px) {
-  .cinema {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<style scoped></style>
