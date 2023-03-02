@@ -1,11 +1,11 @@
 <script setup>
 import searchBar from "../components/searchBar.vue";
-import TestCard from "../components/TestCard2.vue";
+import MoviesList from "../components/MoviesList.vue";
 </script>
 
 <template>
   <searchBar />
-  <TestCard />
+  <MoviesList />
 </template>
 
 <style scoped></style>

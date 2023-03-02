@@ -1,9 +1,9 @@
 <script setup>
-import TestCard2 from "../components/TestCard2.vue";
+import MoviesList from "../components/MoviesList.vue";
 </script>
 
 <template>
-  <TestCard2 />
+  <MoviesList />
 </template>
 
 <script></script>
