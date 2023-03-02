@@ -77,7 +77,7 @@ body {
   justify-self: center;
   align-items: center;
   min-height: 100vh;
-  background: #161623;
+  background: #131415;
 }
 .container2 {
   position: relative;
@@ -150,7 +150,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 /* Innehåller texten under cards */
-.cinemaList{
+.cinemaList {
   color: rgba(255, 255, 255, 1);
   font-size: 1em;
 }
