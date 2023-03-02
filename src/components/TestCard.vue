@@ -11,6 +11,9 @@ export default {
         .get("movies.json")
         .then((response) => (this.movies = response.data));
     },
+    onClick(id) {
+      this.$router.replace("film/" + id);
+    },
   },
   data() {
     return {
@@ -22,7 +25,12 @@ export default {
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-4" v-for="movie in movies" :key="movie.id">
+      <div
+        class="col-md-4"
+        v-for="movie in movies"
+        :key="movie.id"
+        @click="onClick(movie.id)"
+      >
         <div class="card mb-1" style="width: 12rem">
           <img
             :src="movie.img"

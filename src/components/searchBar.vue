@@ -129,6 +129,7 @@ export default {
 
 .filmcard {
   margin: 45px 25px;
+  cursor: pointer;
 }
 
 .card-img {
