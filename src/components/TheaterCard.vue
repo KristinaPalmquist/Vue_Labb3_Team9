@@ -47,7 +47,7 @@ body {
   justify-self: center;
   align-items: center;
   min-height: 100vh;
-  background: #161623;
+  background: #131415;
 }
 .container2 {
   position: relative;
