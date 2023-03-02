@@ -11,42 +11,48 @@
             class="btn btn-outline-light btn-floating m-1"
             href="https://www.facebook.com/"
             role="button"
-            ><i class="bi bi-facebook"></i></a>
+            ><i class="bi bi-facebook"></i
+          ></a>
 
           <!-- Twitter -->
           <a
             class="btn btn-outline-light btn-floating m-1"
             href="https://twitter.com/?lang=sv"
             role="button"
-            ><i class="bi bi-twitter"></i></a>
+            ><i class="bi bi-twitter"></i
+          ></a>
 
           <!-- Google -->
           <a
             class="btn btn-outline-light btn-floating m-1"
             href="https://www.google.com/"
             role="button"
-            ><i class="bi bi-google"></i></a>
+            ><i class="bi bi-google"></i
+          ></a>
 
           <!-- Instagram -->
           <a
             class="btn btn-outline-light btn-floating m-1"
             href="https://www.instagram.com/"
             role="button"
-            ><i class="bi bi-instagram"></i></a>
+            ><i class="bi bi-instagram"></i
+          ></a>
 
           <!-- Linkedin -->
           <a
             class="btn btn-outline-light btn-floating m-1"
             href="https://www.linkedin.com/"
             role="button"
-            ><i class="bi bi-linkedin"></i></a>
+            ><i class="bi bi-linkedin"></i
+          ></a>
 
           <!-- Github -->
           <a
             class="btn btn-outline-light btn-floating m-1"
             href="https://github.com/DimPirogov/Team9"
             role="button"
-            ><i class="bi bi-github"></i></a>
+            ><i class="bi bi-github"></i
+          ></a>
         </section>
         <!-- Section: Social media -->
 
@@ -94,7 +100,9 @@
         <!-- Section: Text -->
         <section class="mb-4">
           <p>
-            Cinemap startade 2023 genom ett projekt på IT-högskolan. Vårt mål är att göra det enklare att hitta i biodjungeln genom att samla alla biografer och filmer på en hemsida.
+            Cinemap startade 2023 genom ett projekt på IT-högskolan. Vårt mål är
+            att göra det enklare att hitta i biodjungeln genom att samla alla
+            biografer och filmer på en hemsida.
           </p>
         </section>
         <!-- Section: Text -->
@@ -139,7 +147,9 @@
                   <a href="https://bio.se/" class="text-white">BIO.SE</a>
                 </li>
                 <li>
-                  <a href="https://www.filmstaden.se/" class="text-white">Filmstaden</a>
+                  <a href="https://www.filmstaden.se/" class="text-white"
+                    >Filmstaden</a
+                  >
                 </li>
               </ul>
             </div>
@@ -177,5 +187,8 @@
     </footer>
     <!-- Footer -->
   </div>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+  />
 </template>
