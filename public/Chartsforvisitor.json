@@ -9,13 +9,13 @@
     ],
     "datasets": [
       {
-        "label": "Användarrecensioner",
+        "label": "Antal besökare per år",
         "backgroundColor": "rgba(255,99,132,0.2)",
         "borderColor": "rgba(255,99,132,1)",
         "borderWidth": 1,
         "hoverBackgroundColor": "rgba(255,99,132,0.4)",
         "hoverBorderColor": "rgba(255,99,132,1)",
-        "data": [4, 5, 4.5, 5, 3.5]
+        "data": [120000, 150000, 100000, 200000, 170000]
       }
     ]
   }

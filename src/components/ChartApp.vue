@@ -36,13 +36,13 @@ export default {
         ],
         datasets: [
           {
-            label: "Antal besökare per år",
+            label: "Användarrecensioner",
             backgroundColor: [
-              "rgba(0, 153, 153, 0.4)",
-              "rgba(0, 76, 153, 0.4)",
-              "rgba(0, 153, 76, 0.4)",
-              "rgba(153, 0, 153, 0.4)",
-              "rgba(102, 51, 0, 0.4)",
+              "rgba(100,250,100, 0.5)",
+              "rgba(0,50,50, 0.5)",
+              "rgba(128,0,0, 0.5)",
+              "rgba(0,50,200, 0.5)",
+              "rgba(0,255,255, 0.5)",
             ],
             borderColor: [
               "rgb(75, 192, 192)",
@@ -54,7 +54,7 @@ export default {
             borderWidth: 1,
             hoverBackgroundColor: "rgba(255,99,132,0.4)",
             hoverBorderColor: "rgba(255,99,132,1)",
-            data: [120000, 150000, 100000, 200000, 170000],
+            data: [4, 5, 4.5, 5, 3.5],
           },
         ],
       },
