@@ -2,6 +2,7 @@
 import axios from "axios";
 
 export default {
+  // förladdning av json filerna
   created() {
     this.apiCall();
     this.cinemaSearch();
@@ -13,8 +14,13 @@ export default {
         .get("movies.json")
         .then((response) => (this.movies = response.data));
     },
+    // skickar till IndividualMovie
     onClick(id) {
       this.$router.replace("film/" + id);
+    },
+    // skickar till CinemaHero sida
+    onClickCinemaHero(id) {
+      this.$router.replace("biograf/" + id);
     },
     // hämtar biografernas json
     cinemaSearch() {
@@ -35,17 +41,13 @@ export default {
   <body>
     <div class="container">
       <div class="row">
-        <div
-          class="col-md-4 filmcard"
-          v-for="movie in movies"
-          :key="movie.id"
-          @click="onClick(movie.id)"
-        >
+        <div class="col-md-4 filmcard" v-for="movie in movies" :key="movie.id">
           <div class="container2">
             <div
               class="card2"
               :style="{ backgroundImage: `url(${movie.img})` }"
               :alt="movie.titleSweden"
+              @click="onClick(movie.id)"
             >
               <div class="content2">
                 <h2>{{ movie.id }}</h2>
@@ -59,7 +61,9 @@ export default {
           </div>
           <div v-for="cinema in cinemas" :key="cinema.id">
             <div v-if="cinema.movies.includes(movie.id)">
-              <h2 class="cinemaList">{{ cinema.name }}</h2>
+              <h2 class="cinemaList" @click="onClickCinemaHero(cinema.id)">
+                {{ cinema.name }}
+              </h2>
             </div>
           </div>
         </div>
@@ -153,5 +157,6 @@ body {
 .cinemaList{
   color: rgba(255, 255, 255, 1);
   font-size: 1em;
+  margin-left: 25%;
 }
 </style>
