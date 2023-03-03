@@ -12,7 +12,7 @@ export default {
         .then((response) => (this.theaters = response.data));
     },
     onClick(id) {
-        this.$router.replace("biograf/" + id);
+      this.$router.replace("biograf/" + id);
     },
   },
   data() {
@@ -26,7 +26,12 @@ export default {
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-lg-6" v-for="theater in theaters" :key="theater.id">
+        <div
+          class="col-lg-6"
+          v-for="theater in theaters"
+          :key="theater.id"
+          @click="($event) => onClick(theater.id)"
+        >
           <div class="container2">
             <div
               class="card2"
@@ -78,6 +83,7 @@ body {
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 .container2 .card2:hover {
   opacity: 1;

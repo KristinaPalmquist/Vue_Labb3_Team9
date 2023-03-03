@@ -38,6 +38,9 @@ export default {
     onClick(id) {
       this.$router.replace("film/" + id);
     },
+    onClickThree(id) {
+      this.$router.replace("biograf/" + id);
+    },
   },
   computed: {
     searchFilterFilms() {
@@ -112,6 +115,7 @@ export default {
       class="card bg-dark mb-1 col-md-7 cinema-card"
       v-for="result in cinemasResult"
       :key="result"
+      @click="($event) => onClickThree(result.id)"
     >
       <div class="card bg-dark">
         <img class="card-img" :src="result.img" alt="Card image" />
@@ -131,6 +135,7 @@ export default {
 <style scoped>
 .cinema-card {
   margin: 10px;
+  cursor: pointer;
 }
 .filmcard {
   margin: 45px 25px;
