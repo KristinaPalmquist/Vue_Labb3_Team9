@@ -4,6 +4,7 @@ import MovieView from "../views/MovieView.vue";
 import CinemaView from "../views/CinemaView.vue";
 import FeedbackView from "../views/FeedbackView.vue";
 import IndividualMovieView from "../views/IndividualMovieView.vue";
+import CinemaHeroView from "../views/CinemaHeroView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
       name: "film-id",
       component: IndividualMovieView,
     },
+    {
+      path: "/biograf/:id",
+      name: "biograf-id",
+      component: CinemaHeroView,
+    }
   ],
 });
 

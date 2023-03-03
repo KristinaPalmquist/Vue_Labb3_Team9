@@ -11,6 +11,9 @@ export default {
         .get("cinemas.json")
         .then((response) => (this.theaters = response.data));
     },
+    onClick(id) {
+        this.$router.replace("biograf/" + id);
+    },
   },
   data() {
     return {
