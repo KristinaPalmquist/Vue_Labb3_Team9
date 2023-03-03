@@ -4,17 +4,29 @@ import axios from "axios";
 export default {
   created() {
     this.apiCall();
+    this.cinemaSearch();
   },
   methods: {
+    // hämtar filmernas json
     apiCall() {
       axios
         .get("movies.json")
         .then((response) => (this.movies = response.data));
     },
+    onClick(id) {
+      this.$router.replace("film/" + id);
+    },
+    // hämtar biografernas json
+    cinemaSearch() {
+      axios
+        .get("cinemas.json")
+        .then((response) => (this.cinemas = response.data));
+    },
   },
   data() {
     return {
       movies: [],
+      cinemas: [],
     };
   },
 };
@@ -23,7 +35,12 @@ export default {
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-4" v-for="movie in movies" :key="movie.id">
+        <div
+          class="col-md-4 filmcard"
+          v-for="movie in movies"
+          :key="movie.id"
+          @click="onClick(movie.id)"
+        >
           <div class="container2">
             <div
               class="card2"
@@ -40,12 +57,21 @@ export default {
               </div>
             </div>
           </div>
+          <div v-for="cinema in cinemas" :key="cinema.id">
+            <div v-if="cinema.movies.includes(movie.id)">
+              <h2 class="cinemaList">{{ cinema.name }}</h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </body>
 </template>
 <style scoped>
+.filmcard {
+  cursor: pointer;
+}
+
 body {
   display: flex;
   justify-self: center;
@@ -69,7 +95,7 @@ body {
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
-  opacity: 0.5;
+  opacity: 0.8;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -122,5 +148,10 @@ body {
   text-decoration: none;
   font-weight: 500;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+/* Innehåller texten under cards */
+.cinemaList{
+  color: rgba(255, 255, 255, 1);
+  font-size: 1em;
 }
 </style>

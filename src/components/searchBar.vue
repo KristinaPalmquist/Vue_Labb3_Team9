@@ -1,10 +1,12 @@
+<script setup></script>
+
 <script>
 import axios from "axios";
 
 export default {
   data() {
     return {
-      films: [],
+      id: Number,
       cinemas: [],
       searchinput: "",
       filmsResult: [],
@@ -26,12 +28,15 @@ export default {
         .get("cinemas.json")
         .then((response) => (this.cinemas = response.data));
     },
-    onClick() {
+    onClickOne() {
       this.cinemasResult = this.searchFilterMovies;
       this.filmsResult = this.searchFilterFilms;
       this.searchinput = "";
       this.filmsHeader = "FILMER";
       this.cinemasHeader = "BIOGRAFER";
+    },
+    onClick(id) {
+      this.$router.replace("film/" + id);
     },
   },
   computed: {
@@ -60,9 +65,13 @@ export default {
       aria-label="Search"
       aria-describedby="search-addon"
       v-model="searchinput"
-      @keydown.enter="onClick"
+      @keydown.enter="onClickOne"
     />
-    <span class="input-group-text border-0" @click="onClick" id="search-addon">
+    <span
+      class="input-group-text border-0"
+      @click="onClickOne"
+      id="search-addon"
+    >
       <i class="bi bi-film"></i>
     </span>
   </div>
@@ -74,17 +83,36 @@ export default {
       <td>{{ data.name }}</td>
     </tr>
   </div>
-  <div class="result-div">
-    <div class="films-div">
-      <p>{{ filmsHeader }}</p>
-      <div v-for="result in filmsResult" :key="result">
-        <li>{{ result.titleSweden }}</li>
+  <div class="row">
+    <div
+      class="card mb-1 col-md-4 filmcard"
+      style="width: 12rem"
+      v-for="result in filmsResult"
+      :key="result.id"
+      @click="onClick(result.id)"
+    >
+      <img :src="result.img" class="card-img-top" :alt="result.titleEnglish" />
+      <div class="card-body">
+        <h5 class="card-title">{{ result.titleSweden }}</h5>
+        <p class="card-text">Ranking IMDB: {{ result.imdb }}</p>
+        <a class="card-text" :href="result.trailer" target="_blank">
+          Trailer
+        </a>
       </div>
     </div>
-    <div class="cinemas-div">
-      <p>{{ cinemasHeader }}</p>
-      <div v-for="result in cinemasResult" :key="result">
-        <li>{{ result.name }}</li>
+  </div>
+  <div class="column">
+    <div
+      class="card mb-1 col-md-7 cinema-card"
+      v-for="result in cinemasResult"
+      :key="result"
+    >
+      <div class="card bg-dark text-white">
+        <img class="card-img" :src="result.img" alt="Card image" />
+        <div class="card-img-overlay">
+          <h5 class="card-title">{{ result.name }}</h5>
+          <p class="card-text">{{ result.Adress }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -94,21 +122,17 @@ export default {
   />
 </template>
 
-<style>
-.films-div {
-  margin: 10px 10px;
+<style scoped>
+.cinema-card {
+  margin: 45px 10px;
 }
 
-.cinemas-div {
-  margin: 10px 10px;
+.filmcard {
+  margin: 45px 25px;
+  cursor: pointer;
 }
 
-.result-div {
-  display: flex;
-  flex-direction: row;
-}
-
-#search-icon {
-  height: 25px;
+.card-img {
+  height: 60vh;
 }
 </style>

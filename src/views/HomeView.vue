@@ -1,5 +1,6 @@
 <script setup>
 import searchBar from "../components/searchBar.vue";
+import MoviesList from "../components/MoviesList.vue";
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import searchBar from "../components/searchBar.vue";
   <div class="home">
     <h1>HOME</h1>
   </div>
+  <MoviesList />
 </template>
 <script>
 import ChartComp from "../components/ChartComp.vue";

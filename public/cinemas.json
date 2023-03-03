@@ -18,7 +18,18 @@
             "sunday": "14:00-19:00"
         },
         "img": "https://www.filminstitutet.se/globalassets/4.-om-oss/press/pressbilder/filmhusetexterior_fotomarkstandley.jpg?width=10000",
-        "movies": [ 46,45,44,43,42,41,40,38,37,36 ],
+        "movies": [
+            46,
+            45,
+            44,
+            43,
+            42,
+            41,
+            40,
+            38,
+            37,
+            36
+        ],
         "salonger": 2
     },
     {
@@ -40,7 +51,24 @@
             "sunday": "10:30-21:15"
         },
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Victoria_entre_2016.jpg/1494px-Victoria_entre_2016.jpg",
-        "movies": [1,2,5,6,7,8,9,10,12,13,15,16,17,29,33,35],
+        "movies": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13,
+            15,
+            16,
+            17,
+            29,
+            33,
+            35
+        ],
         "salonger": 8
     },
     {
@@ -61,8 +89,27 @@
             "saturday": "10:45-22:00",
             "sunday": "10:45-22:00"
         },
-        "img":"https://scontent.farn2-2.fna.fbcdn.net/v/t31.18172-8/15800306_612102385641643_154789360486184923_o.jpg?_nc_cat=110&ccb=1-7&_nc_sid=973b4a&_nc_ohc=ReQ_5u1caJwAX9NDawQ&_nc_ht=scontent.farn2-2.fna&oh=00_AfDIh8cUC8eAfl2v0NAUwheJHfoX896LSRML_NbJVLpc2w&oe=6424176B",
-        "movies": [1,2,6,7,8,13,15,17,30,33,34,35,39,40],
+        "img": "https://scontent.farn2-2.fna.fbcdn.net/v/t31.18172-8/15800306_612102385641643_154789360486184923_o.jpg?_nc_cat=110&ccb=1-7&_nc_sid=973b4a&_nc_ohc=ReQ_5u1caJwAX9NDawQ&_nc_ht=scontent.farn2-2.fna&oh=00_AfDIh8cUC8eAfl2v0NAUwheJHfoX896LSRML_NbJVLpc2w&oe=6424176B",
+        "movies": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            8,
+            13,
+            14,
+            15,
+            17,
+            20,
+            28,
+            30,
+            33,
+            34,
+            35,
+            39,
+            40
+        ],
         "salonger": 2
     },
     {
@@ -84,7 +131,33 @@
             "sunday": "10:30-22:45"
         },
         "img": "https://th.bing.com/th/id/R.f150afc6a455bdfb3421a6be58fece43?rik=QBRh5Umcv0ApMA&riu=http%3a%2f%2fphotos.wikimapia.org%2fp%2f00%2f03%2f64%2f12%2f52_full.jpg&ehk=JsA9Mj8aiHPdPa6GttPmT7CbmgR0KPC99sL5rh81SaI%3d&risl=&pid=ImgRaw&r=0",
-        "movies": [1,2,5,6,7,8,9,10,12,13,15,16,17,21,22,23,24,25,26,27,29,30,31,33,35],
+        "movies": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13,
+            15,
+            16,
+            17,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            29,
+            30,
+            31,
+            33,
+            35
+        ],
         "salonger": 14
     },
     {
@@ -106,7 +179,19 @@
             "sunday": "13:00-21:00"
         },
         "img": "https://reg.kulan.stockholm/images/zitafolkets-bio-602a5d777ae28.jpg",
-        "movies": [5,7,10,12,15,16,18,19,32],
+        "movies": [
+            4,
+            5,
+            7,
+            10,
+            11,
+            12,
+            15,
+            16,
+            18,
+            19,
+            32
+        ],
         "salonger": 3
     }
 ]
