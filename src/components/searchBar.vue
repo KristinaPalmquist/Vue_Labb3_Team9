@@ -103,11 +103,8 @@ export default {
           :alt="result.titleEnglish"
         />
         <div class="card-body">
-          <h5 class="card-title">{{ result.titleSweden }}</h5>
-          <p class="card-text">Ranking IMDB: {{ result.imdb }}</p>
-          <a class="card-text" :href="result.trailer" target="_blank">
-            Trailer
-          </a>
+          <h1 class="card-title">{{ result.titleSweden }}</h1>
+          <p class="card-text">IMDB: {{ result.imdb }}</p>
         </div>
       </div>
     </div>
@@ -161,6 +158,10 @@ export default {
 #search-addon {
   background-color: #131415;
   color: white;
+}
+
+.card-title {
+  font-size: medium;
 }
 
 .search-container {

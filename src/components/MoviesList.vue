@@ -141,6 +141,11 @@ body {
   color: #fff;
   font-weight: 300;
 }
+
+.card2 {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .container2 .card2 .content2 a {
   position: relative;
   display: inline-block;
