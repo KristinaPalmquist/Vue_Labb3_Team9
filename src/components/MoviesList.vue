@@ -4,8 +4,10 @@ import axios from "axios";
 export default {
   created() {
     this.apiCall();
+    this.cinemaSearch();
   },
   methods: {
+    // hämtar filmernas json
     apiCall() {
       axios
         .get("movies.json")
@@ -14,10 +16,17 @@ export default {
     onClick(id) {
       this.$router.replace("film/" + id);
     },
+    // hämtar biografernas json
+    cinemaSearch() {
+      axios
+        .get("cinemas.json")
+        .then((response) => (this.cinemas = response.data));
+    },
   },
   data() {
     return {
       movies: [],
+      cinemas: [],
     };
   },
 };
@@ -46,6 +55,11 @@ export default {
                   Trailer
                 </a>
               </div>
+            </div>
+          </div>
+          <div v-for="cinema in cinemas" :key="cinema.id">
+            <div v-if="cinema.movies.includes(movie.id)">
+              <h2 class="cinemaList">{{ cinema.name }}</h2>
             </div>
           </div>
         </div>
@@ -81,7 +95,7 @@ body {
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
-  opacity: 0.5;
+  opacity: 0.8;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -134,5 +148,10 @@ body {
   text-decoration: none;
   font-weight: 500;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+/* Innehåller texten under cards */
+.cinemaList{
+  color: rgba(255, 255, 255, 1);
+  font-size: 1em;
 }
 </style>
