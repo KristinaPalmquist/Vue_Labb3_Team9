@@ -1,5 +1,5 @@
 <template id="Feedback-page">
-  <header>
+  <header class="feedback-div">
     <div>
       <form class="formBox" @submit.prevent="submitFeedback">
         <div class="label-box">
@@ -11,7 +11,7 @@
           <input type="email" v-model="email" placeholder="Skriv email" />
         </div>
         <div class="label-box">
-          <label>Skriv ditt Kommentar Här</label>
+          <label>Skriv ditt kommentar här:</label>
           <textarea v-model="message"></textarea>
         </div>
         <button class="form-btn" type="submit">Skicka</button>
@@ -59,6 +59,10 @@ export default {
   background-color: black;
   color: white;
   border-radius: 7px;
+}
+
+.feedback-div {
+  height: 80vh;
 }
 
 .label-box {

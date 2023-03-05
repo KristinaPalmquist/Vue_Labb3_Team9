@@ -1,17 +1,10 @@
-<script setup></script>
+<script setup>
+import FeedbackPage from "../components/FeedbackPage.vue";
+</script>
 
 <template>
-  <div class="">
-    <FeedbackPage />
-  </div>
+  <FeedbackPage />
 </template>
-
-<script>
-import FeedbackPage from "../components/FeedbackPage.vue";
-export default {
-  components: { FeedbackPage },
-};
-</script>
 
 <style scoped>
 body {
