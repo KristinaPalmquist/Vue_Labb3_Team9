@@ -4,6 +4,7 @@
         "titleEnglish": "Cairo Conspiracy",
         "titleOriginal": "Cairo Conspiracy",
         "titleSweden": "Boy from Heaven",
+        "titleId": "boy_from_heaven",
         "category": ["Drama","Thriller"],
         "director": ["Tarek Saleh"],
         "actors":
@@ -26,6 +27,7 @@
         "titleEnglish": "The Banshees of Inisherin",
         "titleOriginal": "The Banshees of Inisherin",
         "titleSweden": "The Banshees of Inisherin",
+        "titleId": "the_banshees_of_inisherin",
         "category": ["Komedi", "Drama"],
 
         "director": ["Martin McDonagh"],
@@ -51,6 +53,7 @@
         "titleEnglish": "Dogborn",
         "titleOriginal": "Dogborn",
         "titleSweden": "Dogborn",
+        "titleId": "dogborn",
         "category": ["Drama","Thriller"],
         "director": ["Isabella Carbonell"],
         "actors":
@@ -73,6 +76,7 @@
         "titleEnglish": "The Conference",
         "titleOriginal": "Die Wannseekonferenz",
         "titleSweden": "Wannsee 1942",
+        "titleId": "wannsee_1942",
         "category": ["Drama"],
         "director": ["Matti Geschonneck"],
         "actors":
@@ -99,6 +103,7 @@
         "titleEnglish": "Women Talking",
         "titleOriginal": "Women Talking",
         "titleSweden": "Women Talking",
+        "titleId": "women_talking",
         "category": ["Drama"],
         "director": ["Sarah Polley"],
         "actors":
@@ -126,6 +131,7 @@
         "titleEnglish": "A Bookshop in Paris",
         "titleOriginal": "Il materiale emotivo",
         "titleSweden": "En liten bokhandel i Paris",
+        "titleId": "en_liten_bokhandel_i_paris",
         "category": ["Drama","Romantik"],
         "director": ["Sergio Castellitto"],
         "actors":
@@ -152,6 +158,7 @@
         "titleEnglish": "Heart of Oak",
         "titleOriginal": "Le Chêne",
         "titleSweden": "Ekens rike",
+        "titleId": "ekens_rike",
         "category": ["Dokumentär"],
         "director": ["Laurent Charbonnier", "Michel Seydoux"],
         "actors": [],
@@ -170,6 +177,7 @@
         "titleEnglish": "Return to Seoul",
         "titleOriginal": "Retour à Séoul",
         "titleSweden": "Tillbaka till Seoul",
+        "titleId": "tillbaka_till_seoul",
         "category": ["Drama"],
         "director": ["Davy Chou"],
         "actors":
@@ -195,6 +203,7 @@
         "titleEnglish": "Rose",
         "titleOriginal": "Rose",
         "titleSweden": "Rose",
+        "titleId": "rose",
         "category": ["Drama"],
         "director": ["Niels Arden Oplev"],
         "actors":
@@ -219,6 +228,7 @@
         "titleEnglish": "Holy Spider",
         "titleOriginal": "Holy Spider",
         "titleSweden": "Holy Spider",
+        "titleId": "holy_spider",
         "category": ["Drama","Thriller"],
         "director": ["Ali Abbasi"],
         "actors":
@@ -243,6 +253,7 @@
         "titleEnglish": "Lunana: A Yak in the Classroom",
         "titleOriginal": "Lunana: A Yak in the Classroom",
         "titleSweden": "Skolan vid världens ände",
+        "titleId": "skolan_vid_varldens_ande",
         "category": ["Drama"],
         "director": ["Pawo Choyning Dorji"],
         "actors":
@@ -266,6 +277,7 @@
         "titleEnglish": "Godland",
         "titleOriginal": "Vanskabte land",
         "titleSweden": "Godland",
+        "titleId": "godland",
         "category": ["Drama"],
         "director": ["Hlynur Palmason"],
         "actors":
@@ -289,6 +301,7 @@
         "titleEnglish": "The Fabelmans",
         "titleOriginal": "The Fabelmans",
         "titleSweden": "The Fabelmans",
+        "titleId": "the_fabelmans",
         "category": ["Drama"],
         "director": ["Steven Spielberg"],
         "actors":
@@ -314,6 +327,7 @@
         "titleEnglish": "Tori and Lokita",
         "titleOriginal": "Tori et Lokita",
         "titleSweden": "Tori och Lokita",
+        "titleId": "tori_och_lokita",
         "category": ["Drama"],
         "director": ["Luc Dardenne", "Jean-Pierre Dardenne"],
         "actors":
@@ -338,6 +352,7 @@
         "titleEnglish": "Aftersun",
         "titleOriginal": "Aftersun",
         "titleSweden": "Aftersun",
+        "titleId": "aftersun",
         "category": ["Drama"],
         "director": ["Charlotte Wells"],
         "actors":
@@ -361,6 +376,7 @@
         "titleEnglish": "No bears",
         "titleOriginal": "Khers nist",
         "titleSweden": "No bears",
+        "titleId": "no_bears",
         "category": ["Drama"],
         "director": ["Jafar Panahi"],
         "actors":
@@ -384,6 +400,7 @@
         "titleEnglish": "Kungen",
         "titleOriginal": "Kungen",
         "titleSweden": "Kungen",
+        "titleId": "kungen",
         "category": ["Dokumentär"],
         "director": ["Karin af Klintberg"],
         "actors":
@@ -405,6 +422,7 @@
         "titleEnglish": "R.M.N.",
         "titleOriginal": "R.M.N.",
         "titleSweden": "R.M.N. - Kall vinter",
+        "titleId": "rmn-kall_vinter",
         "category": ["Drama"],
         "director": ["Cristian Mungiu"],
         "actors":
@@ -427,6 +445,7 @@
         "titleEnglish": "Touching Freedom",
         "titleOriginal": "Touching Freedom",
         "titleSweden": "Touching Freedom",
+        "titleId": "touching_freedom",
         "category": ["Dokumentär"],
         "director": ["Manal Masri"],
         "actors":
@@ -449,6 +468,7 @@
         "titleEnglish": "Zen in the ice rift",
         "titleOriginal": "Zen sul ghiaccio sottile",
         "titleSweden": "Zen in the ice rift",
+        "titleId": "zen_in_the_ice_rift",
         "category": ["Drama"],
         "director": ["Margherita Ferri"],
         "actors":
@@ -473,6 +493,7 @@
         "titleEnglish": "Ant-Man and the Wasp: Quantumania",
         "titleOriginal": "Ant-Man and the Wasp: Quantumania",
         "titleSweden": "Ant-Man and the Wasp: Quantumania",
+        "titleId": "ant-man_and_the_wasp_quantumania",
         "category": ["Action", "Äventyr", "Komedi"],
         "director": ["Peyton Reed"],
         "actors":
@@ -501,6 +522,7 @@
         "titleEnglish": "Avatar: The Way of Water",
         "titleOriginal": "Avatar: The Way of Water",
         "titleSweden": "Avatar: The Way of Water",
+        "titleId": "avatar_the_way_of_water",
         "category": ["Action","Äventyr", "Sci-Fi"],
         "director": ["James Cameron"],
         "actors":
@@ -529,6 +551,7 @@
         "titleEnglish": "Asterix & Obelix: The Middle Kingdom",
         "titleOriginal": "Astérix & Obélix: L'Empire du Milieu",
         "titleSweden": "Asterix & Obelix: I drakens rike",
+        "titleId": "asterix_&_obelix_i_drakens_rike",
         "category": ["Äventyr","Komedi", "Familj"],
         "director": ["Guillaume Canet"],
         "actors":
@@ -554,6 +577,7 @@
         "titleEnglish": "A Man Called Otto",
         "titleOriginal": "A Man Called Otto",
         "titleSweden": "A Man Called Otto",
+        "titleId": "a_man_called_otto",
         "category": ["Komedi","Drama"],
         "director": ["Marc Forster"],
         "actors":
@@ -581,6 +605,7 @@
         "titleEnglish": "Bamse och vulkanön",
         "titleOriginal": "Bamse och vulkanön",
         "titleSweden": "Bamse och vulkanön",
+        "titleId": "bamse_och_vulkanön",
         "category": ["Barn","Familj", "Animerat"],
         "director": ["Christian Ryltenius"],
         "actors":
@@ -604,6 +629,7 @@
         "titleEnglish": "Dans & lek med Babblarna",
         "titleOriginal": "Dans & lek med Babblarna",
         "titleSweden": "Dans & lek med Babblarna",
+        "titleId": "dans_&_lek_med_babblarna",
         "category": ["Barn"],
         "director": ["Anneli Tisell", "My Blomqvist Olsberg"],
         "actors":
@@ -629,6 +655,7 @@
         "titleEnglish": "Moonbound",
         "titleOriginal": "Moonbound",
         "titleSweden": "Den magiska månresan",
+        "titleId": "den_magiska_manresan",
         "category": ["Animerat","Familj"],
         "director": ["Ali Samadi Ahadi"],
         "actors":
@@ -652,6 +679,7 @@
         "titleEnglish": "Where the Crawdads Sing",
         "titleOriginal": "Where the Crawdads Sing",
         "titleSweden": "Där kräftorna sjunger",
+        "titleId": "dar_kraftorna_sjunger",
         "category": ["Drama","Mysterium"],
         "director": ["Olivia Newman"],
         "actors":
@@ -678,6 +706,7 @@
         "titleEnglish": "En dag kommer allt det här bli ditt",
         "titleOriginal": "En dag kommer allt det här bli ditt",
         "titleSweden": "En dag kommer allt det här bli ditt",
+        "titleId": "en_dag_kommer_allt_det_har_bli_ditt",
         "category": ["Komedi","Drama"],
         "director": ["Andreas Öhman"],
         "actors":
@@ -706,6 +735,7 @@
         "titleEnglish": "Everything Everywhere All at Once",
         "titleOriginal": "Everything Everywhere All at Once",
         "titleSweden": "Everything Everywhere All at Once",
+        "titleId": "everything_everywhere_all_at_once",
         "category": ["Action","Äventyr", "Komedi"],
         "director": ["Daniel Kwan", "Daniel Scheinert"],
         "actors":
@@ -731,6 +761,7 @@
         "titleEnglish": "LasseMajas detektivbyrå - Skorpionens gåta",
         "titleOriginal": "LasseMajas detektivbyrå - Skorpionens gåta",
         "titleSweden": "LasseMajas detektivbyrå - Skorpionens gåta",
+        "titleId": "lassemajas_detektivbyra_-_skorpionens_gata",
         "category": ["Familj"],
         "director": ["Tina Mackic"],
         "actors":
@@ -756,6 +787,7 @@
         "titleEnglish": "Brighton 4th",
         "titleOriginal": "Brighton 4th",
         "titleSweden": "Brighton 4:e gatan",
+        "titleId": "brighton_4e_gatan",
         "category": ["Drama"],
         "director": ["Levan Koguashvili"],
         "actors":
@@ -779,6 +811,7 @@
         "titleEnglish": "Second act",
         "titleOriginal": "Andra Akten",
         "titleSweden": "Andra Akten",
+        "titleId": "andra_akten",
         "category": ["Drama","Romantik"],
         "director": ["Mårten Klingberg"],
         "actors":
@@ -801,6 +834,7 @@
         "titleEnglish": "Downton Abbey: A New Era",
         "titleOriginal": "Downton Abbey: A New Era",
         "titleSweden": "Downton Abbey: En ny era",
+        "titleId": "downton_abbey_en_ny_era",
         "category": ["Drama","Historia", "Romantik"],
         "director": ["Simon Curtis"],
         "actors":
@@ -829,6 +863,7 @@
         "titleEnglish": "Triangle of Sadness",
         "titleOriginal": "Triangle of Sadness",
         "titleSweden": "Triangle of Sadness",
+        "titleId": "triangle_of_sadness",
         "category": ["Komedi","Drama"],
         "director": ["Ruben Östlund"],
         "actors":
@@ -860,6 +895,7 @@
         "titleEnglish": "Rocky Horror Picture Show",
         "titleOriginal": "Rocky Horror Picture Show",
         "titleSweden": "Rocky Horror Picture Show",
+        "titleId": "rocky_horror_picture_show",
         "category": ["Komedi","Skräck", "Musikal"],
         "director": ["Jim Sharman"],
         "actors":
@@ -883,6 +919,7 @@
         "titleEnglish": "Cabaret",
         "titleOriginal": "Cabaret",
         "titleSweden": "Cabaret",
+        "titleId": "cabaret",
         "category": ["Drama","Musikal"],
         "director": ["Bob Fosse"],
         "actors":
@@ -907,6 +944,7 @@
         "titleEnglish": "Vertigo",
         "titleOriginal": "Vertigo",
         "titleSweden": "Vertigo",
+        "titleId": "vertigo",
         "category": ["Drama","Thriller"],
         "director": ["Alfred Hitchcock"],
         "actors":
@@ -930,6 +968,7 @@
         "titleEnglish": "Hilma",
         "titleOriginal": "Hilma",
         "titleSweden": "Hilma",
+        "titleId": "hilma",
         "category": ["Biografi","Drama"],
         "director": ["Lasse Hallström"],
         "actors":
@@ -953,6 +992,7 @@
         "titleEnglish": "Moulin Rouge",
         "titleOriginal": "Moulin Rouge",
         "titleSweden": "Moulin Rouge",
+        "titleId": "moulin_rouge",
         "category": ["Drama","Romantik", "Musikal"],
         "director": ["Baz Luhrmann"],
         "actors":
@@ -978,6 +1018,7 @@
         "titleEnglish": "A Bug's Life",
         "titleOriginal": "A Bug's Life",
         "titleSweden": "Ett småkryps liv",
+        "titleId": "ett_smakryps_liv",
         "category": ["Animerat","Äventyr", "Komedi", "Barn", "Familj"],
         "director": ["John Lasseter"],
         "actors":
@@ -1003,6 +1044,7 @@
         "titleEnglish": "A Farewell to Arms",
         "titleOriginal": "A Farewell to Arms",
         "titleSweden": "Farväl till vapnen",
+        "titleId": "farval_till_vapnen",
         "category": ["Drama","Romantik", "Krig"],
         "director": ["Frank Borzage"],
         "actors":
@@ -1026,6 +1068,7 @@
         "titleEnglish": "House by the River",
         "titleOriginal": "House by the River",
         "titleSweden": "Huset vid floden",
+        "titleId": "huset_vid_floden",
         "category": ["Kriminal","Drama", "Film noir", "Thriller"],
         "director": ["Fritz Lang"],
         "actors":
@@ -1049,6 +1092,7 @@
         "titleEnglish": "Annie",
         "titleOriginal": "Annie",
         "titleSweden": "Annie",
+        "titleId": "annie",
         "category": ["Komedi","Drama", "Familj"],
         "director": ["John Huston"],
         "actors":
@@ -1072,6 +1116,7 @@
         "titleEnglish": "Cloak and Dagger",
         "titleOriginal": "Cloak and Dagger",
         "titleSweden": "Dolken och kappan",
+        "titleId": "dolken_och_kappan",
         "category": ["Äventyr","Film noir", "Thriller", "Romantik"],
         "director": ["Fritz Lang"],
         "actors":
@@ -1097,6 +1142,7 @@
         "titleEnglish": "Zombie",
         "titleOriginal": "Zombie 2",
         "titleSweden": "Zombie Flesh Eaters",
+        "titleId": "zombie_flesh_eaters",
         "category": ["Skräck"],
         "director": ["Lucio Fulci"],
         "actors":

@@ -11,8 +11,8 @@ export default {
         .get("cinemas.json")
         .then((response) => (this.theaters = response.data));
     },
-    onClick(id) {
-      this.$router.replace("biograf/" + id);
+    onClick(nameId) {
+      this.$router.replace("biograf/" + nameId);
     },
   },
   data() {
@@ -30,7 +30,7 @@ export default {
           class="col-lg-6"
           v-for="theater in theaters"
           :key="theater.id"
-          @click="($event) => onClick(theater.id)"
+          @click="($event) => onClick(theater.nameId)"
         >
           <div class="container2">
             <div

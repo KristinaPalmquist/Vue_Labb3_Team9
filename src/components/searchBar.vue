@@ -35,11 +35,11 @@ export default {
       this.filmsHeader = "FILMER";
       this.cinemasHeader = "BIOGRAFER";
     },
-    onClick(id) {
-      this.$router.replace("film/" + id);
+    onClick(titleId) {
+      this.$router.replace("film/" + titleId);
     },
-    onClickThree(id) {
-      this.$router.replace("biograf/" + id);
+    onClickThree(nameId) {
+      this.$router.replace("biograf/" + nameId);
     },
   },
   computed: {
@@ -95,7 +95,7 @@ export default {
         style="width: 12rem"
         v-for="result in filmsResult"
         :key="result.id"
-        @click="onClick(result.id)"
+        @click="onClick(result.titleId)"
       >
         <img
           :src="result.img"
@@ -115,7 +115,7 @@ export default {
       class="card bg-dark mb-1 col-md-7 cinema-card"
       v-for="result in cinemasResult"
       :key="result"
-      @click="($event) => onClickThree(result.id)"
+      @click="($event) => onClickThree(result.nameId)"
     >
       <div class="card bg-dark">
         <img class="card-img" :src="result.img" alt="Card image" />

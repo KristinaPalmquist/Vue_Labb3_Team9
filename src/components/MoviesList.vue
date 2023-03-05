@@ -15,12 +15,12 @@ export default {
         .then((response) => (this.movies = response.data));
     },
     // skickar till IndividualMovie
-    onClick(id) {
-      this.$router.replace("film/" + id);
+    onClick(titleId) {
+      this.$router.replace("film/" + titleId);
     },
     // skickar till CinemaHero sida
-    onClickCinemaHero(id) {
-      this.$router.replace("biograf/" + id);
+    onClickCinemaHero(nameId) {
+      this.$router.replace("biograf/" + nameId);
     },
     // hämtar biografernas json
     cinemaSearch() {
@@ -41,13 +41,17 @@ export default {
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-4 filmcard" v-for="movie in movies" :key="movie.id">
+        <div
+          class="col-md-4 filmcard"
+          v-for="movie in movies"
+          :key="movie.titleId"
+        >
           <div class="container2">
             <div
               class="card2"
               :style="{ backgroundImage: `url(${movie.img})` }"
               :alt="movie.titleSweden"
-              @click="onClick(movie.id)"
+              @click="onClick(movie.titleId)"
             >
               <div class="content2">
                 <h2>{{ movie.id }}</h2>

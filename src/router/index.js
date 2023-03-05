@@ -3,7 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import MovieView from "../views/MovieView.vue";
 import CinemaView from "../views/CinemaView.vue";
 import FeedbackView from "../views/FeedbackView.vue";
-import IndividualMovieView from "../views/IndividualMovieView.vue";
+import MovieHeroView from "../views/MovieHeroView.vue";
 import CinemaHeroView from "../views/CinemaHeroView.vue";
 
 const router = createRouter({
@@ -32,13 +32,13 @@ const router = createRouter({
     {
       path: "/film/:id",
       name: "film-id",
-      component: IndividualMovieView,
+      component: MovieHeroView,
     },
     {
       path: "/biograf/:id",
       name: "biograf-id",
       component: CinemaHeroView,
-    }
+    },
   ],
 });
 
