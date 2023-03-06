@@ -65,7 +65,7 @@ export default {
           </div>
           <div v-for="cinema in cinemas" :key="cinema.id">
             <div v-if="cinema.movies.includes(movie.id)">
-              <h2 class="cinemaList" @click="onClickCinemaHero(cinema.id)">
+              <h2 class="cinemaList" @click="onClickCinemaHero(cinema.nameId)">
                 {{ cinema.name }}
               </h2>
             </div>
