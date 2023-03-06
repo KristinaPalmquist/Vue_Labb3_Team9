@@ -5,8 +5,8 @@ import axios from "axios";
 <template>
   <div class="container">
     <div v-if="!movie">
-      Oj! Någonting har blivit fel, sidan för filmen du valt finns inte. Vänligen
-      gå tillbaka och välj en annan film.
+      Oj! Någonting har blivit fel, sidan för filmen du valt finns inte.
+      Vänligen gå tillbaka och välj en annan film.
     </div>
     <div v-if="movie">
       <div v-for="movie in movies" :key="movie.id">
@@ -48,7 +48,8 @@ import axios from "axios";
         </p>
         <p>
           <template v-if="movie.rtTomatometer !== null"
-            >Rotten Tomatoes Tomatometer: {{ movie.rtTomatometer }}/100</template
+            >Rotten Tomatoes Tomatometer:
+            {{ movie.rtTomatometer }}/100</template
           >
         </p>
         <p>

@@ -12,7 +12,7 @@ export default {
         .then((response) => (this.theaters = response.data));
     },
     onClick(id) {
-        this.$router.replace("biograf/" + id);
+      this.$router.replace("biograf/" + id);
     },
   },
   data() {

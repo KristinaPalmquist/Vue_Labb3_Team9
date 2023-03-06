@@ -1,77 +1,87 @@
 <template>
-  <div>
-    <div><button @click="showModalA = true">Klicka Här</button></div>
-    <div><button @click="showModalB = true">Klicka</button></div>
-
-    <div class="modal" v-if="showModalA">
-      <div class="modal-content">
-        <span class="close" @click="showModalA = false">&times;</span>
-        hej
-        <ChartApp />
-      </div>
-    </div>
-
-    <div class="modal" v-if="showModalB">
-      <div class="modal-content">
-        <span class="close" @click="showModalB = false">&times;</span>
-        <ChartComp />
-      </div>
+  <!--class directive is used to apply css value on the isModalVisible prop"
+    and used bootstrap css code for styling-->
+  <div class="modal" :class="{ 'is-active': isModalVisible }">
+    <div class="modal-background" @click="$emit('hide-modal')"></div>
+    <div class="modal-content">
+      <button
+        class="modal-close is-large"
+        @click="$emit('hide-modal')"
+      ></button>
+      <slot></slot>
     </div>
   </div>
 </template>
+
 <script>
-import ChartComp from "../components/ChartComp.vue";
-import ChartApp from "../components/ChartApp.vue";
 export default {
-  components: {
-    ChartComp,
-    ChartApp,
-  },
-  data() {
-    return {
-      showModalA: false,
-      showModalB: false,
-    };
+  name: "ChartModal",
+  props: {
+    isModalVisible: {
+      type: Boolean,
+      required: true,
+    },
   },
 };
 </script>
 
-<style>
+<style scoped>
 .modal {
   display: none;
+}
+
+.modal.is-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-background {
   position: fixed;
-  z-index: 1;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-  background-color: #181717;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 800px;
-  height: 400px;
-  overflow: auto;
+  background-color: #080707;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 500px;
+  align-items: center;
+  position: relative;
+  height: 300px;
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2rem;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  outline: none;
   cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.modal-close:before,
+.modal-close:after {
+  position: absolute;
+  content: " ";
+  margin: 10px;
+  height: 1.5rem;
+  width: 0.2rem;
+  background-color: #ece1e1;
+}
+
+.modal-close:before {
+  transform: rotate(45deg);
+}
+
+.modal-close:after {
+  transform: rotate(-45deg);
 }
 </style>

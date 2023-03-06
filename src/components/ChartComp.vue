@@ -54,7 +54,7 @@ export default {
             borderWidth: 1,
             hoverBackgroundColor: "rgba(255,99,132,0.4)",
             hoverBorderColor: "rgba(255,99,132,1)",
-            data: [120000, 150000, 100000, 200000, 170000],
+            data: [400000, 400000, 980000, 790000, 600000],
           },
         ],
       },
@@ -68,7 +68,7 @@ export default {
 <style scoped>
 @media only screen and (min-width: 500px) {
   .chart-area {
-    width: 500px;
+    width: 400px;
     height: auto;
     justify-content: center;
   }

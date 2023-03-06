@@ -20,25 +20,25 @@ const router = createRouter({
       component: MovieView,
     },
     {
+      path: "/film/:id",
+      name: "film-id",
+      component: IndividualMovieView,
+    },
+    {
       path: "/biograf",
       name: "biograf",
       component: CinemaView,
+    },
+    {
+      path: "/biograf/:id",
+      name: "biograf-id",
+      component: CinemaHeroView,
     },
     {
       path: "/feedback",
       name: "feedback",
       component: FeedbackView,
     },
-    {
-      path: "/film/:id",
-      name: "film-id",
-      component: IndividualMovieView,
-    },
-    {
-      path: "/biograf/:id",
-      name: "biograf-id",
-      component: CinemaHeroView,
-    }
   ],
 });
 

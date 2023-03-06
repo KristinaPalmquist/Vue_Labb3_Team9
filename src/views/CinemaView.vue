@@ -1,4 +1,5 @@
-div<script setup>
+div
+<script setup>
 import axios from "axios";
 import TheaterCard from "../components/TheaterCard.vue";
 </script>
@@ -8,11 +9,11 @@ import TheaterCard from "../components/TheaterCard.vue";
     <h1>Cinema</h1>
     <h2>{{ $route.params.id }}</h2>
     <div v-for="cinema in cinemas" :key="cinema.id">
-        <input
+      <input
         type="button"
-        @click="$event => onClick(cinema.id)"
+        @click="($event) => onClick(cinema.id)"
         :value="`${cinema.name}`"
-    />
+      />
     </div>
   </div>
   <TheaterCard />
@@ -20,23 +21,25 @@ import TheaterCard from "../components/TheaterCard.vue";
 
 <script>
 export default {
-    data() {
-        return {
-            cinemas: [],
-            id: Number,
-        };
+  data() {
+    return {
+      cinemas: [],
+      id: Number,
+    };
+  },
+  created() {
+    this.fetchCinemas();
+  },
+  methods: {
+    fetchCinemas() {
+      axios
+        .get("cinemas.json")
+        .then((cinemas) => (this.cinemas = cinemas.data));
     },
-    created() {
-        this.fetchCinemas();
+    onClick(id) {
+      this.$router.replace("biograf/" + id);
     },
-    methods: {
-        fetchCinemas() {
-            axios.get("cinemas.json").then((cinemas) => (this.cinemas = cinemas.data));
-        },
-        onClick(id) {
-            this.$router.replace("biograf/" + id)
-        },
-    },
+  },
 };
 </script>
 
