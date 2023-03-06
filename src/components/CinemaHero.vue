@@ -30,7 +30,7 @@ import axios from "axios";
 <script>
 export default {
   computed: {
-    cinemaId() {
+    cinemaName() {
       return this.$route.params.id;
     },
   },
@@ -44,7 +44,7 @@ export default {
     axios.get("../../public/cinemas.json").then((response) => {
       this.cinemas = response.data;
       this.cinemas = this.cinemas.filter((cinema) => {
-        return cinema.id === parseInt(this.cinemaId);
+        return cinema.nameId === this.cinemaName;
       });
       if (this.cinemas.length > 0) {
         this.cinema = this.cinemas[0];

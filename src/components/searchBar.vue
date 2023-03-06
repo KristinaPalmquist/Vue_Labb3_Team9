@@ -35,8 +35,11 @@ export default {
       this.filmsHeader = "FILMER";
       this.cinemasHeader = "BIOGRAFER";
     },
-    onClick(id) {
-      this.$router.replace("film/" + id);
+    onClick(titleId) {
+      this.$router.replace("film/" + titleId);
+    },
+    onClickThree(nameId) {
+      this.$router.replace("biograf/" + nameId);
     },
   },
   computed: {
@@ -57,57 +60,61 @@ export default {
 </script>
 
 <template>
-  <div class="input-group rounded">
-    <input
-      type="search"
-      class="form-control rounded"
-      placeholder="Filmer och Biografer"
-      aria-label="Search"
-      aria-describedby="search-addon"
-      v-model="searchinput"
-      @keydown.enter="onClickOne"
-    />
-    <span
-      class="input-group-text border-0"
-      @click="onClickOne"
-      id="search-addon"
-    >
-      <i class="bi bi-film"></i>
-    </span>
-  </div>
-  <div v-if="this.searchinput != ''">
-    <tr class="listdiv" v-for="data in searchFilterFilms" :key="data">
-      <td>{{ data.titleSweden }}</td>
-    </tr>
-    <tr class="listdiv" v-for="data in searchFilterMovies" :key="data">
-      <td>{{ data.name }}</td>
-    </tr>
-  </div>
-  <div class="row">
-    <div
-      class="card mb-1 col-md-4 filmcard"
-      style="width: 12rem"
-      v-for="result in filmsResult"
-      :key="result.id"
-      @click="onClick(result.id)"
-    >
-      <img :src="result.img" class="card-img-top" :alt="result.titleEnglish" />
-      <div class="card-body">
-        <h5 class="card-title">{{ result.titleSweden }}</h5>
-        <p class="card-text">Ranking IMDB: {{ result.imdb }}</p>
-        <a class="card-text" :href="result.trailer" target="_blank">
-          Trailer
-        </a>
+  <div class="search-container">
+    <div class="searchbar-div">
+      <div class="input-group rounded inputdiv">
+        <input
+          type="search"
+          class="form-control rounded searchinput"
+          placeholder="Filmer och Biografer"
+          aria-label="Search"
+          aria-describedby="search-addon"
+          v-model="searchinput"
+          @keydown.enter="onClickOne"
+        />
+        <span
+          class="input-group-text border-0"
+          @click="onClickOne"
+          id="search-addon"
+        >
+          <i class="bi bi-search"></i>
+        </span>
+      </div>
+      <div v-if="this.searchinput != ''">
+        <tr class="listdiv" v-for="data in searchFilterFilms" :key="data">
+          <td>{{ data.titleSweden }}</td>
+        </tr>
+        <tr class="listdiv" v-for="data in searchFilterMovies" :key="data">
+          <td>{{ data.name }}</td>
+        </tr>
       </div>
     </div>
-  </div>
-  <div class="column">
+    <div class="row">
+      <div
+        class="card mb-1 col-md-4 filmcard text-white"
+        style="width: 12rem"
+        v-for="result in filmsResult"
+        :key="result.id"
+        @click="onClick(result.titleId)"
+      >
+        <img
+          :src="result.img"
+          class="card-img-top"
+          :alt="result.titleEnglish"
+        />
+        <div class="card-body">
+          <h1 class="card-title">{{ result.titleSweden }}</h1>
+          <p class="card-text">IMDB: {{ result.imdb }}</p>
+        </div>
+      </div>
+    </div>
     <div
-      class="card mb-1 col-md-7 cinema-card"
+      class="card bg-dark mb-1 col-md-7 cinema-card"
       v-for="result in cinemasResult"
       :key="result"
+      @click="($event) => onClickThree(result.nameId)"
     >
-      <div class="card bg-dark text-white">
+      <div class="card bg-dark">
         <img class="card-img" :src="result.img" alt="Card image" />
         <div class="card-img-overlay">
           <h5 class="card-title">{{ result.name }}</h5>
@@ -115,24 +122,57 @@ export default {
         </div>
       </div>
     </div>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
   </div>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-  />
 </template>
 
 <style scoped>
 .cinema-card {
-  margin: 45px 10px;
+  margin: 10px;
+  cursor: pointer;
 }
-
 .filmcard {
   margin: 45px 25px;
   cursor: pointer;
+  background-color: #131415 !important;
 }
 
-.card-img {
-  height: 60vh;
+.searchinput {
+  background-color: black;
+  color: beige;
+}
+
+.searchinput:focus {
+  background-color: black;
+  color: beige;
+}
+
+.searchbar-div {
+  width: 250px;
+  text-align: left;
+}
+
+#search-addon {
+  background-color: #131415;
+  color: white;
+}
+
+.card-title {
+  font-size: medium;
+}
+
+.search-container {
+  background-color: #131415;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputdiv {
+  margin-top: 10px;
 }
 </style>

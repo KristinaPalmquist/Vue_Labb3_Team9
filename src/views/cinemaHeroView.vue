@@ -1,5 +1,5 @@
 <script setup>
-import axios from "axios";
+// import axios from "axios";
 import CinemaHero from "../components/CinemaHero.vue";
 </script>
 

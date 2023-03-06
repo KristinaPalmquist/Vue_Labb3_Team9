@@ -1,9 +1,9 @@
 <script setup>
-import IndividualMovie from "../components/IndividualMovie.vue";
+import MovieHero from "../components/MovieHero.vue";
 </script>
 
 <template>
-  <IndividualMovie />
+  <MovieHero />
 </template>
 
 <script>

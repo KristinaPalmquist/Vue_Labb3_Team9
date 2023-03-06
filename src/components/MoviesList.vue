@@ -2,6 +2,7 @@
 import axios from "axios";
 
 export default {
+  // förladdning av json filerna
   created() {
     this.apiCall();
     this.cinemaSearch();
@@ -13,8 +14,13 @@ export default {
         .get("movies.json")
         .then((response) => (this.movies = response.data));
     },
-    onClick(id) {
-      this.$router.replace("film/" + id);
+    // skickar till IndividualMovie
+    onClick(titleId) {
+      this.$router.replace("film/" + titleId);
+    },
+    // skickar till CinemaHero sida
+    onClickCinemaHero(nameId) {
+      this.$router.replace("biograf/" + nameId);
     },
     // hämtar biografernas json
     cinemaSearch() {
@@ -38,14 +44,14 @@ export default {
         <div
           class="col-md-4 filmcard"
           v-for="movie in movies"
-          :key="movie.id"
-          @click="onClick(movie.id)"
+          :key="movie.titleId"
         >
           <div class="container2">
             <div
               class="card2"
               :style="{ backgroundImage: `url(${movie.img})` }"
               :alt="movie.titleSweden"
+              @click="onClick(movie.titleId)"
             >
               <div class="content2">
                 <h2>{{ movie.id }}</h2>
@@ -59,7 +65,9 @@ export default {
           </div>
           <div v-for="cinema in cinemas" :key="cinema.id">
             <div v-if="cinema.movies.includes(movie.id)">
-              <h2 class="cinemaList">{{ cinema.name }}</h2>
+              <h2 class="cinemaList" @click="onClickCinemaHero(cinema.id)">
+                {{ cinema.name }}
+              </h2>
             </div>
           </div>
         </div>
@@ -77,7 +85,7 @@ body {
   justify-self: center;
   align-items: center;
   min-height: 100vh;
-  background: #161623;
+  background: #131415;
 }
 .container2 {
   position: relative;
@@ -137,6 +145,11 @@ body {
   color: #fff;
   font-weight: 300;
 }
+
+.card2 {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .container2 .card2 .content2 a {
   position: relative;
   display: inline-block;
@@ -153,5 +166,6 @@ body {
 .cinemaList {
   color: rgba(255, 255, 255, 1);
   font-size: 1em;
+  margin-left: 25%;
 }
 </style>

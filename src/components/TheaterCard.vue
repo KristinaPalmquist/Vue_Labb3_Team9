@@ -11,8 +11,8 @@ export default {
         .get("cinemas.json")
         .then((response) => (this.theaters = response.data));
     },
-    onClick(id) {
-      this.$router.replace("biograf/" + id);
+    onClick(nameId) {
+      this.$router.replace("biograf/" + nameId);
     },
   },
   data() {
@@ -26,7 +26,12 @@ export default {
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-lg-6" v-for="theater in theaters" :key="theater.id">
+        <div
+          class="col-lg-6"
+          v-for="theater in theaters"
+          :key="theater.id"
+          @click="($event) => onClick(theater.nameId)"
+        >
           <div class="container2">
             <div
               class="card2"
@@ -50,7 +55,7 @@ body {
   justify-self: center;
   align-items: center;
   min-height: 100vh;
-  background: #161623;
+  background: #131415;
 }
 .container2 {
   position: relative;
@@ -78,6 +83,7 @@ body {
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 .container2 .card2:hover {
   opacity: 1;
