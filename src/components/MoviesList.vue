@@ -16,11 +16,11 @@ export default {
     },
     // skickar till IndividualMovie
     onClick(titleId) {
-      this.$router.replace("film/" + titleId);
+      this.$router.push("film/" + titleId);
     },
     // skickar till CinemaHero sida
     onClickCinemaHero(nameId) {
-      this.$router.replace("biograf/" + nameId);
+      this.$router.push("biograf/" + nameId);
     },
     // hämtar biografernas json
     cinemaSearch() {
