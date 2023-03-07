@@ -316,6 +316,18 @@ export default {
   }
 }
 
+@media screen and (max-width: 800px) {
+  #search-open {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #calendar-open {
+    margin-right: 0px;
+  }
+}
+
 #search-open i {
   margin-left: 6px;
 }
