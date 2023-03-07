@@ -5,15 +5,8 @@ import MoviesList from "../components/MoviesList.vue";
 
 <template>
   <searchBar />
-  <div class="home">
-    <h1>HOME</h1>
-  </div>
   <MoviesList />
 </template>
-<script>
-export default {
-  components: {},
-};
-</script>
+
 
 <style scoped></style>

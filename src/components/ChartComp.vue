@@ -68,7 +68,7 @@ export default {
 <style scoped>
 @media only screen and (min-width: 500px) {
   .chart-area {
-    width: 400px;
+    width: 370px;
     height: auto;
     justify-content: center;
   }

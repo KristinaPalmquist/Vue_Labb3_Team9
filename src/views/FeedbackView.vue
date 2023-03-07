@@ -1,55 +1,54 @@
 <template>
-  <div class="color">
-    <FeedbackPage />
-  </div>
-  <div class="Review-box">
-    <div class="Review-text">
-      <h4 class="Review-header">Är du intreserad av att se om biograferna?</h4>
+  <div class="main">
+    <img src="" alt="" />
+    <div v-html="WelcomeMsg" class="WelcomeMsg"></div>
+    <div class="">
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br />
-        Omnis unde laboriosam expedita error fuga recusandae id, <br />
-        voluptate quaerat! Eum, sapiente laborum!
+        kan du beskriva dina upplevelser av denna app. <br />
+        Har du förslag på hur vi kan förbättra appen?<br />
+        Saknar du något i appen? <br />
+        Dina idéer är viktiga så att vi tillsammans kan förbättra appen.
       </p>
-      <div class="review-btn">
-        <h5>Användare recension</h5>
-        <button class="btn" @click="showModal('rating')">Klicka här</button>
+
+      <div>
+        <p>
+          <button
+            class="btn btn-secondary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseWidthExample"
+            aria-expanded="false"
+            aria-controls="collapseWidthExample"
+          >
+            Ge feedback
+          </button>
+        </p>
+        <div style="min-height: 400px">
+          <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="card card-body" style="width: 390px">
+              <FeedbackPage />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="review-btn">
-        <h5>Antal besökare per år</h5>
-        <button class="btn" @click="showModal('visitors')">Klicka här</button>
-      </div>
-      <ChartModal :isModalVisible="isModalVisible" @hideModal="hideModal">
-        <component :is="componentToShow" />
-      </ChartModal>
     </div>
-    <img src="../assets/img/review.jpeg" alt="" />
+    <DisplayChart />
   </div>
 </template>
 
 <script>
 import FeedbackPage from "../components/FeedbackPage.vue";
-import ChartModal from "../components/ChartModal.vue";
-import ChartApp from "../components/ChartApp.vue";
-import ChartComp from "../components/ChartComp.vue";
+import DisplayChart from "../components/DisplayChart.vue";
 export default {
   name: "FeedbackView",
-  components: { FeedbackPage, ChartModal, ChartApp, ChartComp },
+  components: { FeedbackPage, DisplayChart },
   data() {
     return {
-      isModalVisible: false,
-      componentToShow: null,
+      WelcomeMsg:
+        "<h5>Välkommen Till CINEMAP!</h5><Br><h6>Vi behöver eran feedBack för att bli bättre</h6>",
     };
   },
-  methods: {
-    showModal(component) {
-      this.componentToShow = component === "rating" ? "ChartApp" : "ChartComp";
-      this.isModalVisible = true;
-    },
-    hideModal() {
-      this.isModalVisible = false;
-      this.componentToShow = null;
-    },
-  },
+  methods: {},
 };
 </script>
 
@@ -61,43 +60,8 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
-.Review-box {
-  background-color: black;
-  display: flex;
+.main {
+  background-color: rgb(16, 14, 14);
   color: white;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px;
-  width: auto;
-}
-.Review-text {
-  width: auto;
-  height: 370px;
-  margin: 20px;
-  justify-content: space-around;
-  align-items: center;
-  text-align: left;
-  padding: 20px;
-  flex-direction: row;
-}
-img {
-  flex-direction: row;
-  width: 370px;
-  height: 350px;
-  margin: 15px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-.review-btn {
-  display: flex;
-  flex-direction: row;
-  margin: 10px 10px 10px 0px;
-}
-.btn {
-  border: none;
-  background-color: rgb(114, 109, 109);
-  color: white;
-  margin-left: 10px;
 }
 </style>

@@ -1,103 +1,95 @@
 <template>
-  <div>
-    <button class="Ratingbtn" @click="$emit('ShowRating')">
-      See Users rating
-    </button>
-    <button class="visitorsbtn" @click="$emit('Showvisitosrs')">
-      See amount of visitor
-    </button>
-    <div v-if="chartType === 'rating'">
-      <ChartForRating />
-    </div>
-    <div v-if="chartType === 'visitors'">
-      <ChartForVisitor />
-    </div>
-    <div v-if="showModalFlag">
-      <div class="modal">
-        <div class="modal-content">
-          <span class="close" @click="hideModal">&times;</span>
-          <div v-if="chartType === 'rating'">
-            <ChartForRating />
-          </div>
-          <div v-if="chartType === 'visitors'">
-            <ChartForVisitor />
-          </div>
-        </div>
+  <div class="Review-box">
+    <div class="Review-text">
+      <h5 class="Review-header">Facta om biograferna</h5>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br />
+        Omnis unde laboriosam expedita error fuga recusandae id, <br />
+        voluptate quaerat! Eum, sapiente laborum!
+      </p>
+      <div class="review-btn">
+        <h6>Användare recension</h6>
+        <button class="btn" @click="showModal('rating')">Klicka här</button>
       </div>
+      <div class="review-btn">
+        <h6>Antal besökare per år</h6>
+        <button class="btn" @click="showModal('visitors')">Klicka här</button>
+      </div>
+      <ChartModal :isModalVisible="isModalVisible" @hideModal="hideModal">
+        <component :is="componentToShow" />
+      </ChartModal>
     </div>
+    <!-- <img src="../assets/img/review.jpeg" alt="" /> -->
   </div>
 </template>
 
 <script>
-import ChartForRating from "./ChartForRating.vue";
-import ChartForVisitor from "./ChartForVisitor.vue";
-
+import ChartModal from "../components/ChartModal.vue";
+import ChartApp from "../components/ChartApp.vue";
+import ChartComp from "../components/ChartComp.vue";
 export default {
-  name: "ChartModal",
-  components: {
-    ChartForRating,
-    ChartForVisitor,
-  },
+  name: "DisplayChart",
+  components: { ChartModal, ChartApp, ChartComp },
   data() {
     return {
-      showModalFlag: false,
-      chartType: null,
+      isModalVisible: false,
+      componentToShow: null,
     };
   },
   methods: {
-    hideModal() {
-      this.showModalFlag = false;
-      this.chartType = null;
+    showModal(component) {
+      this.componentToShow = component === "rating" ? "ChartApp" : "ChartComp";
+      this.isModalVisible = true;
     },
-  },
-  mounted() {
-    this.$on("ShowRating", () => {
-      this.chartType = "rating";
-      this.showModalFlag = true;
-    });
-    this.$on("Showvisitosrs", () => {
-      this.chartType = "visitors";
-      this.showModalFlag = true;
-    });
+    hideModal() {
+      this.isModalVisible = false;
+      this.componentToShow = null;
+    },
   },
 };
 </script>
 
-<style>
-.modal {
-  display: block;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+<style scoped>
+body {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
-
-.modal-content {
-  display: block;
-  background-color: white;
-  margin: 10% auto;
+.Review-box {
+  display: flex;
+  color: white;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
+  width: auto;
+}
+.Review-text {
+  width: 370px;
+  height: auto;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 20px;
 }
 
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+.review-btn {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 10px 10px 0px;
 }
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+.btn {
+  width: 100px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  text-align: center;
+  background-color: rgb(114, 109, 109);
+  color: white;
+  padding-bottom: 15px;
+  margin-left: 10px;
 }
 </style>

@@ -5,7 +5,6 @@ import CinemaView from "../views/CinemaView.vue";
 import FeedbackView from "../views/FeedbackView.vue";
 import MovieHeroView from "../views/MovieHeroView.vue";
 import CinemaHeroView from "../views/CinemaHeroView.vue";
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
