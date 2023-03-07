@@ -1,52 +1,20 @@
 <template>
   <div class="main">
-    <img src="" alt="" />
-    <div v-html="WelcomeMsg" class="WelcomeMsg"></div>
-    <div class="">
-      <p>
-        kan du beskriva dina upplevelser av denna app. <br />
-        Har du förslag på hur vi kan förbättra appen?<br />
-        Saknar du något i appen? <br />
-        Dina idéer är viktiga så att vi tillsammans kan förbättra appen.
-      </p>
+    <RatingFeedback />
 
-      <div>
-        <p>
-          <button
-            class="btn btn-secondary"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseWidthExample"
-            aria-expanded="false"
-            aria-controls="collapseWidthExample"
-          >
-            Ge feedback
-          </button>
-        </p>
-        <div style="min-height: 400px">
-          <div class="collapse collapse-horizontal" id="collapseWidthExample">
-            <div class="card card-body" style="width: 390px">
-              <FeedbackPage />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <DisplayChart />
   </div>
 </template>
 
 <script>
-import FeedbackPage from "../components/FeedbackPage.vue";
+import RatingFeedback from "../components/RatingFeedback.vue";
+//import newForm from "../components/newForm.vue";
 import DisplayChart from "../components/DisplayChart.vue";
 export default {
   name: "FeedbackView",
-  components: { FeedbackPage, DisplayChart },
+  components: { RatingFeedback, DisplayChart },
   data() {
-    return {
-      WelcomeMsg:
-        "<h5>Välkommen Till CINEMAP!</h5><Br><h6>Vi behöver eran feedBack för att bli bättre</h6>",
-    };
+    return {};
   },
   methods: {},
 };
@@ -61,7 +29,7 @@ body {
   overflow-x: hidden;
 }
 .main {
-  background-color: rgb(16, 14, 14);
+  background-color: rgb(22, 21, 21);
   color: white;
 }
 </style>

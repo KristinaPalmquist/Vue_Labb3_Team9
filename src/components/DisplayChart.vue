@@ -1,11 +1,12 @@
 <template>
   <div class="Review-box">
     <div class="Review-text">
-      <h5 class="Review-header">Facta om biograferna</h5>
+      <h5 class="Review-header">Fakta om biografer</h5>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br />
-        Omnis unde laboriosam expedita error fuga recusandae id, <br />
-        voluptate quaerat! Eum, sapiente laborum!
+        Det finns gott om biosalonger i Stockholm och de största och mest kända
+        är Filmstaden Sergel i Stockholm City, Victoria och Filmstaden Söder på
+        Södermalm. I den här appen inkluderas fem mest kända biografer i
+        stockholm.
       </p>
       <div class="review-btn">
         <h6>Användare recension</h6>

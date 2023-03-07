@@ -6,5 +6,4 @@ import MoviesList from "../components/MoviesList.vue";
   <MoviesList />
 </template>
 
-
 <style scoped></style>
