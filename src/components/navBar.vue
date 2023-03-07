@@ -283,7 +283,7 @@ export default {
 }
 
 .searchbar-div {
-  width: 250px;
+  width: 260px;
   text-align: left;
 }
 
@@ -295,11 +295,13 @@ export default {
 #search-open {
   background-color: #13141500;
   color: white;
+  cursor: pointer;
 }
 
 #calendar-open {
   background-color: #13141500;
   color: white;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 800px) {
@@ -311,6 +313,18 @@ export default {
 @media screen and (min-width: 800px) {
   #calendar-open {
     margin-right: 45px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #search-open {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #calendar-open {
+    margin-right: 0px;
   }
 }
 
