@@ -66,6 +66,7 @@ import axios from "axios";
 <script>
 export default {
   computed: {
+    // return titleId from the URL
     movieName() {
       return this.$route.params.id;
     },
@@ -77,6 +78,7 @@ export default {
     };
   },
   created() {
+    // fetch movies.json and filter result for the movie whos titleId matches movieName taken from URL
     axios.get("/movies.json").then((response) => {
       this.movies = response.data;
       this.movies = this.movies.filter((movie) => {
