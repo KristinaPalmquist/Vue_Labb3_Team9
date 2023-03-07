@@ -3,7 +3,6 @@ import { ref } from "vue";
 import VueDatePicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
 import { RouterLink, RouterView } from "vue-router";
-const date = ref(new Date());
 </script>
 
 <script>
@@ -12,6 +11,7 @@ import axios from "axios";
 export default {
   data() {
     return {
+      date: ref(new Date()),
       id: Number,
       cinemas: [],
       searchinput: "",
@@ -71,6 +71,10 @@ export default {
     closeCalendar() {
       this.calendarOpen = "";
       this.togglerOpen = "Open";
+    },
+    handleDate(modelData) {
+      date.value = modelData;
+      // do something else with the data
     },
   },
   computed: {
@@ -174,6 +178,8 @@ export default {
         v-model="date"
         class="datePickerDesktop datePicker"
         color="black"
+        locale="swe"
+        @update:model-value="handleDate"
       ></VueDatePicker>
       <span
         class="input-group-text border-0"
