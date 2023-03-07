@@ -37,9 +37,13 @@ export default {
     },
     onClick(titleId) {
       this.$router.replace("film/" + titleId);
+      this.cinemasResult = "";
+      this.filmsResult = "";
     },
     onClickThree(nameId) {
       this.$router.replace("biograf/" + nameId);
+      this.cinemasResult = "";
+      this.filmsResult = "";
     },
   },
   computed: {
