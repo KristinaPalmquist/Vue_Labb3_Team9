@@ -61,7 +61,7 @@ export default {
   data() {
     return {
       WelcomeMsg: `<h5>Välkommen Till CINEMAP!</h5><Br>
-        <h6>Vi behöver eran feedBack för att bli bättre</h6>`,
+        <h6>Vi behöver eran feedBack för att bli bättre !</h6>`,
       stars: [
         { selected: false },
         { selected: false },
