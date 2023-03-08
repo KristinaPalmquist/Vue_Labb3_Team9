@@ -12,6 +12,7 @@ import axios from "axios";
 export default {
   data() {
     return {
+      date: ref(new Date()),
       id: Number,
       cinemas: [],
       searchinput: "",
@@ -71,6 +72,9 @@ export default {
     closeCalendar() {
       this.calendarOpen = "";
       this.togglerOpen = "Open";
+    },
+    returnDate() {
+      this.$emit("emit", this.date);
     },
   },
   computed: {
