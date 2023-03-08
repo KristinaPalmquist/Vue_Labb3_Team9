@@ -1,6 +1,5 @@
 <template>
   <div class="heroimage">
-    <!-- rendering heroimage with v-bind in short form is succeded and it is responsive-->
     <img :src="heroImage" alt="MakeUp" class="first-hero" />
     <div class="text"></div>
   </div>

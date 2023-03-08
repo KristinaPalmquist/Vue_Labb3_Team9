@@ -1,14 +1,11 @@
 <template>
   <div class="main">
     <RatingFeedback />
-
     <DisplayChart />
   </div>
 </template>
-
 <script>
 import RatingFeedback from "../components/RatingFeedback.vue";
-//import newForm from "../components/newForm.vue";
 import DisplayChart from "../components/DisplayChart.vue";
 export default {
   name: "FeedbackView",

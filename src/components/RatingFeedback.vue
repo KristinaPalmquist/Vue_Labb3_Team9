@@ -9,9 +9,11 @@
     <div class="intro-text-container">
       <p class="intro-text">
         kan du beskriva dina upplevelser av denna app. Har du förslag på hur vi
-        kan förbättra appen? Saknar du något i appen? <br />
-        Dina idéer är viktiga!! Betygsätt och dela dina idéer för att vi kan
-        förbättra appen tillsammans.
+        kan förbättra oss ytterligare? Saknar du något i appen? <br />
+        Vi arbetar outtröttligt för att göra upplevelsen av att använda våra
+        appar så bra som möjligt och dina idéer är viktiga!!<br />
+        Betygsätt och dela dina idéer för att vi kan förbättra appen
+        tillsammans.
       </p>
       <!-- Bootstrap Star icon is used to make clickable star icon for rating
       and v-for attribute is used to loop in star array index-->
@@ -38,26 +40,20 @@
         <!-- Collapse method used to show the form when the button is clicked -->
         <div v-if="showFeedback">
           <form class="collapse-box">
-            <FeedbackPage />
+            <FeedbackForm />
           </form>
         </div>
-        <!-- <div v-if="showRating">
-          <h6>Betyg formulär</h6>
-          <form>
-           I will add rating here
-          </form>
-        </div> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import FeedbackPage from "../components/FeedbackPage.vue";
-// import HeroImg from "../components/HeroImg.vue";
+import FeedbackForm from "./FeedbackForm.vue";
+//import HeroImg from "../components/HeroImg.vue";
 export default {
   name: "RatingFeedback",
-  components: { FeedbackPage },
+  components: { FeedbackForm },
   data() {
     return {
       WelcomeMsg: `<h5>Välkommen Till CINEMAP!</h5><Br>
@@ -71,7 +67,6 @@ export default {
       ],
 
       showFeedback: false,
-      //showRating: false,
     };
   },
   methods: {
@@ -83,18 +78,6 @@ export default {
         this.stars[i].selected = false;
       }
     },
-    //     toggleFeedback() {
-    //       this.showFeedback = !this.showFeedback;
-    //       //   if (this.showFeedback && this.showRating) {
-    //       //     this.showRating = false;
-    //       //   }
-    //     },
-    //     // toggleRating() {
-    //     //   this.showRating = !this.showRating;
-    //     //   if (this.showRating && this.showFeedback) {
-    //     //     this.showFeedback = false;
-    //     //   }
-    //     // },
   },
 };
 </script>
