@@ -155,16 +155,16 @@ export default {
 
 <style scoped>
 .cards-div {
-  background-color: #131415;
+  background-color: #121212;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .filmcard {
-  margin: 45px;
+  margin: 30px;
   cursor: pointer;
-  background-color: #131415 !important;
+  background-color: #121212 !important;
 }
 .card-title {
   font-size: medium;
@@ -183,12 +183,12 @@ export default {
   width: 1rem;
   display: inline-block;
   padding: 3px;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .change-day:hover {
   cursor: pointer;
-  border: solid #4f6754;
+  border: solid #93000a;
   border-width: 0 3px 3px 0;
 }
 

@@ -12,6 +12,7 @@ export default {
   data() {
     return {
       date: ref(new Date()),
+      date: ref(new Date()),
       id: Number,
       cinemas: [],
       searchinput: "",
@@ -278,7 +279,7 @@ export default {
   cursor: pointer;
 }
 .filmcard {
-  margin: 45px;
+  margin: 30px;
   cursor: pointer;
   background-color: #131415 !important;
 }
