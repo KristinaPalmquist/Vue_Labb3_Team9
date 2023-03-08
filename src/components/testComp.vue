@@ -10,7 +10,9 @@ import moment from "moment/min/moment-with-locales";
     <div class="row" v-if="this.dateProps == undefined">
       <div class="date-header">
         <h1>
+          <span @click="previousDay"><i class="change-day left"></i></span>
           {{ $store.state.datefixed }}
+          <span @click="nextDay"><i class="change-day right"></i></span>
         </h1>
       </div>
       <div
@@ -53,7 +55,6 @@ import moment from "moment/min/moment-with-locales";
 export default {
   data() {
     return {
-      todaysDate: moment().dayOfYear(),
       chosenDate: null,
       filmIds: "",
       todaysScreenings: [],
@@ -73,10 +74,15 @@ export default {
       this.getChosenScreenings(value);
       this.getChosenMovies(value);
     },
+    todaysScreenings(value) {
+      this.getMovies(value);
+    },
+  },
+  mounted() {
+    this.getMovies();
   },
   created() {
     this.getScreenings();
-    this.getMovies();
     this.getChosenMovies();
   },
   methods: {
@@ -85,7 +91,28 @@ export default {
         .get("screenings.json")
         .then(
           (response) =>
-            (this.todaysScreenings = response.data[this.todaysDate].Victoria)
+            (this.todaysScreenings =
+              response.data[this.$store.state.date].Victoria)
+        );
+    },
+    nextDay() {
+      this.$store.commit("increment");
+      axios
+        .get("screenings.json")
+        .then(
+          (response) =>
+            (this.todaysScreenings =
+              response.data[this.$store.state.date].Victoria)
+        );
+    },
+    previousDay() {
+      this.$store.commit("previous");
+      axios
+        .get("screenings.json")
+        .then(
+          (response) =>
+            (this.todaysScreenings =
+              response.data[this.$store.state.date].Victoria)
         );
     },
     getChosenScreenings(value) {
@@ -105,7 +132,7 @@ export default {
     onClickTwo(titleId) {
       this.$router.replace("film/" + titleId);
     },
-    getMovies() {
+    getMovies(value) {
       axios.get("movies.json").then((response) => {
         this.movies = response.data;
         this.movies = this.movies.filter(
@@ -146,5 +173,32 @@ export default {
 .date-header {
   text-align: center;
   margin-top: 20px;
+}
+
+/*change day buttons*/
+.change-day {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.change-day:hover {
+  cursor: pointer;
+  border: solid #4f6754;
+  border-width: 0 3px 3px 0;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 </style>
