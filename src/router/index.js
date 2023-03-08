@@ -5,7 +5,7 @@ import CinemaView from "../views/CinemaView.vue";
 import FeedbackView from "../views/FeedbackView.vue";
 import MovieHeroView from "../views/MovieHeroView.vue";
 import CinemaHeroView from "../views/CinemaHeroView.vue";
-import LisTestVue from "../views/testVue.vue"
+import LisTestVue from "../views/testVue.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,9 +21,19 @@ const router = createRouter({
       component: MovieView,
     },
     {
+      path: "/film/:id",
+      name: "film-id",
+      component: MovieHeroView,
+    },
+    {
       path: "/biograf",
       name: "biograf",
       component: CinemaView,
+    },
+    {
+      path: "/biograf/:id",
+      name: "biograf-id",
+      component: CinemaHeroView,
     },
     {
       path: "/feedback",
@@ -43,8 +53,8 @@ const router = createRouter({
     {
       path: "/feedback/:date",
       name: "film-date",
-      component: LisTestVue
-    }
+      component: LisTestVue,
+    },
   ],
 });
 

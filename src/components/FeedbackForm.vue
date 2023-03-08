@@ -16,17 +16,21 @@
         </div>
         <button class="form-btn" type="submit">Skicka</button>
       </form>
-      <ModalComp v-if="showModal" :name="name" @close="showModal = false">
-        <p>Tack för ditt medelande!</p>
-      </ModalComp>
+      <ModalFeedbackform
+        v-if="showModal"
+        :name="name"
+        @close="showModal = false"
+      >
+        <p>Tack för ditt meddelande!</p>
+      </ModalFeedbackform>
     </div>
   </header>
 </template>
 <script>
-import ModalComp from "../components/ModalComp.vue";
+import ModalFeedbackform from "./ModalFeedbackform.vue";
 export default {
   components: {
-    ModalComp,
+    ModalFeedbackform,
   },
   data() {
     return {
