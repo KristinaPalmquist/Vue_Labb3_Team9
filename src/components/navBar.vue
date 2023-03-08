@@ -12,7 +12,6 @@ export default {
   data() {
     return {
       date: ref(new Date()),
-      dateNew: null,
       id: Number,
       cinemas: [],
       searchinput: "",
@@ -27,7 +26,6 @@ export default {
   },
   watch: {
     date(value) {
-      this.dateNew = value;
       console.log(value);
       this.onSelect(value);
     },
@@ -383,11 +381,12 @@ export default {
 
 .mobile-links {
   position: absolute;
-  top: 58px;
+  right: 0;
+  padding-right: 8px;
+  top: 56px;
   z-index: 999;
   background-color: #131415cb;
   width: 100%;
-  padding-right: 25px;
   text-align: right;
 }
 </style>

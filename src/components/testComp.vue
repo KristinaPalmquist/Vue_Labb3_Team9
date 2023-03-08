@@ -9,26 +9,14 @@ import moment from "moment/min/moment-with-locales";
     <h1>
       {{ moment().format("LL") }}
     </h1>
-    <h1>
-      {{ moment().dayOfYear() }}
-    </h1>
-    <h1>
-      {{ this.todaysScreenings }}
-    </h1>
   </div>
   <div class="test" v-if="this.dateProps != undefined">
     <h1>
       {{ moment(dateProps).format("LL") }}
     </h1>
-    <h1>
-      {{ moment(dateProps).dayOfYear() }}
-    </h1>
-    <h1>
-      {{ this.chosenScreenings }}
-    </h1>
   </div>
-  <!--film cards-->
-  <div class="row">
+  <!--film cards todays film-->
+  <div class="row" v-if="this.dateProps == undefined">
     <div
       class="card mb-1 col-md-4 filmcard text-white"
       style="width: 12rem"
@@ -41,8 +29,8 @@ import moment from "moment/min/moment-with-locales";
       </div>
     </div>
   </div>
-
-  <div class="row">
+  <!--film cards chosen film-->
+  <div class="row" v-if="this.dateProps != undefined">
     <div
       class="card mb-1 col-md-4 filmcard text-white"
       style="width: 12rem"
@@ -76,9 +64,16 @@ export default {
       require: true,
     },
   },
+  watch: {
+    dateProps(value) {
+      this.getChosenScreenings(value);
+      this.getChosenMovies(value);
+    },
+  },
   created() {
     this.getScreenings();
     this.getMovies();
+    this.getChosenMovies();
   },
   methods: {
     getScreenings() {
@@ -89,12 +84,13 @@ export default {
             (this.todaysScreenings = response.data[this.todaysDate].Victoria)
         );
     },
-    getChosenScreenings() {
+    getChosenScreenings(value) {
       axios
         .get("screenings.json")
         .then(
           (response) =>
-            (this.chosenScreenings = response.data[this.chosenDate].Victoria)
+            (this.chosenScreenings =
+              response.data[moment(value).dayOfYear()].Victoria)
         );
     },
     getMovies() {
@@ -105,11 +101,12 @@ export default {
         );
       });
     },
-    getTodaysMovies() {
+    getChosenMovies() {
       axios.get("movies.json").then((response) => {
         this.selectedMovies = response.data;
-        this.selectedMovies = this.movies.filter(
-          (movie) => this.todaysScreenings.indexOf(movie.id) > -1
+        this.selectedMovies = this.selectedMovies.filter(
+          (selectedMovie) =>
+            this.chosenScreenings.indexOf(selectedMovie.id) > -1
         );
       });
     },
@@ -117,8 +114,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.test {
-  height: 50vh;
-}
-</style>
+<style scoped></style>
