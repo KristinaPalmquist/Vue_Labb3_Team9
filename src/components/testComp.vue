@@ -10,7 +10,7 @@ import moment from "moment/min/moment-with-locales";
     <div class="row" v-if="this.dateProps == undefined">
       <div class="date-header">
         <h1>
-          {{ moment().lang("sv").format("LL") }}
+          {{ $store.state.datefixed }}
         </h1>
       </div>
       <div

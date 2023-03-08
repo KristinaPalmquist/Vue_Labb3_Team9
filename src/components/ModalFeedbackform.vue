@@ -2,7 +2,7 @@
   <div class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title">Hej {{ name }}!</h3>
+        <h5 class="modal-title">Hej {{ name }}!</h5>
         <button class="close-button" @click="$emit('close')">X</button>
       </div>
       <div class="modal-body">
@@ -25,7 +25,8 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(251, 245, 245, 0.5);
+  background-color: rgba(20, 18, 18, 0.5);
+  opacity: 0.2 px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +35,7 @@ export default {
 .modal-content {
   background-color: black;
   border-radius: 5px;
+  border: solid 1px white;
   padding: 20px;
   max-width: 303px;
   max-height: auto;

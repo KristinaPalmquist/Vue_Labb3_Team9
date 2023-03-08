@@ -20,9 +20,19 @@ const router = createRouter({
       component: MovieView,
     },
     {
+      path: "/film/:id",
+      name: "film-id",
+      component: MovieHeroView,
+    },
+    {
       path: "/biograf",
       name: "biograf",
       component: CinemaView,
+    },
+    {
+      path: "/biograf/:id",
+      name: "biograf-id",
+      component: CinemaHeroView,
     },
     {
       path: "/feedback",
