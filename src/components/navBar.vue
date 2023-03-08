@@ -12,6 +12,7 @@ export default {
   data() {
     return {
       date: ref(new Date()),
+      dateNew: null,
       id: Number,
       cinemas: [],
       searchinput: "",
@@ -23,6 +24,13 @@ export default {
       calendarOpen: "",
       togglerOpen: "Open",
     };
+  },
+  watch: {
+    date(value) {
+      this.dateNew = value;
+      console.log(value);
+      this.onSelect(value);
+    },
   },
   created() {
     this.filmSearch();
@@ -72,9 +80,9 @@ export default {
       this.calendarOpen = "";
       this.togglerOpen = "Open";
     },
-    handleDate(modelData) {
-      date.value = modelData;
-      // do something else with the data
+    onSelect(value) {
+      console.log(value);
+      this.$emit("generated-date", value);
     },
   },
   computed: {
@@ -179,7 +187,6 @@ export default {
         class="datePickerDesktop datePicker"
         color="black"
         locale="swe"
-        @update:model-value="handleDate"
       ></VueDatePicker>
       <span
         class="input-group-text border-0"
