@@ -54,12 +54,16 @@ export default {
               @click="onClick(movie.titleId)"
             >
               <div class="content2">
-                <h2>{{ movie.id }}</h2>
+                <h2></h2>
                 <h3>{{ movie.titleSweden }}</h3>
-                <p>Ranking IMDB: {{ movie.imdb }}</p>
-                <a class="card-text" :href="movie.trailer" target="_blank">
-                  Trailer
-                </a>
+                <br />
+                <h3 v-if="movie.imdb">imdb: {{ movie.imdb }}</h3>
+                <h3 v-if="movie.rtTomatometer">
+                  Tomatoes: {{ movie.rtTomatometer }}
+                </h3>
+                <h3 v-if="movie.rtAudienceScore">
+                  Audience: {{ movie.rtAudienceScore }}
+                </h3>
               </div>
             </div>
           </div>
@@ -126,42 +130,22 @@ body {
   transform: translateY(0px);
   opacity: 1;
 }
+/* Text that rolls up on the card image */
+/* This H2 is the one which lowers the text initially */
 .container2 .card2 .content2 h2 {
   position: absolute;
   top: -100px;
   right: 30px;
-  font-size: 8em;
-  color: rgba(255, 255, 255, 0.1);
   pointer-events: none;
 }
 .container2 .card2 .content2 h3 {
   font-size: 2em;
   color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0 20px #610c04, 0 0 10px #93000A;
   font-weight: 600;
   z-index: 1;
 }
-.container2 .card2 .content2 p {
-  font-size: 2em;
-  color: #fff;
-  font-weight: 300;
-}
 
-.card2 {
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.container2 .card2 .content2 a {
-  position: relative;
-  display: inline-block;
-  padding: 8px 20px;
-  margin-top: 15px;
-  background: #fff;
-  color: #000;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: 500;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
 /* Innehåller texten under cards */
 .cinemaList {
   color: rgba(255, 255, 255, 1);
