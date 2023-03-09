@@ -26,73 +26,124 @@
 }
 
 /* Buttons */
-
-.button {
+.btn1 {
   display: inline-block;
   cursor: pointer;
-  position: absolute;
   min-width: 90px;
   height: 36px;
   border-radius: 4px;
+  margin: 10px;
   font-family: "Inter", sans-serif;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-}
-
-.btn1 {
   border: none;
   background-color: var(--black-blue);
   color: var(--blue);
 }
 .btn1:hover {
-  box-shadow: 2px 4px 4px var(--yellow-soft);
+  box-shadow: 0px 0px 40px 6px var(--red);
 }
 
 .btn2 {
+  display: inline-block;
+  cursor: pointer;
+  min-width: 90px;
+  height: 36px;
+  border-radius: 4px;
+  margin: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
   border: 1px solid var(--blue);
   background-color: var(--black-blue);
   color: var(--blue);
 }
 .btn2:hover {
-  box-shadow: 2px 4px 4px var(--yellow-soft);
+  box-shadow: 0px 0px 40px 6px var(--red-dark);
 }
 
 .btn3 {
+  display: inline-block;
+  cursor: pointer;
+  min-width: 90px;
+  height: 36px;
+  border-radius: 4px;
+  margin: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
   border: none;
   background-color: var(--blue);
   color: var(--black-blue);
 }
 .btn3:hover {
-  box-shadow: 2px 4px 4px var(--yellow-soft);
+  box-shadow: 2px 2px 40px 6px var(--yellow);
 }
 
 .btn4 {
+  display: inline-block;
+  cursor: pointer;
+  min-width: 90px;
+  height: 36px;
+  border-radius: 4px;
+  margin: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
   border: 1px solid var(--black-blue);
   background-color: var(--blue);
   color: var(--black-blue);
 }
 .btn4:hover {
-  box-shadow: 2px 4px 4px var(--yellow-soft);
+  box-shadow: 0px 0px 40px 6px var(--blue);
 }
 
 .btn5 {
+  display: inline-block;
+  cursor: pointer;
+  min-width: 90px;
+  height: 36px;
+  border-radius: 4px;
+  margin: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
   border: none;
   background-color: var(--yellow);
   color: var(--black-soft);
 }
 .btn5:hover {
-  box-shadow: 2px 4px 4px var(--yellow-soft);
+  box-shadow: 0px 0px 40px 6px var(--white-soft);
 }
 
 .btn6 {
+  display: inline-block;
+  cursor: pointer;
+  min-width: 90px;
+  height: 36px;
+  border-radius: 4px;
+  margin: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
   border: 1px solid var(--yellow);
   background-color: var(--black-soft);
   color: var(--yellow);
 }
 .btn6:hover {
-  box-shadow: 2px 4px 4px var(--yellow-soft);
+  box-shadow: 0px 0px 40px 6px var(--yellow-soft);
 }
 
 .button-container {
