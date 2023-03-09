@@ -4,11 +4,11 @@ import moment from "moment/min/moment-with-locales";
 const mutations = {
     increment(state) {
         state.date += moment(1).lang("sv").dayOfYear()
-        state.datefixed = moment(state.datefixed).add(1, "days").format("LL")
+        state.datefixed = moment(state.datefixed).lang("sv").add(1, "days").format("LL")
     },
     previous(state) {
         state.date -= moment(1).lang("sv").dayOfYear()
-        state.datefixed = moment(state.datefixed).subtract(1, "days").format("LL")
+        state.datefixed = moment(state.datefixed).lang("sv").subtract(1, "days").format("LL")
     }
 },
 

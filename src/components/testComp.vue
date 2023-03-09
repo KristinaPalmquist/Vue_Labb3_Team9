@@ -181,7 +181,7 @@ export default {
   width: 1rem;
   display: inline-block;
   padding: 3px;
-  margin-bottom: 9px;
+  margin-bottom: 7px;
 }
 
 .change-day:hover {
