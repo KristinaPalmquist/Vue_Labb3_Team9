@@ -228,6 +228,13 @@ export default {
   </nav>
   <!--search result cards-->
   <div class="cards-div">
+    <div
+      class="close-btn-container"
+      v-if="filmsResult != ''"
+      @click="(this.filmsResult = '') & (this.cinemasResult = '')"
+    >
+      <i class="bi bi-x-lg close-btn"></i>
+    </div>
     <div class="row">
       <div
         class="card mb-1 col-md-4 filmcard text-white"
@@ -272,16 +279,6 @@ export default {
 <style scoped>
 .datePicker {
   width: 200px;
-}
-
-.cinema-card {
-  margin: 10px;
-  cursor: pointer;
-}
-.filmcard {
-  margin: 30px;
-  cursor: pointer;
-  background-color: #131415 !important;
 }
 
 .searchinput {
@@ -343,10 +340,20 @@ export default {
 #search-open i {
   margin-left: 6px;
 }
-.card-title {
-  font-size: medium;
+
+/*close search cards btn */
+.close-btn-container {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  background-color: #121212;
+}
+.close-btn {
+  margin-right: 15px;
+  cursor: pointer;
 }
 
+/*search cards*/
 .cards-div {
   background-color: #131415;
   color: white;
@@ -355,8 +362,23 @@ export default {
   align-items: center;
 }
 
+.card-title {
+  font-size: medium;
+}
+
+.cinema-card {
+  margin: 10px;
+  cursor: pointer;
+}
+.filmcard {
+  margin: 30px;
+  cursor: pointer;
+  background-color: #131415 !important;
+}
+
+/*search results list*/
 .listdiv {
-  background-color: #13141594;
+  background-color: #12121294;
   color: white;
   display: flex;
   flex-direction: column;
@@ -367,6 +389,8 @@ export default {
   top: 58px;
   z-index: 999;
 }
+
+/*nav links*/
 
 @media screen and (max-width: 800px) {
   .desktop-links {

@@ -1,8 +1,10 @@
 <script setup>
 import MoviesList from "../components/MoviesList.vue";
+import screeningsToday from "../components/screeningsToday.vue";
 </script>
 
 <template>
+  <screeningsToday />
   <!-- remove after testing -->
   <div class="button-container">
     <p>Button 1</p>
