@@ -1,15 +1,8 @@
 /* Font import */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap");
 
-/* Root settings */
+/* Color Scheme */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-  font-size: 16pt;
-
-  /* Color Scheme */
   --black: #000000;
   --white: #ffffff;
   --black-soft: #201b16;
@@ -23,88 +16,19 @@
   --yellow-soft: #f5c65067;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--black-blue);
+  color: var(--white);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
 /* Buttons */
-.btn1 {
-  display: inline-block;
-  cursor: pointer;
-  min-width: 90px;
-  height: 36px;
-  border-radius: 4px;
-  margin: 10px;
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-align: center;
-  border: none;
-  background-color: var(--black-blue);
-  color: var(--blue);
-}
-.btn1:hover {
-  box-shadow: 0px 0px 40px 6px var(--red);
-}
-
-.btn2 {
-  display: inline-block;
-  cursor: pointer;
-  min-width: 90px;
-  height: 36px;
-  border-radius: 4px;
-  margin: 10px;
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-align: center;
-  border: 1px solid var(--blue);
-  background-color: var(--black-blue);
-  color: var(--blue);
-}
-.btn2:hover {
-  box-shadow: 0px 0px 40px 6px var(--red-dark);
-}
-
-.btn3 {
-  display: inline-block;
-  cursor: pointer;
-  min-width: 90px;
-  height: 36px;
-  border-radius: 4px;
-  margin: 10px;
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-align: center;
-  border: none;
-  background-color: var(--blue);
-  color: var(--black-blue);
-}
-.btn3:hover {
-  box-shadow: 2px 2px 40px 6px var(--yellow);
-}
-
-.btn4 {
-  display: inline-block;
-  cursor: pointer;
-  min-width: 90px;
-  height: 36px;
-  border-radius: 4px;
-  margin: 10px;
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-align: center;
-  border: 1px solid var(--black-blue);
-  background-color: var(--blue);
-  color: var(--black-blue);
-}
-.btn4:hover {
-  box-shadow: 0px 0px 40px 6px var(--blue);
-}
-
-.btn5 {
+.btn-light {
   display: inline-block;
   cursor: pointer;
   min-width: 90px;
@@ -120,11 +44,11 @@
   background-color: var(--yellow);
   color: var(--black-soft);
 }
-.btn5:hover {
-  box-shadow: 0px 0px 40px 6px var(--white-soft);
+.btn-light:hover {
+  box-shadow: 0px 0px 40px 6px var(--yellow-soft);
 }
 
-.btn6 {
+.btn-dark {
   display: inline-block;
   cursor: pointer;
   min-width: 90px;
@@ -137,15 +61,9 @@
   text-transform: uppercase;
   text-align: center;
   border: 1px solid var(--yellow);
-  background-color: var(--black-soft);
+  background-color: var(--black);
   color: var(--yellow);
 }
-.btn6:hover {
+.btn-dark:hover {
   box-shadow: 0px 0px 40px 6px var(--yellow-soft);
-}
-
-.button-container {
-  width: 100%;
-  height: 50vh;
-  background-color: var(--black-soft);
 }
