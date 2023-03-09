@@ -16,11 +16,10 @@ export default {
 <style scoped>
 .heroimage {
   margin: auto;
-  height: 70vh;
-  overflow-x: hidden;
+  height: 60vh;
 }
 img {
   width: 100%;
-  height: 70vh;
+  height: 55vh;
 }
 </style>

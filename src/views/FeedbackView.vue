@@ -1,5 +1,7 @@
 <template>
   <div class="main">
+    <HeroImg />
+
     <RatingFeedback />
     <DisplayChart />
   </div>
@@ -7,9 +9,10 @@
 <script>
 import RatingFeedback from "../components/RatingFeedback.vue";
 import DisplayChart from "../components/DisplayChart.vue";
+import HeroImg from "../components/HeroImg.vue";
 export default {
   name: "FeedbackView",
-  components: { RatingFeedback, DisplayChart },
+  components: { RatingFeedback, DisplayChart, HeroImg },
   data() {
     return {};
   },

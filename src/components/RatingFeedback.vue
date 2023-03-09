@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <!-- <HeroImg /> -->
-  </div>
   <div class="feedbackBox">
-    <img src="" alt="" />
+    <!-- <img src="" alt="" /> -->
     <!-- v-html directive used to insert welcome message-->
     <div v-html="WelcomeMsg" class="WelcomeMsg"></div>
     <div class="intro-text-container">
@@ -19,7 +16,6 @@
       and v-for attribute is used to loop in star array index-->
       <div>
         <h6 class="FD-title">Betygsätt din upplevelse av appen</h6>
-
         <div class="star-rating">
           <span
             v-for="(star, index) in stars"
@@ -32,8 +28,8 @@
             ></i>
           </span>
         </div>
-        <div class="FD-btn">
-          <button @click="showFeedback = !showFeedback">
+        <div>
+          <button class="FD-btn" @click="showFeedback = !showFeedback">
             Klicka här för att lämna feedback
           </button>
         </div>
@@ -50,14 +46,14 @@
 
 <script>
 import FeedbackForm from "./FeedbackForm.vue";
-//import HeroImg from "../components/HeroImg.vue";
+
 export default {
   name: "RatingFeedback",
   components: { FeedbackForm },
   data() {
     return {
       WelcomeMsg: `<h5>Välkommen Till CINEMAP!</h5><Br>
-        <h6>Vi behöver eran feedBack för att bli bättre !</h6>`,
+        <h6>Vi behöver eran feedback för att bli bättre !</h6>`,
       stars: [
         { selected: false },
         { selected: false },
@@ -84,7 +80,7 @@ export default {
 
 <style scoped>
 .feedbackBox {
-  margin: 0px 2rem 2rem 2rem;
+  padding: 0px 2rem 2rem 2rem;
   justify-content: center;
   align-items: center;
 }
@@ -103,6 +99,8 @@ export default {
   color: gold;
 }
 .FD-btn {
-  margin-top: 15px;
+  background-color: black;
+  color: white;
+  margin: 15px;
 }
 </style>

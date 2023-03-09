@@ -4,8 +4,16 @@ import TheaterCard from "../components/TheaterCard.vue";
 
 <template>
   <TheaterCard />
+  <FeedbackNavigator />
 </template>
 
-<script></script>
+<script>
+import FeedbackNavigator from "../components/FeedbackNavigator.vue";
+export default {
+  component: {
+    FeedbackNavigator,
+  },
+};
+</script>
 
 <style scoped></style>
