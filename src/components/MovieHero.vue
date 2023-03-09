@@ -10,21 +10,21 @@ import axios from "axios";
     </div>
     <div v-if="movie">
       <div v-for="movie in movies" :key="movie.id" class="grid-container">
-        <div class="grid-item poster">
+        <div class="poster">
           <img class="poster-image" :src="`${movie.img}`" />
         </div>
-        <div class="grid-item title">
+        <div class="title">
           <h2>{{ movie.titleSweden }}</h2>
         </div>
-        <div class="grid-item info">
+        <div class="info">
           <table id="info-table">
             <tr>
               <td class="info-title">Svensk premiär:</td>
-              <td>{{ movie.premiere }}</td>
+              <td class="info-text">{{ movie.premiere }}</td>
             </tr>
             <tr>
               <td class="info-title">Trailer på IMDb:</td>
-              <td>
+              <td class="info-text">
                 <a :href="`${movie.trailer}`" target="_blank" id="trailer-link">
                   {{ movie.titleSweden }}
                 </a>
@@ -32,15 +32,15 @@ import axios from "axios";
             </tr>
             <tr>
               <td class="info-title">Längd:</td>
-              <td>{{ movie.minutes }} minuter</td>
+              <td class="info-text">{{ movie.minutes }} minuter</td>
             </tr>
             <tr>
               <td class="info-title">Åldersgräns:</td>
-              <td>{{ movie.ageLimit }} år</td>
+              <td class="info-text">{{ movie.ageLimit }} år</td>
             </tr>
             <tr>
               <td class="info-title">Genre:</td>
-              <td>
+              <td class="info-text">
                 <template v-for="(genre, index) in movie.category" :key="index">
                   <template v-if="index > 0">, </template>
                   {{ genre }}
@@ -49,7 +49,7 @@ import axios from "axios";
             </tr>
             <tr>
               <td class="info-title">Regissör:</td>
-              <td>
+              <td class="info-text">
                 <template v-for="(dir, index) in movie.director" :key="index">
                   <template v-if="index > 0">, </template>
                   {{ dir }}
@@ -58,7 +58,7 @@ import axios from "axios";
             </tr>
             <tr id="row-actors">
               <td class="info-title">Skådespelare:</td>
-              <td>
+              <td class="info-text">
                 <template v-for="(actor, index) in movie.actors" :key="index">
                   <template v-if="index > 0">, </template>
                   {{ actor }}
@@ -67,21 +67,21 @@ import axios from "axios";
             </tr>
           </table>
         </div>
-        <div class="grid-item text-area">
+        <div class="text-area">
           <p>{{ movie.plot }}</p>
         </div>
-        <div class="grid-item rating">
+        <div class="rating">
           <h5>Tillgängliga omdömen</h5>
           <table id="rating-table">
             <tr>
               <td v-if="movie.imdb !== null" class="rating-site">IMDb:</td>
-              <td v-if="movie.imdb !== null">{{ movie.imdb }}/10</td>
+              <td v-if="movie.imdb !== null" class="rating-score">{{ movie.imdb }}/10</td>
             </tr>
             <tr>
               <td v-if="movie.rtTomatometer !== null" class="rating-site">
                 Rotten Tomatoes Tomatometer:
               </td>
-              <td v-if="movie.rtTomatometer !== null">
+              <td v-if="movie.rtTomatometer !== null" class="rating-score">
                 {{ movie.rtTomatometer }}/100
               </td>
             </tr>
@@ -89,7 +89,7 @@ import axios from "axios";
               <td v-if="movie.rtAudienceScore !== null" class="rating-site">
                 Rotten Tomatoes Audience Score:
               </td>
-              <td v-if="movie.rtAudienceScore !== null">
+              <td v-if="movie.rtAudienceScore !== null" class="rating-score">
                 {{ movie.rtTomatometer }}/100
               </td>
             </tr>
@@ -158,30 +158,22 @@ h5 {
 
 .title {
   grid-area: title;
-  /* border-radius: 15px;
-  border: 1px solid var(--yellow); */
   padding: 20px;
   width: 100%;
   margin: auto;
 }
 .info {
   grid-area: info;
-  /* border-radius: 15px;
-  border: 1px solid var(--yellow); */
   padding: 10px;
 }
 
 .text-area {
   grid-area: text-area;
-  /* border-radius: 15px;
-  border: 1px solid var(--yellow); */
   padding: 10px;
 }
 
 .poster {
   grid-area: poster;
-  /* border-radius: 15px;
-  border: 1px solid var(--yellow); */
   padding: 20px;
 }
 
@@ -195,7 +187,6 @@ h5 {
   max-width: 90vw;
 }
 
-/* What colors to use? */
 #trailer-link {
   font-size: 1rem;
   text-decoration: none;
@@ -208,7 +199,6 @@ h5 {
 table {
   width: 100%;
   font-size: 0.875rem;
-  /* background-color: var(--yellow-soft); */
 }
 
 tr {
@@ -216,26 +206,40 @@ tr {
 }
 
 .info-title {
-  width: 30%;
-  /* background-color: var(--red-dark); */
+  width: 115px;
+  text-align: right;
+  padding-right: 7px;
 }
-
-.rating-site {
-  width: 60%;
-  /* background-color: var(--red-dark); */
+.info-text {
+    text-align: left;
+    padding-left: 7px
 }
 
 #row-actors {
   height: 60px;
 }
 
+.rating-site {
+  width: 240px;
+  text-align: right;
+  padding-right: 7px;
+}
+.rating-score {
+    text-align: left;
+    padding-left: 7px
+}
+
 #info-table {
 }
 
-#rating-table {
+#rating-table>tr {
+    height: 40px
 }
 
 @media screen and (min-width: 1000px) {
+  .container {
+    max-height: 100vh;
+  }
   .grid-container {
     display: grid;
     grid-column: auto 1fr 1fr 1fr auto;
@@ -247,27 +251,8 @@ tr {
       ". rating rating poster .";
   }
 
-  /* .info {
-    grid-area: info;
-  }
-
-  .text-area {
-    grid-area: text-area;
-  }
-
-  .poster {
-    grid-area: poster;
-  }
-
-  .rating {
-    grid-area: rating;
-    border-radius: 15px;
-    border: 1px solid var(--yellow);
-    padding: 20px;
-  } */
-
   .poster-image {
-    max-height: 100vh;
+    max-height: 90vh;
   }
 }
 </style>
