@@ -78,10 +78,8 @@ export default {
       this.getMovies(value);
     },
   },
-  mounted() {
-    this.getMovies();
-  },
   created() {
+    this.getMovies();
     this.getScreenings();
     this.getChosenMovies();
   },
@@ -162,7 +160,7 @@ export default {
   align-items: center;
 }
 .filmcard {
-  margin: 30px;
+  margin: 15px;
   cursor: pointer;
   background-color: #121212 !important;
 }

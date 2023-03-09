@@ -9,7 +9,7 @@
   box-sizing: border-box;
   /*overflow-x: hidden;*/
   font-family: "Inter", sans-serif;
-  /*font-size: 16pt;
+  font-size: 16pt;
 
   /* Color Scheme */
 
@@ -27,7 +27,7 @@
 }
 
 /* Buttons */
-/*
+
 .button {
   display: inline-block;
   cursor: pointer;
@@ -101,4 +101,3 @@
   height: 50vh;
   background-color: var(--black-soft);
 }
-*/
