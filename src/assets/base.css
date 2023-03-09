@@ -1,8 +1,69 @@
-/* color palette from <https://github.com/vuejs/theme> */
+/* Font import */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap");
+
+/* Color Scheme */
+* {
+  --black: #000000;
+  --white: #ffffff;
+  --black-soft: #201b16;
+  --white-soft: #fffbff;
+  --yellow: #f5c550;
+  --yellow-imdb: #f5c518;
+  --red: #93000a;
+  --red-dark: #610c04;
+  --black-blue: #121212;
+  --blue: #75e9e5;
+  --yellow-soft: #f5c65067;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  background-color: var(--black-blue);
+  color: var(--white);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
 
+/* Buttons */
+.btn-light {
+  display: inline-block;
+  cursor: pointer;
+  min-width: 90px;
+  height: 36px;
+  border-radius: 4px;
+  margin: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  background-color: var(--yellow);
+  color: var(--black-soft);
+}
+.btn-light:hover {
+  box-shadow: 0px 0px 40px 6px var(--yellow-soft);
+}
+
+.btn-dark {
+  display: inline-block;
+  cursor: pointer;
+  min-width: 90px;
+  height: 36px;
+  border-radius: 4px;
+  margin: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid var(--yellow);
+  background-color: var(--black);
+  color: var(--yellow);
+}
+.btn-dark:hover {
+  box-shadow: 0px 0px 40px 6px var(--yellow-soft);
 }
