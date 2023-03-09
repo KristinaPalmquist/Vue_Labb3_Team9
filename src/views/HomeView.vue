@@ -1,10 +1,10 @@
 <script setup>
 import MoviesList from "../components/MoviesList.vue";
-import testComp from "../components/testComp.vue";
+import screeningsToday from "../components/screeningsToday.vue";
 </script>
 
 <template>
-  <testComp @emit="receiveDate" :value="date" />
+  <screeningsToday />
   <!-- remove after testing -->
   <div class="button-container">
     <input type="button" class="btn-light" value="Button 5" />

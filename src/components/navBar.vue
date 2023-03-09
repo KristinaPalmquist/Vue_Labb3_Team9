@@ -3,7 +3,6 @@ import { ref } from "vue";
 import VueDatePicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
 import { RouterLink, RouterView } from "vue-router";
-const date = ref(new Date());
 </script>
 
 <script>
@@ -12,6 +11,7 @@ import axios from "axios";
 export default {
   data() {
     return {
+      date: ref(new Date()),
       date: ref(new Date()),
       id: Number,
       cinemas: [],
@@ -24,6 +24,12 @@ export default {
       calendarOpen: "",
       togglerOpen: "Open",
     };
+  },
+  watch: {
+    date(value) {
+      console.log(value);
+      this.onSelect(value);
+    },
   },
   created() {
     this.filmSearch();
@@ -73,8 +79,9 @@ export default {
       this.calendarOpen = "";
       this.togglerOpen = "Open";
     },
-    returnDate() {
-      this.$emit("emit", this.date);
+    onSelect(value) {
+      console.log(value);
+      this.$emit("generated-date", value);
     },
   },
   computed: {
@@ -178,6 +185,7 @@ export default {
         v-model="date"
         class="datePickerDesktop datePicker"
         color="black"
+        locale="swe"
       ></VueDatePicker>
       <span
         class="input-group-text border-0"
@@ -220,6 +228,13 @@ export default {
   </nav>
   <!--search result cards-->
   <div class="cards-div">
+    <div
+      class="close-btn-container"
+      v-if="filmsResult != ''"
+      @click="(this.filmsResult = '') & (this.cinemasResult = '')"
+    >
+      <i class="bi bi-x-lg close-btn"></i>
+    </div>
     <div class="row">
       <div
         class="card mb-1 col-md-4 filmcard text-white"
@@ -264,16 +279,6 @@ export default {
 <style scoped>
 .datePicker {
   width: 200px;
-}
-
-.cinema-card {
-  margin: 10px;
-  cursor: pointer;
-}
-.filmcard {
-  margin: 45px;
-  cursor: pointer;
-  background-color: #131415 !important;
 }
 
 .searchinput {
@@ -335,10 +340,20 @@ export default {
 #search-open i {
   margin-left: 6px;
 }
-.card-title {
-  font-size: medium;
+
+/*close search cards btn */
+.close-btn-container {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  background-color: #121212;
+}
+.close-btn {
+  margin-right: 15px;
+  cursor: pointer;
 }
 
+/*search cards*/
 .cards-div {
   background-color: #131415;
   color: white;
@@ -347,8 +362,23 @@ export default {
   align-items: center;
 }
 
+.card-title {
+  font-size: medium;
+}
+
+.cinema-card {
+  margin: 10px;
+  cursor: pointer;
+}
+.filmcard {
+  margin: 30px;
+  cursor: pointer;
+  background-color: #131415 !important;
+}
+
+/*search results list*/
 .listdiv {
-  background-color: #13141594;
+  background-color: #12121294;
   color: white;
   display: flex;
   flex-direction: column;
@@ -359,6 +389,8 @@ export default {
   top: 58px;
   z-index: 999;
 }
+
+/*nav links*/
 
 @media screen and (max-width: 800px) {
   .desktop-links {
@@ -374,11 +406,12 @@ export default {
 
 .mobile-links {
   position: absolute;
-  top: 58px;
+  right: 0;
+  padding-right: 8px;
+  top: 56px;
   z-index: 999;
   background-color: #131415cb;
   width: 100%;
-  padding-right: 25px;
   text-align: right;
 }
 </style>
