@@ -121,9 +121,11 @@ export default {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark navbar-dark">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary bg-black navbar-dark">
     <div class="container-fluid">
-      <RouterLink class="navbar-brand" to="/">CINEMAP</RouterLink>
+      <RouterLink class="navbar-brand" to="/">
+        <img class="brand-img" src="src\assets\img\cmlogo2.png"
+      /></RouterLink>
       <div class="navbar-collapse desktop-links">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -296,6 +298,12 @@ export default {
 </template>
 
 <style scoped>
+.navbar-brand .brand-img{
+    width: 100%;
+    height: 100%;
+}
+
+
 .datePicker {
   width: 200px;
 }
