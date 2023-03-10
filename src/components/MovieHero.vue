@@ -79,9 +79,7 @@ import axios from "axios";
             <p v-if="movie.imdb !== null">IMDb:</p>
           </div>
           <div id="imdb-score" class="rating-score">
-            <p v-if="movie.imdb !== null">
-              {{ movie.imdb }}/10
-            </p>
+            <p v-if="movie.imdb !== null">{{ movie.imdb }}/10</p>
           </div>
           <div id="tm" class="rating-site">
             <p v-if="movie.rtTomatometer !== null">
@@ -89,26 +87,17 @@ import axios from "axios";
             </p>
           </div>
           <div id="tm-score" class="rating-score">
-            <p
-              v-if="movie.rtTomatometer !== null"
-              id="tm-score"
-            >
+            <p v-if="movie.rtTomatometer !== null" id="tm-score">
               {{ movie.rtTomatometer }}/100
             </p>
           </div>
           <div id="as" class="rating-site">
-            <p
-              v-if="movie.rtAudienceScore !== null"
-              id="as"
-            >
+            <p v-if="movie.rtAudienceScore !== null" id="as">
               Rotten Tomatoes Audience Score:
             </p>
           </div>
           <div id="as-score" class="rating-score">
-            <p
-              v-if="movie.rtAudienceScore !== null"
-              id="as-score"
-            >
+            <p v-if="movie.rtAudienceScore !== null" id="as-score">
               {{ movie.rtTomatometer }}/100
             </p>
           </div>
@@ -176,7 +165,7 @@ export default {
 
 .poster {
   grid-area: poster;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .poster-image {
@@ -185,7 +174,8 @@ export default {
 
 .rating {
   grid-area: rating;
-  padding: 10px 10vw;
+  max-width: 472px;
+  margin: 0 auto;
 }
 .info {
   grid-area: info;
@@ -255,13 +245,13 @@ export default {
   border-radius: 15px;
   border: 1px solid var(--yellow);
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: auto auto;
   grid-template-areas:
-    "rating-header"
-    "imdb" "imdb-score"
-    "tm" "tm-score"
-    "as" "as-score";
+    "rating-header rating-header"
+    "imdb imdb-score"
+    "tm tm-score"
+    "as as-score";
 }
 
 #rating-header {
@@ -292,19 +282,14 @@ export default {
   grid-area: as-score;
 }
 
-div.rating-site {
-  margin-bottom: 0;
-  padding-bottom: 0;
+.rating-site {
+  text-align: right;
+  padding: 0 10px;
 }
 
-#imdb,
-#as,
-#tm {
-  margin-bottom: 0;
-}
-#imdb-score,
-#tm-score,
-#as-score {
+.rating-score {
+  text-align: left;
+  padding: 0 10px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -314,7 +299,7 @@ div.rating-site {
   .grid-container {
     display: grid;
     grid-template-columns: auto 1fr 1fr 1fr auto;
-    grid-template-rows: 1fr auto auto 1fr;
+    grid-template-rows: min-content auto min-content min-content;
     grid-template-areas:
       ". title title poster ."
       ". text-area text-area poster ."
