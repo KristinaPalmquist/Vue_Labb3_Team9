@@ -113,10 +113,8 @@ export default {
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .filmcard {
-  margin: 15px;
   cursor: pointer;
   background-color: #121212 !important;
 }
