@@ -12,7 +12,6 @@ export default {
   data() {
     return {
       date: ref(new Date()),
-      date: ref(new Date()),
       id: Number,
       cinemas: [],
       searchinput: "",
@@ -23,6 +22,21 @@ export default {
       searchOpen: "",
       calendarOpen: "",
       togglerOpen: "Open",
+      //click outside config
+      vcoConfig: {
+        handler: this.handler,
+        middleware: this.middleware,
+        events: ["dblclick", "click"],
+        // Note: The default value is true, but in case you want to activate / deactivate
+        //       this directive dynamically use this attribute.
+        isActive: true,
+        // Note: The default value is true. See "Detecting Iframe Clicks" section
+        //       to understand why this behaviour is behind a flag.
+        detectIFrame: true,
+        // Note: The default value is false. Sets the capture option for EventTarget addEventListener method.
+        //       Could be useful if some event's handler calls stopPropagation method preventing event bubbling.
+        capture: false,
+      },
     };
   },
   watch: {
@@ -43,6 +57,11 @@ export default {
       axios
         .get("cinemas.json")
         .then((response) => (this.cinemas = response.data));
+    },
+    onClickOutside(event) {
+      console.log("Clicked outside. Event: ", event);
+      this.filmsResult = null;
+      this.cinemasResult = null;
     },
     onClickOne() {
       this.cinemasResult = this.searchFilterMovies;
@@ -227,11 +246,11 @@ export default {
     </div>
   </nav>
   <!--search result cards-->
-  <div class="cards-div">
+  <div class="cards-div" v-click-outside="onClickOutside">
     <div
       class="close-btn-container"
-      v-if="filmsResult != '' || cinemasResult != ''"
-      @click="(this.filmsResult = '') & (this.cinemasResult = '')"
+      v-if="filmsResult != null || cinemasResult != null"
+      @click="(this.filmsResult = null) & (this.cinemasResult = null)"
     >
       <i class="bi bi-x-lg close-btn"></i>
     </div>

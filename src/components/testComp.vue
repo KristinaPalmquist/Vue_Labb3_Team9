@@ -4,8 +4,12 @@ import moment from "moment/min/moment-with-locales";
 </script>
 
 <template>
-  <div class="cards-div" v-if="this.dateProps != undefined">
-    <div class="close-btn-container" @click="dateProps = undefined">
+  <div
+    class="cards-div"
+    v-if="this.selectedMovies != ''"
+    v-click-outside="onClickOutside"
+  >
+    <div class="close-btn-container" @click="this.selectedMovies = ''">
       <i class="bi bi-x-lg close-btn"></i>
     </div>
     <!--film cards chosen film-->
@@ -39,6 +43,21 @@ export default {
       filmIds: "",
       chosenScreenings: [],
       selectedMovies: null,
+      //click outside config
+      vcoConfig: {
+        handler: this.handler,
+        middleware: this.middleware,
+        events: ["dblclick", "click"],
+        // Note: The default value is true, but in case you want to activate / deactivate
+        //       this directive dynamically use this attribute.
+        isActive: true,
+        // Note: The default value is true. See "Detecting Iframe Clicks" section
+        //       to understand why this behaviour is behind a flag.
+        detectIFrame: true,
+        // Note: The default value is false. Sets the capture option for EventTarget addEventListener method.
+        //       Could be useful if some event's handler calls stopPropagation method preventing event bubbling.
+        capture: false,
+      },
     };
   },
   props: {
@@ -55,6 +74,7 @@ export default {
   },
   created() {
     this.getChosenMovies();
+    this.onClickOutside();
   },
   methods: {
     getChosenScreenings(value) {
@@ -66,9 +86,14 @@ export default {
               response.data[moment(value).dayOfYear()].Victoria)
         );
     },
+    onClickOutside(event) {
+      console.log("Clicked outside. Event: ", event);
+      this.selectedMovies = "";
+    },
     // skickar till IndividualMovie
     onClickTwo(titleId) {
       this.$router.replace("film/" + titleId);
+      this.selectedMovies = "";
     },
     getChosenMovies() {
       axios.get("movies.json").then((response) => {
