@@ -147,13 +147,6 @@ export default {
       <!--search-->
       <div class="searchbar-div" v-if="this.searchOpen != ''">
         <div class="input-group rounded inputdiv">
-          <span
-            class="input-group-text border-0"
-            @click="onClickOne"
-            id="search-addon"
-          >
-            <i class="bi bi-search"></i>
-          </span>
           <input
             type="search"
             class="form-control rounded searchinput"
@@ -200,22 +193,25 @@ export default {
         <i class="bi bi-calendar"></i>
       </span>
       <!--calendar-->
-      <VueDatePicker
-        v-if="this.calendarOpen != ''"
-        dark
-        v-model="date"
-        class="datePickerDesktop datePicker"
-        color="black"
-        locale="swe"
-      ></VueDatePicker>
-      <span
-        class="input-group-text border-0"
-        @click="closeCalendar"
-        id="search-addon"
-        v-if="this.calendarOpen != ''"
-      >
-        <i class="bi bi-x-lg"></i>
-      </span>
+      <div class="datepicker-div">
+        <VueDatePicker
+          v-if="this.calendarOpen != ''"
+          dark
+          v-model="date"
+          class="datePickerDesktop datePicker"
+          color="black"
+          locale="swe"
+        ></VueDatePicker>
+        <span
+          class="input-group-text border-0"
+          @click="closeCalendar"
+          id="search-addon"
+          v-if="this.calendarOpen != ''"
+        >
+          <i class="bi bi-x-lg"></i>
+        </span>
+      </div>
+
       <button
         class="navbar-toggler"
         type="button"
@@ -227,7 +223,11 @@ export default {
       >
         <span class="navbar-toggler-icon" v-if="this.togglerOpen != ''"></span>
       </button>
-      <div class="collapse mobile-links" id="navbarNav">
+      <div
+        class="collapse mobile-links"
+        id="navbarNav"
+        v-if="this.togglerOpen != ''"
+      >
         <ul class="navbar-nav">
           <li class="nav-item">
             <RouterLink class="nav-link" aria-current="page" to="/"
@@ -298,29 +298,75 @@ export default {
 </template>
 
 <style scoped>
-.navbar-brand .brand-img{
-    width: 100%;
-    height: 100%;
+/*Logo*/
+.brand-img {
+  height: 5.5vh;
+}
+@media screen and (max-width: 500px) {
+  .brand-img {
+    height: 3.5vh;
+  }
 }
 
+/*date picker */
 
+.datepicker-div {
+  display: flex;
+  flex-direction: row;
+}
 .datePicker {
   width: 200px;
 }
 
+#calendar-open {
+  background-color: #13141500;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  #calendar-open {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .datePicker {
+    width: 155px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #calendar-open {
+    margin-right: 0px;
+  }
+}
+
+/*search input field */
 .searchinput {
   background-color: black;
+  font-size: small;
   color: beige;
 }
 
 .searchinput:focus {
-  background-color: black;
-  color: beige;
+  box-shadow: none !important;
+  border: solid var(--yellow-soft) !important;
 }
 
 .searchbar-div {
-  width: 260px;
+  width: 250px;
   text-align: left;
+}
+
+@media screen and (max-width: 500px) {
+  .searchbar-div {
+    width: 190px;
+  }
+
+  .searchinput {
+    font-size: x-small;
+  }
 }
 
 #search-addon {
@@ -334,32 +380,14 @@ export default {
   cursor: pointer;
 }
 
-#calendar-open {
-  background-color: #13141500;
-  color: white;
-  cursor: pointer;
-}
-
 @media screen and (min-width: 800px) {
   #search-open {
     margin-right: 30px;
   }
 }
 
-@media screen and (min-width: 800px) {
-  #calendar-open {
-    margin-right: 45px;
-  }
-}
-
 @media screen and (max-width: 800px) {
   #search-open {
-    margin-right: 0px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  #calendar-open {
     margin-right: 0px;
   }
 }
@@ -404,37 +432,43 @@ export default {
 
 /*search results list*/
 .listdiv {
-  background-color: #12121294;
   color: white;
   display: flex;
   flex-direction: column;
+  background-color: #121212cb;
 }
 
 .listdiv-container {
   position: absolute;
-  top: 58px;
+  top: 68px;
+  right: 0;
+  width: 30vh;
   z-index: 999;
 }
 
 /*nav links*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 992px) {
   .desktop-links {
     display: none;
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 992px) {
   .mobile-links {
     display: none;
   }
+}
+
+.desktop-links {
+  font-size: large;
 }
 
 .mobile-links {
   position: absolute;
   right: 0;
   padding-right: 8px;
-  top: 56px;
+  top: 68px;
   z-index: 999;
   background-color: #121212cb;
   width: 100%;
