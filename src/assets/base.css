@@ -28,6 +28,52 @@ body {
   font-size: 16px;
 }
 
+h1 {
+    font-size: 3.25rem;
+    color: var(--yellow);
+}
+
+h2 {
+    font-size: 2.75rem;
+    color: var(--yellow);
+}
+
+h3 {
+    font-size: 2.25rem;
+    color: var(--yellow);
+}
+
+h4 {
+    font-size: 2rem;
+    color: var(--yellow);
+}
+
+h5 {
+    font-size: 1.75rem;
+    color: var(--yellow);
+}
+
+h6 {
+    font-size: 1.5rem;
+    color: var(--yellow);
+}
+
+h7 {
+    font-size: 1.375rem;
+    color: var(--yellow);
+}
+
+h8 {
+    font-size: 1rem;
+    color: var(--yellow);
+}
+
+h9 {
+    font-size: 0.875rem;
+    color: var(--yellow);
+}
+
+
 /* Buttons */
 .btn-light {
   display: inline-block;
