@@ -230,7 +230,7 @@ export default {
   <div class="cards-div">
     <div
       class="close-btn-container"
-      v-if="filmsResult != ''"
+      v-if="filmsResult != '' || cinemasResult != ''"
       @click="(this.filmsResult = '') & (this.cinemasResult = '')"
     >
       <i class="bi bi-x-lg close-btn"></i>
@@ -346,16 +346,15 @@ export default {
   display: flex;
   width: 100%;
   justify-content: end;
-  background-color: #121212;
 }
 .close-btn {
-  margin-right: 15px;
+  margin-right: 25px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
 /*search cards*/
 .cards-div {
-  background-color: #131415;
   color: white;
   display: flex;
   flex-direction: column;
@@ -373,7 +372,7 @@ export default {
 .filmcard {
   margin: 30px;
   cursor: pointer;
-  background-color: #131415 !important;
+  background-color: #121212 !important;
 }
 
 /*search results list*/
@@ -410,7 +409,7 @@ export default {
   padding-right: 8px;
   top: 56px;
   z-index: 999;
-  background-color: #131415cb;
+  background-color: #121212cb;
   width: 100%;
   text-align: right;
 }

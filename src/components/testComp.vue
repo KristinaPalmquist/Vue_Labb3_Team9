@@ -4,9 +4,12 @@ import moment from "moment/min/moment-with-locales";
 </script>
 
 <template>
-  <div class="cards-div">
+  <div class="cards-div" v-if="this.dateProps != undefined">
+    <div class="close-btn-container" @click="dateProps = undefined">
+      <i class="bi bi-x-lg close-btn"></i>
+    </div>
     <!--film cards chosen film-->
-    <div class="row" v-if="this.dateProps != undefined">
+    <div class="row">
       <div class="date-header">
         <h1>
           {{ moment(dateProps).lang("sv").format("LL") }}
@@ -82,7 +85,6 @@ export default {
 
 <style scoped>
 .cards-div {
-  background-color: #121212;
   color: white;
   display: flex;
   flex-direction: column;
@@ -100,5 +102,18 @@ export default {
 .date-header {
   text-align: center;
   margin-top: 20px;
+}
+
+/*close search cards btn */
+.close-btn-container {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  background-color: #121212;
+}
+.close-btn {
+  margin-top: 10px;
+  margin-right: 25px;
+  cursor: pointer;
 }
 </style>

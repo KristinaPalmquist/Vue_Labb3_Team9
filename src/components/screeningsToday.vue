@@ -97,7 +97,6 @@ export default {
 
 <style scoped>
 .cards-div {
-  background-color: #121212;
   color: white;
   display: flex;
   flex-direction: column;
@@ -119,7 +118,7 @@ export default {
 
 /*change day buttons*/
 .change-day {
-  border: solid white;
+  border: solid #610c04;
   border-width: 0 3px 3px 0;
   height: 1rem;
   width: 1rem;

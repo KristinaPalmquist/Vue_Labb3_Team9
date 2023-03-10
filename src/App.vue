@@ -6,7 +6,7 @@ import testComp from "./components/testComp.vue";
 
 <template>
   <navBar @generated-date="onGeneratedDate" />
-  <testComp :dateProps="date" id="test-comp" />
+  <testComp :dateProps="date" />
   <FooterFooter />
 </template>
 
@@ -25,4 +25,4 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style></style>
