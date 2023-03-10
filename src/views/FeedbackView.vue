@@ -18,13 +18,15 @@ export default {
 </script>
 
 <style scoped>
+/*
 body {
+
   width: auto;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-}
+}*/
 .main {
   background-color: rgb(22, 21, 21);
   color: white;

@@ -10,12 +10,14 @@ import moment from "moment/min/moment-with-locales";
 import "./assets/base.css";
 import VueDatePicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
+import vClickOutside from "click-outside-vue3"
 
 const app = createApp(App);
 app.config.globalProperties.axios = axios;
 
 app.use(createPinia());
 app.use(router);
+app.use(vClickOutside)
 app.component(VueDatePicker);
 app.use(bootstrap);
 app.use(moment);
