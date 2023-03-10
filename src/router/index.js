@@ -48,7 +48,7 @@ const router = createRouter({
       path: "/biograf/:id",
       name: "biograf-id",
       component: CinemaHeroView,
-    }
+    },
   ],
 });
 
