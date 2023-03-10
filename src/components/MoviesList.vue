@@ -41,11 +41,7 @@ export default {
   <body>
     <div class="container">
       <div class="row">
-        <div
-          class="col-md-4 filmcard"
-          v-for="movie in movies"
-          :key="movie.titleId"
-        >
+        <div class="col-lg-4" v-for="movie in movies" :key="movie.titleId">
           <div class="container2">
             <div
               class="card2"
@@ -53,18 +49,9 @@ export default {
               :alt="movie.titleSweden"
               @click="onClick(movie.titleId)"
             >
-              <div class="content2">
-                <h2></h2>
-                <h3>{{ movie.titleSweden }}</h3>
-                <br />
-                <h3 v-if="movie.imdb">imdb: {{ movie.imdb }}</h3>
-                <h3 v-if="movie.rtTomatometer">
-                  Tomatoes: {{ movie.rtTomatometer }}
-                </h3>
-                <h3 v-if="movie.rtAudienceScore">
-                  Audience: {{ movie.rtAudienceScore }}
-                </h3>
-              </div>
+              <!-- <div class="content2">
+
+              </div> -->
             </div>
           </div>
           <div v-for="cinema in cinemas" :key="cinema.id">
@@ -80,19 +67,14 @@ export default {
   </body>
 </template>
 <style scoped>
-.filmcard {
-  cursor: pointer;
-}
 
 body {
   display: flex;
   justify-self: center;
   align-items: center;
   min-height: 100vh;
-  background: #131415;
 }
 .container2 {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,55 +83,32 @@ body {
   z-index: 1;
 }
 .container2 .card2 {
-  position: relative;
-  min-width: 200px;
+  min-width: 250px;
   height: 400px;
   margin: 30px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
-  opacity: 0.8;
-  background-size: cover;
+  opacity: 0.7;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
 }
-.container2 .card2 .content2 {
-  padding: 20px;
-  text-align: center;
-  transform: translateY(100px);
-  opacity: 0;
-  transition: 0.5s;
-}
-.container2:hover .content2 {
-  transform: translateY(0px);
+
+.container2 .card2:hover {
+  cursor: pointer;
   opacity: 1;
-}
-/* Text that rolls up on the card image */
-/* This H2 is the one which lowers the text initially */
-.container2 .card2 .content2 h2 {
-  position: absolute;
-  top: -100px;
-  right: 30px;
-  pointer-events: none;
-}
-.container2 .card2 .content2 h3 {
-  font-size: 2em;
-  color: rgba(255, 255, 255, 1);
-  text-shadow: 0 0 20px #610c04, 0 0 10px #93000A;
-  font-weight: 600;
-  z-index: 1;
 }
 
 /* Innehåller texten under cards */
 .cinemaList {
   color: rgba(255, 255, 255, 1);
   font-size: 1em;
-  margin-left: 25%;
+  cursor: pointer;
+}
+.cinemaList:hover {
+  color: #f5c518;
 }
 </style>

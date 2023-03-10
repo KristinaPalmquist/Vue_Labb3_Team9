@@ -55,7 +55,6 @@ body {
   justify-self: center;
   align-items: center;
   min-height: 100vh;
-  background: #131415;
 }
 .container2 {
   position: relative;
@@ -69,7 +68,7 @@ body {
   position: relative;
   min-width: 350px;
   width: 800px;
-  height: 600px;
+  height: 400px;
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
