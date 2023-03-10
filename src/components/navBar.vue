@@ -298,6 +298,10 @@ export default {
 </template>
 
 <style scoped>
+.navbar {
+  border-bottom: solid 1px var(--black-soft);
+}
+
 /*Logo*/
 .brand-img {
   height: 5.5vh;
@@ -319,7 +323,7 @@ export default {
 }
 
 #calendar-open {
-  background-color: #13141500;
+  background-color: #000000;
   color: white;
   cursor: pointer;
 }
@@ -370,12 +374,12 @@ export default {
 }
 
 #search-addon {
-  background-color: #13141500;
+  background-color: #000000;
   color: white;
 }
 
 #search-open {
-  background-color: #13141500;
+  background-color: #000000;
   color: white;
   cursor: pointer;
 }
@@ -460,10 +464,9 @@ export default {
   }
 }
 
-.desktop-links {
-  font-size: large;
+.desktop-links li {
+  font-size: larger;
 }
-
 .mobile-links {
   position: absolute;
   right: 0;
