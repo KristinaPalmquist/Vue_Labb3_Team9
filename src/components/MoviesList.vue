@@ -48,11 +48,7 @@ export default {
               :style="{ backgroundImage: `url(${movie.img})` }"
               :alt="movie.titleSweden"
               @click="onClick(movie.titleId)"
-            >
-              <!-- <div class="content2">
-
-              </div> -->
-            </div>
+            ></div>
           </div>
           <div v-for="cinema in cinemas" :key="cinema.id">
             <div v-if="cinema.movies.includes(movie.id)">

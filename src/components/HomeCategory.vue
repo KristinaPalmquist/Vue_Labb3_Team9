@@ -6,13 +6,29 @@ export default {
   created() {
     this.apiCall();
     this.cinemaSearch();
+    // this.getDramas();
   },
   methods: {
     // hämtar filmernas json
     apiCall() {
-      axios
-        .get("movies.json")
-        .then((response) => (this.movies = response.data));
+      axios.get("movies.json").then((response) => {
+        this.movies = response.data; // loading the whole film json
+        // creating drama array randomising and choosing 3 movies
+        this.dramas = this.movies
+          .filter((movie) => movie.category.includes("Drama"))
+          .sort(() => 0.5 - Math.random())
+          .slice(0, 3);
+        // creating comedy list
+        this.comedys = this.movies
+          .filter((movie) => movie.category.includes("Komedi"))
+          .sort(() => 0.5 - Math.random())
+          .slice(0, 3);
+        // creating documentary list
+        this.documentarys = this.movies
+          .filter((movie) => movie.category.includes("Dokumentär"))
+          .sort(() => 0.5 - Math.random())
+          .slice(0, 3);
+      });
     },
     // skickar till IndividualMovie
     onClick(titleId) {
@@ -33,6 +49,9 @@ export default {
     return {
       movies: [],
       cinemas: [],
+      dramas: [],
+      comedys: [],
+      documentarys: []
     };
   },
 };
@@ -40,45 +59,106 @@ export default {
 
 <template>
   <div class="container">
-    Dramaskola
+    DRAMA
     <hr class="hr hr-blurry" />
     <div class="row">
-      <div
-        class="card mb-1 col-md-4 filmcard text-white"
-        style="width: 12rem"
-        v-for="result in filmsResult"
-        :key="result.id"
-        @click="onClick(result.titleId)"
-      >
-        <img :src="result.img" class="card-img-top" :alt="result.titleEnglish" />
-        <div class="card-body">
-          <h1 class="card-title">{{ result.titleSweden }}</h1>
-          <p class="card-text">IMDB: {{ result.imdb }}</p>
+      <div v-for="movie in dramas" :key="movie.titleId" class="col-md-4">
+        <div>
+          <div class="container2">
+            <div
+              class="card2"
+              :style="{ backgroundImage: `url(${movie.img})` }"
+              :alt="movie.titleSweden"
+              @click="onClick(movie.titleId)"
+            ></div>
+          </div>
+        </div>
+        <!-- <div v-for="cinema in cinemas" :key="cinema.id">
+          <div v-if="cinema.movies.includes(movie.id)">
+            <h2 class="cinemaList" @click="onClickCinemaHero(cinema.nameId)">
+              {{ cinema.name }}
+            </h2>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    KOMEDY
+    <hr class="hr hr-blurry" />
+    <div class="row">
+      <div v-for="movie in comedys" :key="movie.titleId" class="col-md-4">
+        <div>
+          <div class="container2">
+            <div
+              class="card2"
+              :style="{ backgroundImage: `url(${movie.img})` }"
+              :alt="movie.titleSweden"
+              @click="onClick(movie.titleId)"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    DOKUMENTÄR
+    <hr class="hr hr-blurry" />
+    <div class="row">
+      <div v-for="movie in documentarys" :key="movie.titleId" class="col-md-4">
+        <div>
+          <div class="container2">
+            <div
+              class="card2"
+              :style="{ backgroundImage: `url(${movie.img})` }"
+              :alt="movie.titleSweden"
+              @click="onClick(movie.titleId)"
+            ></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <style scoped>
-.cards-div {
-  background-color: #131415;
-  color: white;
+
+body {
   display: flex;
-  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+.container2 .card2 {
+  min-width: 150px;
+  width: 250px;
+  height: 350px;
+  margin: 30px;
+  border-radius: 15px;
+  opacity: 0.7;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.card-title {
-  font-size: medium;
+.container2 .card2:hover {
+  cursor: pointer;
+  opacity: 1;
 }
 
-.cinema-card {
-  margin: 10px;
+/* Innehåller texten under cards */
+.cinemaList {
+  color: rgba(255, 255, 255, 1);
+  font-size: 1em;
   cursor: pointer;
 }
-.filmcard {
-  margin: 30px;
-  cursor: pointer;
-  background-color: #131415 !important;
+.cinemaList:hover {
+  color: #f5c518;
 }
 </style>
