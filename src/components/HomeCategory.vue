@@ -82,7 +82,7 @@ export default {
         </div> -->
       </div>
     </div>
-    KOMEDY
+    KOMEDI
     <hr class="hr hr-blurry" />
     <div class="row">
       <div v-for="movie in comedys" :key="movie.titleId" class="col-md-4">
