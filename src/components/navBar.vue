@@ -123,7 +123,7 @@ export default {
   <nav class="navbar navbar-expand-lg bg-body-tertiary bg-black navbar-dark">
     <div class="container-fluid">
       <RouterLink class="navbar-brand" to="/">
-        <img class="brand-img" src="src\assets\img\cmlogo2.png"
+        <img class="brand-img" src="../assets/img/cmlogo2.png"
       /></RouterLink>
       <div class="navbar-collapse desktop-links">
         <ul class="navbar-nav">
@@ -250,11 +250,12 @@ export default {
   <div class="cards-div" v-click-outside="onClickOutside">
     <div
       class="close-btn-container"
-      v-if="filmsResult != null || cinemasResult != null"
-      @click="(this.filmsResult = null) & (this.cinemasResult = null)"
+      v-if="filmsResult != '' || cinemasResult != ''"
+      @click="(this.filmsResult = '') & (this.cinemasResult = '')"
     >
       <i class="bi bi-x-lg close-btn"></i>
     </div>
+    <h1 v-if="filmsResult != '' || cinemasResult != ''">Sökresultat</h1>
     <div class="row">
       <div
         class="card mb-1 col-md-4 filmcard text-white"
