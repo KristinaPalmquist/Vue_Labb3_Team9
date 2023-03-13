@@ -8,7 +8,7 @@
 import RatingFeedback from "../components/RatingFeedback.vue";
 import DisplayChart from "../components/DisplayChart.vue";
 export default {
-  name: "FeedbackView",
+  name: "AboutView",
   components: { RatingFeedback, DisplayChart },
   data() {
     return {};
