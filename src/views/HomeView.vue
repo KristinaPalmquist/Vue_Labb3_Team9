@@ -13,8 +13,5 @@ import screeningsToday from "../components/screeningsToday.vue";
   <HomeCategory />
   <FeedbackNavigator />
 </template>
-<script>
-
-
-</script>
+<script></script>
 <style scoped></style>
