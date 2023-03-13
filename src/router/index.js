@@ -39,16 +39,6 @@ const router = createRouter({
       name: "feedback",
       component: FeedbackView,
     },
-    {
-      path: "/film/:id",
-      name: "film-id",
-      component: MovieHeroView,
-    },
-    {
-      path: "/biograf/:id",
-      name: "biograf-id",
-      component: CinemaHeroView,
-    },
   ],
 });
 

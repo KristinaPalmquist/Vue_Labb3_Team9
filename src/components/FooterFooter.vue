@@ -1,7 +1,10 @@
 <template>
   <div>
     <!-- Footer -->
-    <footer class="bg-dark text-center text-white">
+    <footer
+      class="text-center text-white footer-div"
+      style="background-color: #000000"
+    >
       <!-- Grid container -->
       <div class="container p-4">
         <!-- Section: Social media -->
@@ -180,7 +183,10 @@
       <!-- Grid container -->
 
       <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div
+        class="text-center p-3 copy-div"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
         © 2023 Copyright CINEMAP
       </div>
       <!-- Copyright -->
@@ -192,4 +198,13 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
   />
 </template>
-<style scoped></style>
+
+<style scoped>
+.copy-div {
+  border-top: solid 2px var(--black-soft);
+}
+
+.footer-div {
+  border-top: solid 1px var(--black-soft);
+}
+</style>

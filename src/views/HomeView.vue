@@ -1,5 +1,5 @@
 <script setup>
-import MoviesList from "../components/MoviesList.vue";
+import HomeCategory from "../components/HomeCategory.vue";
 import screeningsToday from "../components/screeningsToday.vue";
 </script>
 

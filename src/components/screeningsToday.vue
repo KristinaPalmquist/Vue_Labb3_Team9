@@ -1,12 +1,11 @@
 <script setup>
 import axios from "axios";
-import moment from "moment/min/moment-with-locales";
 </script>
 
 <template>
   <div class="cards-div">
     <!--film cards todays film-->
-    <div class="row" v-if="this.dateProps == undefined">
+    <div class="row">
       <div class="date-header">
         <h1>
           <span @click="previousDay"><i class="change-day left"></i></span>
@@ -97,7 +96,6 @@ export default {
 
 <style scoped>
 .cards-div {
-  background-color: #121212;
   color: white;
   display: flex;
   flex-direction: column;
@@ -119,7 +117,7 @@ export default {
 
 /*change day buttons*/
 .change-day {
-  border: solid white;
+  border: solid #f5c65067;
   border-width: 0 3px 3px 0;
   height: 1rem;
   width: 1rem;
@@ -130,7 +128,7 @@ export default {
 
 .change-day:hover {
   cursor: pointer;
-  border: solid #93000a;
+  border: solid #f5c550;
   border-width: 0 3px 3px 0;
 }
 
