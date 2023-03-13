@@ -30,7 +30,8 @@ export default {
           class="col-lg-6"
           v-for="theater in theaters"
           :key="theater.id"
-          @click="onClick(theater.nameId)">
+          @click="onClick(theater.nameId)"
+        >
           <div class="container2">
             <div
               class="card2"

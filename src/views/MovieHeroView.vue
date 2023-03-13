@@ -4,10 +4,16 @@ import MovieHero from "../components/MovieHero.vue";
 
 <template>
   <MovieHero />
+  <FeedbackNavigator />
 </template>
 
 <script>
-export default {};
+import FeedbackNavigator from "../components/FeedbackNavigator.vue";
+export default {
+  component: {
+    FeedbackNavigator,
+  },
+};
 </script>
 
 <style scoped></style>

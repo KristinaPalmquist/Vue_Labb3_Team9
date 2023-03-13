@@ -51,7 +51,7 @@ export default {
       cinemas: [],
       dramas: [],
       comedys: [],
-      documentarys: []
+      documentarys: [],
     };
   },
 };
@@ -59,8 +59,6 @@ export default {
 
 <template>
   <div class="container">
-
-    <hr class="hr hr-blurry" />
     <h5>Drama</h5>
     <div class="row">
       <div v-for="movie in dramas" :key="movie.titleId" class="col-md-4">
@@ -83,7 +81,6 @@ export default {
         </div> -->
       </div>
     </div>
-    <hr class="hr hr-blurry" />
     <h5>Komedi</h5>
     <div class="row">
       <div v-for="movie in comedys" :key="movie.titleId" class="col-md-4">
@@ -99,7 +96,6 @@ export default {
         </div>
       </div>
     </div>
-    <hr class="hr hr-blurry" />
     <h5>Dokumentär</h5>
     <div class="row">
       <div v-for="movie in documentarys" :key="movie.titleId" class="col-md-4">
@@ -118,7 +114,6 @@ export default {
   </div>
 </template>
 <style scoped>
-
 body {
   display: flex;
   justify-self: center;

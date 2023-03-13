@@ -94,8 +94,6 @@ export default {
 </template>
 
 <style scoped>
-.cards-div {
-}
 .on-cinema {
   margin-top: 10px;
 }
