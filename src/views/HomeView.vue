@@ -8,4 +8,5 @@ import screeningsToday from "../components/screeningsToday.vue";
   <FeedbackNavigator />
 </template>
 <script></script>
-<style scoped></style>
+<style scoped>
+</style>

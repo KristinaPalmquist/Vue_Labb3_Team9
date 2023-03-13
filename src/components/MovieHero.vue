@@ -123,7 +123,7 @@ export default {
   },
   created() {
     // fetch movies.json and filter result for the movie whos titleId matches movieName taken from URL
-    axios.get("/movies.json").then((response) => {
+    axios.get("/public/movies.json").then((response) => {
       this.movies = response.data;
       this.movies = this.movies.filter((movie) => {
         return movie.titleId === this.movieName;
