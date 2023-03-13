@@ -17,6 +17,7 @@
   --yellow-soft: #f5c65067;
 }
 
+/* Basic body settings */
 body {
   margin: 0;
   padding: 0;
@@ -28,6 +29,7 @@ body {
   font-size: 16px;
 }
 
+/* Headers */
 h1 {
   font-size: 3.25rem;
   color: var(--yellow);
