@@ -64,7 +64,7 @@ h5:after {
   flex-wrap: wrap;
   width: 100%;
   height: auto;
-  margin: 20px;
+  margin: 20px auto;
   padding: 30px;
   justify-content: center;
   align-items: center;
