@@ -3,7 +3,6 @@ import navBar from "./components/navBar.vue";
 import FooterFooter from "./components/FooterFooter.vue";
 import testComp from "./components/testComp.vue";
 </script>
-
 <template>
   <navBar @generated-date="onGeneratedDate" />
   <testComp :dateProps="date" id="date-filter" />

@@ -109,12 +109,10 @@ export default {
 .card-title {
   font-size: medium;
 }
-
 .date-header {
   text-align: center;
   margin-top: 20px;
 }
-
 /*change day buttons*/
 .change-day {
   border: solid #f5c65067;
@@ -125,18 +123,15 @@ export default {
   padding: 3px;
   margin-bottom: 7px;
 }
-
 .change-day:hover {
   cursor: pointer;
   border: solid #f5c550;
   border-width: 0 3px 3px 0;
 }
-
 .left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
-
 .right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);

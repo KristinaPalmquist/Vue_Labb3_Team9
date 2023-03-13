@@ -51,7 +51,7 @@ export default {
       cinemas: [],
       dramas: [],
       comedys: [],
-      documentarys: []
+      documentarys: [],
     };
   },
 };
@@ -118,7 +118,6 @@ export default {
   </div>
 </template>
 <style scoped>
-
 body {
   display: flex;
   justify-self: center;

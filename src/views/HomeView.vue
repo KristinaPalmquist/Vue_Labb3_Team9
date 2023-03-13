@@ -2,7 +2,6 @@
 import HomeCategory from "../components/HomeCategory.vue";
 import screeningsToday from "../components/screeningsToday.vue";
 </script>
-
 <template>
   <screeningsToday />
   <!-- remove after testing -->
@@ -12,6 +11,7 @@ import screeningsToday from "../components/screeningsToday.vue";
   </div>
   <!-- end of button-test -->
   <HomeCategory />
+  <FeedbackNavigator />
 </template>
-
+<script></script>
 <style scoped></style>
