@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      heroImage: "src/assets/img/cinema.jpg",
+      heroImage: "/src/assets/img/cinema.jpg",
     };
   },
 };

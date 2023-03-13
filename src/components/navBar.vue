@@ -124,7 +124,7 @@ export default {
   <nav class="navbar navbar-expand-lg bg-body-tertiary bg-black navbar-dark">
     <div class="container-fluid">
       <RouterLink class="navbar-brand" to="/">
-        <img class="brand-img" src="src\assets\img\cmlogo2.png"
+        <img class="brand-img" src="\src\assets\img\cmlogo2.png"
       /></RouterLink>
       <div class="navbar-collapse desktop-links">
         <ul class="navbar-nav">

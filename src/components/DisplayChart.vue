@@ -122,7 +122,7 @@ body {
   border: solid 1px rgb(136, 124, 53);
 }
 .ImageSlide {
-  background-image: url("src/assets/img/cinema view.1.jpg");
+  background-image: url("/src/assets/img/cinema view.1.jpg");
   object-fit: cover;
   background-repeat: no-repeat;
   width: 370px;

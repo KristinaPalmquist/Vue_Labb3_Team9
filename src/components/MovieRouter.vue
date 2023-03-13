@@ -24,7 +24,7 @@ export default {
   methods: {
     fetchMovies() {
       axios
-        .get("../../public/movies.json")
+        .get("/movies.json")
         .then((movies) => (this.movies = movies.data));
     },
   },

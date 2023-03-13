@@ -79,7 +79,7 @@ export default {
   methods: {
     getChosenScreenings(value) {
       axios
-        .get("screenings.json")
+        .get("/screenings.json")
         .then(
           (response) =>
             (this.chosenScreenings =
@@ -96,7 +96,7 @@ export default {
       this.selectedMovies = "";
     },
     getChosenMovies() {
-      axios.get("movies.json").then((response) => {
+      axios.get("/movies.json").then((response) => {
         this.selectedMovies = response.data;
         this.selectedMovies = this.selectedMovies.filter(
           (selectedMovie) =>
