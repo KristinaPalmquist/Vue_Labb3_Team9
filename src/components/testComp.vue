@@ -9,7 +9,11 @@ import moment from "moment/min/moment-with-locales";
     v-if="this.selectedMovies != ''"
     v-click-outside="onClickOutside"
   >
-    <div class="close-btn-container" @click="this.selectedMovies = ''">
+    <div
+      class="close-btn-container"
+      @click="this.selectedMovies = ''"
+      v-if="this.selectedMovies != ''"
+    >
       <i class="bi bi-x-lg close-btn"></i>
     </div>
     <!--film cards chosen film-->
