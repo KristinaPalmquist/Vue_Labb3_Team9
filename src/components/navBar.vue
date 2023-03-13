@@ -59,7 +59,6 @@ export default {
         .then((response) => (this.cinemas = response.data));
     },
     onClickOutside(event) {
-      console.log("Clicked outside. Event: ", event);
       this.filmsResult = null;
       this.cinemasResult = null;
     },
@@ -124,7 +123,7 @@ export default {
   <nav class="navbar navbar-expand-lg bg-body-tertiary bg-black navbar-dark">
     <div class="container-fluid">
       <RouterLink class="navbar-brand" to="/">
-        <img class="brand-img" src="src\assets\img\cmlogo2.png"
+        <img class="brand-img" src="../assets/img/cmlogo2.png"
       /></RouterLink>
       <div class="navbar-collapse desktop-links">
         <ul class="navbar-nav">
@@ -248,14 +247,18 @@ export default {
     </div>
   </nav>
   <!--search result cards-->
-  <div class="cards-div" v-click-outside="onClickOutside">
+  <div
+    class="cards-div"
+    v-click-outside="onClickOutside"
+    v-if="this.filmsResult != '' || this.cinemasResult != ''"
+  >
     <div
       class="close-btn-container"
-      v-if="filmsResult != null || cinemasResult != null"
-      @click="(this.filmsResult = null) & (this.cinemasResult = null)"
+      @click="(this.filmsResult = '') & (this.cinemasResult = '')"
     >
       <i class="bi bi-x-lg close-btn"></i>
     </div>
+    <h1>Sökresultat</h1>
     <div class="row">
       <div
         class="card mb-1 col-md-4 filmcard text-white"
@@ -299,7 +302,7 @@ export default {
 
 <style scoped>
 .navbar {
-  border-bottom: solid 1px var(--black-soft);
+  border-bottom: solid 2px var(--black-soft);
 }
 
 /*Logo*/
@@ -413,6 +416,15 @@ export default {
 }
 
 /*search cards*/
+.card {
+  margin: 0 auto;
+  float: none;
+}
+
+.card img {
+  height: 250px;
+}
+
 .cards-div {
   color: white;
   display: flex;
@@ -425,11 +437,10 @@ export default {
 }
 
 .cinema-card {
-  margin: 10px;
+  width: auto;
   cursor: pointer;
 }
 .filmcard {
-  margin: 30px;
   cursor: pointer;
   background-color: #121212 !important;
 }
@@ -445,8 +456,6 @@ export default {
 .listdiv-container {
   position: absolute;
   top: 68px;
-  right: 0;
-  width: 30vh;
   z-index: 999;
 }
 
