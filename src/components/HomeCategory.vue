@@ -59,8 +59,9 @@ export default {
 
 <template>
   <div class="container">
-    DRAMA
+
     <hr class="hr hr-blurry" />
+    <h5>Drama</h5>
     <div class="row">
       <div v-for="movie in dramas" :key="movie.titleId" class="col-md-4">
         <div>
@@ -82,8 +83,8 @@ export default {
         </div> -->
       </div>
     </div>
-    KOMEDI
     <hr class="hr hr-blurry" />
+    <h5>Komedi</h5>
     <div class="row">
       <div v-for="movie in comedys" :key="movie.titleId" class="col-md-4">
         <div>
@@ -98,8 +99,8 @@ export default {
         </div>
       </div>
     </div>
-    DOKUMENTÄR
     <hr class="hr hr-blurry" />
+    <h5>Dokumentär</h5>
     <div class="row">
       <div v-for="movie in documentarys" :key="movie.titleId" class="col-md-4">
         <div>
@@ -160,5 +161,8 @@ body {
 }
 .cinemaList:hover {
   color: #f5c518;
+}
+.hr {
+  color: #f5c550;
 }
 </style>
