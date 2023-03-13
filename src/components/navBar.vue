@@ -412,6 +412,15 @@ export default {
 }
 
 /*search cards*/
+.card {
+  margin: 0 auto;
+  float: none;
+}
+
+.card img {
+  height: 250px;
+}
+
 .cards-div {
   color: white;
   display: flex;
@@ -424,11 +433,10 @@ export default {
 }
 
 .cinema-card {
-  margin: 10px;
+  width: auto;
   cursor: pointer;
 }
 .filmcard {
-  margin: 30px;
   cursor: pointer;
   background-color: #121212 !important;
 }
