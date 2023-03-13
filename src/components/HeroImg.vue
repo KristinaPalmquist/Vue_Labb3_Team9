@@ -4,6 +4,7 @@
     <div class="text"></div>
   </div>
 </template>
+
 <script>
 export default {
   data() {
@@ -13,23 +14,25 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .heroimage {
-  margin: auto;
-  height: 62vh;
+  margin: 0 auto;
+  height: 40vh;
 }
 img {
   width: 100%;
-  height: 60vh;
+  height: 100%;
 }
-@media screen and (max-width: 480px) {
+
+@media screen and (min-width: 480px) {
   .heroimage {
-    margin: auto;
-    height: 40vh;
+    margin: 0 auto;
+    height: 62vh;
   }
   img {
     width: 100%;
-    height: 39vh;
+    height: 100%;
   }
 }
 </style>

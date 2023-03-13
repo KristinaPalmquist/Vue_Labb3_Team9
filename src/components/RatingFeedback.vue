@@ -5,12 +5,11 @@
     <div v-html="WelcomeMsg" class="WelcomeMsg"></div>
     <div class="intro-text-container">
       <p class="intro-text">
-        kan du beskriva dina upplevelser av denna app. Har du förslag på hur vi
+        Kan du beskriva dina upplevelser av denna app? Har du förslag på hur vi
         kan förbättra oss ytterligare? Saknar du något i appen? <br />
-        Vi arbetar outtröttligt för att göra upplevelsen av att använda våra
-        appar så bra som möjligt och dina idéer är viktiga!!<br />
-        Betygsätt och dela dina idéer för att vi kan förbättra appen
-        tillsammans.
+        Vi arbetar outtröttligt för att göra upplevelsen av att använda vår app
+        så bra som möjligt och dina idéer är viktiga!<br />
+        Betygsätt och dela dina idéer så att vi kan förbättra appen tillsammans.
       </p>
       <!-- Bootstrap Star icon is used to make clickable star icon for rating
       and v-for attribute is used to loop in star array index-->
@@ -32,7 +31,7 @@
           </div>
 
           <div class="popover" :class="{ show: showPopover }">
-            Betyget har lämnat!
+            Betyget har lämnats!
           </div>
           <div>
             <button class="btn-light" @click="showFeedback = !showFeedback">
