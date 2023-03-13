@@ -23,9 +23,7 @@ export default {
   },
   methods: {
     fetchMovies() {
-      axios
-        .get("/movies.json")
-        .then((movies) => (this.movies = movies.data));
+      axios.get("/movies.json").then((movies) => (this.movies = movies.data));
     },
   },
 };
