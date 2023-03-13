@@ -247,15 +247,18 @@ export default {
     </div>
   </nav>
   <!--search result cards-->
-  <div class="cards-div" v-click-outside="onClickOutside">
+  <div
+    class="cards-div"
+    v-click-outside="onClickOutside"
+    v-if="this.filmsResult != '' || this.cinemasResult != ''"
+  >
     <div
       class="close-btn-container"
-      v-if="filmsResult != '' || cinemasResult != ''"
       @click="(this.filmsResult = '') & (this.cinemasResult = '')"
     >
       <i class="bi bi-x-lg close-btn"></i>
     </div>
-    <h1 v-if="filmsResult != '' || cinemasResult != ''">Sökresultat</h1>
+    <h1>Sökresultat</h1>
     <div class="row">
       <div
         class="card mb-1 col-md-4 filmcard text-white"
