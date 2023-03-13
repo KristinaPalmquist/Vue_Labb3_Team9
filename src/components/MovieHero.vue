@@ -98,7 +98,7 @@ import axios from "axios";
           </div>
           <div id="as-score" class="rating-score">
             <p v-if="movie.rtAudienceScore !== null" id="as-score">
-              {{ movie.rtTomatometer }}/100
+              {{ movie.rtAudienceScore }}/100
             </p>
           </div>
         </div>

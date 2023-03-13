@@ -30,8 +30,7 @@ export default {
           class="col-lg-6"
           v-for="theater in theaters"
           :key="theater.id"
-          @click="($event) => onClick(theater.nameId)"
-        >
+          @click="onClick(theater.nameId)">
           <div class="container2">
             <div
               class="card2"
@@ -55,7 +54,6 @@ body {
   justify-self: center;
   align-items: center;
   min-height: 100vh;
-  background: #131415;
 }
 .container2 {
   position: relative;
@@ -69,7 +67,7 @@ body {
   position: relative;
   min-width: 350px;
   width: 800px;
-  height: 600px;
+  height: 400px;
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
@@ -81,8 +79,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
 .container2 .card2:hover {

@@ -1,5 +1,5 @@
 <script setup>
-import MoviesList from "../components/MoviesList.vue";
+import HomeCategory from "../components/HomeCategory.vue";
 import screeningsToday from "../components/screeningsToday.vue";
 </script>
 
@@ -11,7 +11,7 @@ import screeningsToday from "../components/screeningsToday.vue";
     <input type="button" class="btn-dark" value="Button 6" />
   </div>
   <!-- end of button-test -->
-  <MoviesList />
+  <HomeCategory />
 </template>
 
 <style scoped></style>
