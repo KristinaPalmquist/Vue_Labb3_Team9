@@ -17,7 +17,6 @@ export default {
 .heroimage {
   margin: auto;
   height: 62vh;
-  overflow-x: hidden;
 }
 img {
   width: 100%;

@@ -44,14 +44,9 @@ export default {
 };
 </script>
 
-<style>
-body {
-  overflow-x: hidden;
-}
-.main {
-  color: white;
-  overflow-x: hidden;
-}
+<style scoped>
+
+
 h5 {
   display: flex;
   flex-direction: row;
