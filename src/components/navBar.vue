@@ -140,7 +140,7 @@ export default {
             <RouterLink class="nav-link" to="/biograf">Biografer</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/feedback">Feedback</RouterLink>
+            <RouterLink class="nav-link" to="/om">Om Cinemap</RouterLink>
           </li>
         </ul>
       </div>
@@ -241,7 +241,7 @@ export default {
             <RouterLink class="nav-link" to="/biograf">Biografer</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/feedback">Feedback</RouterLink>
+            <RouterLink class="nav-link" to="/om">Om Cinemap</RouterLink>
           </li>
         </ul>
       </div>

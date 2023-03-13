@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import MovieView from "../views/MovieView.vue";
 import CinemaView from "../views/CinemaView.vue";
-import FeedbackView from "../views/FeedbackView.vue";
+import AboutView from "../views/AboutView.vue";
 import MovieHeroView from "../views/MovieHeroView.vue";
 import CinemaHeroView from "../views/CinemaHeroView.vue";
 
@@ -35,9 +35,9 @@ const router = createRouter({
       component: CinemaHeroView,
     },
     {
-      path: "/feedback",
-      name: "feedback",
-      component: FeedbackView,
+      path: "/om",
+      name: "om",
+      component: AboutView,
     },
   ],
 });
