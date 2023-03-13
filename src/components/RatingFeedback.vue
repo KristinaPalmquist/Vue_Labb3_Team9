@@ -27,12 +27,20 @@
               :class="{ selected: star.selected }"
             ></i>
           </span>
+          <div>
+            <button class="btn-dark" @click="submitRating">Skicka</button>
+          </div>
+
+          <div class="popover" :class="{ show: showPopover }">
+            Betyget har lämnat!
+          </div>
+          <div>
+            <button class="btn-light" @click="showFeedback = !showFeedback">
+              Klicka här för att lämna feedback
+            </button>
+          </div>
         </div>
-        <div>
-          <button class="FD-btn" @click="showFeedback = !showFeedback">
-            Klicka här för att lämna feedback
-          </button>
-        </div>
+        <!-- <SubmitFeedback /> -->
         <!-- Collapse method used to show the form when the button is clicked -->
         <div v-if="showFeedback">
           <form class="collapse-box">
@@ -46,6 +54,7 @@
 
 <script>
 import FeedbackForm from "./FeedbackForm.vue";
+// import SubmitFeedback from "./SubmitFeedback.vue";
 
 export default {
   name: "RatingFeedback",
@@ -61,7 +70,7 @@ export default {
         { selected: false },
         { selected: false },
       ],
-
+      showPopover: false,
       showFeedback: false,
     };
   },
@@ -73,6 +82,22 @@ export default {
       for (let i = index + 1; i < 5; i++) {
         this.stars[i].selected = false;
       }
+    },
+    submitRating() {
+      // Create a copy of the stars array and reset the selected property to false
+      const starsCopy = [...this.stars];
+      starsCopy.forEach((star) => {
+        star.selected = false;
+      });
+
+      // Show the popover
+      this.showPopover = true;
+
+      // Wait for 2 seconds, then hide the popover and reset the stars
+      setTimeout(() => {
+        this.showPopover = false;
+        this.stars = starsCopy;
+      }, 2000);
     },
   },
 };
@@ -88,7 +113,7 @@ export default {
   align-items: center;
 }
 .intro-text {
-  text-align: justify;
+  text-align: center;
   font-size: medium;
 }
 .collapse-box {
@@ -99,8 +124,34 @@ export default {
   color: gold;
 }
 .FD-btn {
-  background-color: black;
-  color: white;
   margin: 15px;
+}
+.popover {
+  display: none;
+  position: absolute;
+  left: 55%;
+  top: 111%;
+  background-color: #121212;
+  border: solid 1px gray;
+  color: white;
+  padding: 8px;
+  font-size: medium;
+}
+
+.show {
+  display: block;
+}
+@media screen and (max-width: 480px) {
+  .popover {
+    background-color: #121212;
+    border: solid 1px gray;
+    left: 12%;
+    top: 95%;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    height: auto;
+  }
 }
 </style>
