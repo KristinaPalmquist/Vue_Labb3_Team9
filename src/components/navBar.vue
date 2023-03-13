@@ -59,7 +59,6 @@ export default {
         .then((response) => (this.cinemas = response.data));
     },
     onClickOutside(event) {
-      console.log("Clicked outside. Event: ", event);
       this.filmsResult = null;
       this.cinemasResult = null;
     },
@@ -299,7 +298,7 @@ export default {
 
 <style scoped>
 .navbar {
-  border-bottom: solid 1px var(--black-soft);
+  border-bottom: solid 2px var(--black-soft);
 }
 
 /*Logo*/
@@ -445,8 +444,6 @@ export default {
 .listdiv-container {
   position: absolute;
   top: 68px;
-  right: 0;
-  width: 30vh;
   z-index: 999;
 }
 

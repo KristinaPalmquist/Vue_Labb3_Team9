@@ -87,7 +87,6 @@ export default {
         );
     },
     onClickOutside(event) {
-      console.log("Clicked outside. Event: ", event);
       this.selectedMovies = "";
     },
     // skickar till IndividualMovie
