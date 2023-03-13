@@ -51,8 +51,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   overflow-x: hidden; */
-}
+   overflow-x: hidden;
+}*/
 .main {
   background-color: rgb(22, 21, 21);
   color: white;

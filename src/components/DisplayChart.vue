@@ -161,7 +161,7 @@ body {
 #toFilm {
   justify-content: end;
   margin: 15%;
-  border: solid 1px  #f5c65067;;
+  border: solid 1px #f5c65067;
 }
 h5 {
   display: flex;
@@ -172,11 +172,11 @@ h5:before,
 h5:after {
   content: "";
   flex: 1 1;
-  border-bottom: 2px solid #f5c65067;;
+  border-bottom: 2px solid #f5c65067;
   margin: 15px;
 }
 #toCinema {
   margin-top: 0px;
-  border: solid 1px #f5c65067;;
+  border: solid 1px #f5c65067;
 }
 </style>
