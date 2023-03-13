@@ -5,17 +5,22 @@
     <h5>Vad får du ut av den här appen?</h5>
     <div class="discription-box">
       <div class="card-First">
-        <h6>Introducerar nya filmer.</h6>
+        <h6>Alt om filmer och bigrafer</h6>
         <p>
-          Du kan få allt information om nya filmer. Du kan också se på vilket
-          datum och tid de visas, och i vilken biograf som visas på.
+          Du kan se nya och mest populär filmer, se på vilket datum och tid de
+          visas, och i vilken biograf som visas på.
+        </p>
+        <p>
+          Vi tillhandahåller allt information om film och biografer på ett
+          ställe så att du enkelt kan få allt du behöver utan att söka på olika
+          hemsidor.
         </p>
       </div>
       <div class="card-second">
-        <img src="src/assets/img/film.0.jpg" class="card-img" alt="cinema" />
+        <img src="src/assets/img/film.0.jpg" class="Img-box" alt="cinema" />
       </div>
       <div class="card-third">
-        <img src="../assets/img/cinema2.jpg" class="card-img" alt="..." />
+        <img src="../assets/img/cinema2.jpg" class="Img-box" alt="cinema" />
       </div>
       <div class="card-fourth" style="width: 370px">
         <h6>Är den här appen gratis?</h6>
@@ -45,9 +50,7 @@ export default {
 </script>
 
 <style scoped>
-
-
-h5 {
+/* h5 {
   display: flex;
   flex-direction: row;
 }
@@ -57,7 +60,7 @@ h5:after {
   flex: 1 1;
   border-bottom: 2px solid #f5c65067;
   margin: 15px;
-}
+} */
 .discription-box {
   display: flex;
   flex-direction: row;
@@ -91,13 +94,21 @@ h5:after {
   margin: 10px;
   justify-content: center;
   border: solid 1px #f5c65067;
+  border-radius: 10px;
+  object-fit: contain;
 }
 .card-fourth {
   width: 370px;
   height: 300px;
   margin: 10px;
+  border-radius: 10px;
   justify-content: center;
   border: solid 1px #f5c65067;
   padding: 20px;
+}
+.Img-box {
+  width: 368px;
+  height: 298px;
+  border-radius: 5px;
 }
 </style>

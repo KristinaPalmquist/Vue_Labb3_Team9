@@ -9,5 +9,4 @@ import FeedbackNavigator from "../components/FeedbackNavigator.vue";
   <FeedbackNavigator />
 </template>
 <script></script>
-<style scoped>
-</style>
+<style scoped></style>

@@ -1,10 +1,9 @@
 <template>
   <div class="heroimage">
-    <img :src="heroImage" alt="MakeUp" class="first-hero" />
+    <img :src="heroImage" alt="cinema" />
     <div class="text"></div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -14,25 +13,23 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 .heroimage {
-  margin: 0 auto;
-  height: 40vh;
+  margin: auto;
+  height: 62vh;
 }
 img {
   width: 100%;
-  height: 100%;
+  height: 60vh;
 }
-
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .heroimage {
-    margin: 0 auto;
-    height: 62vh;
+    margin: auto;
+    height: 40vh;
   }
   img {
     width: 100%;
-    height: 100%;
+    height: 39vh;
   }
 }
 </style>
