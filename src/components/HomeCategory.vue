@@ -51,7 +51,7 @@ export default {
       cinemas: [],
       dramas: [],
       comedys: [],
-      documentarys: []
+      documentarys: [],
     };
   },
 };
@@ -59,7 +59,6 @@ export default {
 
 <template>
   <div class="container">
-
     <hr class="hr hr-blurry" />
     <h5>Drama</h5>
     <div class="row">
@@ -118,7 +117,6 @@ export default {
   </div>
 </template>
 <style scoped>
-
 body {
   display: flex;
   justify-self: center;
