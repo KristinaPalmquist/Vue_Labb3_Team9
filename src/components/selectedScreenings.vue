@@ -26,6 +26,7 @@ import moment from "moment/min/moment-with-locales";
         class="card mb-1 col-md-4 filmcard text-white"
         style="width: 12rem"
         v-for="movie in selectedMovies"
+        :key="movie.id"
         @click="onClickTwo(movie.titleId)"
       >
         <img :src="movie.img" class="card-img-top" :alt="movie.titleEnglish" />
@@ -89,7 +90,7 @@ export default {
               response.data[moment(value).dayOfYear()].Victoria)
         );
     },
-    onClickOutside(event) {
+    onClickOutside() {
       this.selectedMovies = "";
     },
     // skickar till IndividualMovie

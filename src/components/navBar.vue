@@ -58,7 +58,7 @@ export default {
         .get("cinemas.json")
         .then((response) => (this.cinemas = response.data));
     },
-    onClickOutside(event) {
+    onClickOutside() {
       this.filmsResult = "";
       this.cinemasResult = "";
     },

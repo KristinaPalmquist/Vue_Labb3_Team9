@@ -55,7 +55,7 @@ export default {
     onClick(titleId) {
       this.$router.replace("film/" + titleId);
     },
-    getMovies(value) {
+    getMovies() {
       axios.get("movies.json").then((response) => {
         this.movies = response.data;
         this.movies = this.movies.filter(
@@ -82,6 +82,7 @@ export default {
           class="card filmcard text-white"
           style="width: 12rem"
           v-for="movie in movies"
+          :key="movie.id"
           @click="onClick(movie.titleId)"
         >
           <img
