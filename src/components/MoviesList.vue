@@ -11,7 +11,7 @@ export default {
     // hämtar filmernas json
     apiCall() {
       axios
-        .get("movies.json")
+        .get("/movies.json")
         .then((response) => (this.movies = response.data));
     },
     // skickar till IndividualMovie
@@ -25,7 +25,7 @@ export default {
     // hämtar biografernas json
     cinemaSearch() {
       axios
-        .get("cinemas.json")
+        .get("/cinemas.json")
         .then((response) => (this.cinemas = response.data));
     },
   },
