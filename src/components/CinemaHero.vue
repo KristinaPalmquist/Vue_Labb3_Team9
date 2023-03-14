@@ -7,17 +7,19 @@ import axios from "axios";
     <div v-if="cinema">
       <div v-for="cinema in cinemas" :key="cinema" class="grid-container">
         <img class="heroImage" alt="Biografbild" :src="`${cinema.img}`" />
-          <div class="cinemaName">
-            <h1>{{ cinema.name }}</h1>
-            <br />
-          </div>
-          <div class="cinemaAbout">
-            <p>{{ cinema.About.sv }}</p>
-          </div>
-          <div class="cinemaAdress">
-            <p>{{ cinema.Adress }}</p>
-          </div>
-          <div class="cinemaHours">
+        <div class="cinemaName">
+          <h1>{{ cinema.name }}</h1>
+        </div>
+        <div class="cinemaAbout">
+          <p>{{ cinema.About.sv }}</p>
+        </div>
+        <div class="cinemaAdress">
+          <h7>Adress</h7>
+          <p>{{ cinema.Adress }}</p>
+        </div>
+        <div class="cinemaHours">
+          <div id="cinemaHoursBox">
+            <h7>Öppettider</h7>
             <p>Måndag: {{ cinema.openingHours.monday }}</p>
             <p>Tisdag: {{ cinema.openingHours.tuesday }}</p>
             <p>Onsdag: {{ cinema.openingHours.wednesday }}</p>
@@ -28,6 +30,7 @@ import axios from "axios";
           </div>
         </div>
       </div>
+    </div>
   </body>
 </template>
 
@@ -59,114 +62,50 @@ export default {
 </script>
 
 <style scoped>
-
 .grid-container {
-    display: grid;
-    justify-content: center;
+  width: 100%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 10vw 50vw auto 10vw;
+  grid-template-rows: min-content min-content min-content min-content;
+  grid-template-areas:
+    ". cinemaName cinemaName ."
+    ". heroImage heroImage ."
+    ". cinemaAbout cinemaHours ."
+    ". cinemaAbout cinemaAdress .";
+  grid-gap: 10px 10px;
 }
-.cinemaName {
-    grid-column: 2 / span 5;
-    grid-row: 1 / span 2;
-}
-.heroImage {
-    grid-column: 2 / span 5;
-    grid-row: 2 / span 4;
-    max-width: 48vw;
-    max-height: 48vh;
-}
-
-.cinemaAbout {
-    grid-column: 4;
-    grid-row: 5;
-}
-
-.cinemaAdress {
-    grid-column: 2 / span 5;
-    grid-row: 6;
-}
-
-.cinemaHours {
-    grid-column: 2 / span 5;
-    grid-row: 7;
-}
-/*.grid-container {
-    display: grid;
-    justify-content: center;
-}
-
-.cinemaName {
-    grid-column-start: 2;
-    grid-column-end: five;
-    grid-row-start: row1-start;
-    grid-row-end: 3;
-}
-.heroImage {
-    max-height: 80vh;
-    grid-column-start: 2;
-    grid-column-end: five;
-    grid-row-start: row2-start;
-    grid-row-end: 5;
-}
-
-.cinemaAbout {
-    grid-column-start: 2;
-    grid-column-end: five;
-    grid-row-start: row5-start;
-    grid-row-end: 6;
-}
-
-.cinemaAdress {
-    grid-column-start: 2;
-    grid-column-end: five;
-    grid-row-start: row5-start;
-    grid-row-end: 6;
-}
-.cinemaHours {
-    grid-column-start: 2;
-    grid-column-end: five;
-    grid-row-start: row5-start;
-    grid-row-end: 6;
-}*/
-
-
-/*.grid-container {
-    display: grid;
-    padding: 20px;
-    grid-template-columns: 100%;
-    grid-template-rows: min-content min-content min-content min-content;
-    grid-template-areas:
-    "cinemaName"
-    "heroImage"
-    "cinemaAbout"
-
-}
-
-.grid-item {
-
-}
-
-.heroImage {
-   grid-area:"heroImage";
-    max-width: 80vw;
-    max-height: 80vh;
-}
-
 .cinemaName {
   grid-area: cinemaName;
-  padding: 20px;
+}
+.heroImage {
+  grid-area: heroImage;
+  max-width: 48vw;
+  max-height: 48vh;
+  margin: 0 auto;
 }
 
 .cinemaAbout {
-    grid-area: cinemaAbout;
-    padding: 20px;
-
+  grid-area: cinemaAbout;
+  max-width: 700px;
 }
 
 .cinemaAdress {
-
+  grid-area: cinemaAdress;
 }
 
 .cinemaHours {
+  grid-area: cinemaHours;
+}
 
-}*/
+#cinemaHoursBox {
+  padding: 10px 0;
+  margin: 10px;
+  border: 1px solid var(--yellow);
+}
+
+.cinemaHours p {
+  padding: 0;
+  margin: 0;
+}
 </style>
