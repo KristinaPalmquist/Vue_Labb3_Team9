@@ -4,8 +4,16 @@ import MoviesList from "../components/MoviesList.vue";
 
 <template>
   <MoviesList />
+  <FeedbackNavigator />
 </template>
 
-<script></script>
+<script>
+import FeedbackNavigator from "../components/FeedbackNavigator.vue";
+export default {
+  component: {
+    FeedbackNavigator,
+  },
+};
+</script>
 
 <style scoped></style>

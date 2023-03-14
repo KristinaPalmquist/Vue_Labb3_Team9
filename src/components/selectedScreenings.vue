@@ -9,15 +9,18 @@ import moment from "moment/min/moment-with-locales";
     v-if="this.selectedMovies != ''"
     v-click-outside="onClickOutside"
   >
-    <div class="close-btn-container" @click="this.selectedMovies = ''">
+    <div
+      class="close-btn-container"
+      @click="this.selectedMovies = ''"
+      v-if="this.selectedMovies != ''"
+    >
       <i class="bi bi-x-lg close-btn"></i>
     </div>
     <!--film cards chosen film-->
     <div class="row">
       <div class="date-header">
-        <h1>
-          {{ moment(dateProps).lang("sv").format("LL") }}
-        </h1>
+        <h5 class="on-cinema">På bio</h5>
+        <h6>{{ moment(dateProps).lang("sv").format("LL") }}</h6>
       </div>
       <div
         class="card mb-1 col-md-4 filmcard text-white"
@@ -87,7 +90,6 @@ export default {
         );
     },
     onClickOutside(event) {
-      console.log("Clicked outside. Event: ", event);
       this.selectedMovies = "";
     },
     // skickar till IndividualMovie
@@ -109,11 +111,39 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  margin: 0 auto;
+  float: none;
+}
+
+.card img {
+  height: 250px;
+}
 .cards-div {
   color: white;
   display: flex;
   flex-direction: column;
+  width: 40vh;
+  margin: auto;
+  padding: 0 10px;
 }
+
+@media screen and (min-width: 500px) and (max-width: 750px) {
+  .cards-div {
+    width: 85vh;
+    overflow-x: hidden;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .cards-div {
+    width: 140vh;
+    overflow-x: hidden;
+    padding: 0 15px;
+  }
+}
+
 .filmcard {
   cursor: pointer;
   background-color: #121212 !important;
@@ -121,10 +151,13 @@ export default {
 .card-title {
   font-size: medium;
 }
-
+.cards-div {
+  box-shadow: 0px 0px 40px 6px var(--yellow-soft);
+}
 .date-header {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 /*close search cards btn */
@@ -132,7 +165,6 @@ export default {
   display: flex;
   width: 100%;
   justify-content: end;
-  background-color: #121212;
 }
 .close-btn {
   margin-top: 10px;

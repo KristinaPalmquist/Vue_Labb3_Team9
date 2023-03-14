@@ -123,7 +123,7 @@ export default {
   },
   created() {
     // fetch movies.json and filter result for the movie whos titleId matches movieName taken from URL
-    axios.get("/movies.json").then((response) => {
+    axios.get("/public/movies.json").then((response) => {
       this.movies = response.data;
       this.movies = this.movies.filter((movie) => {
         return movie.titleId === this.movieName;
@@ -217,18 +217,11 @@ export default {
   text-decoration: none;
   color: var(--blue);
 }
-/* #trailer-link:visited {
-  color: var(--red);
-} */
 
-/* #info-container > p {
-} */
 
 .info-title {
   margin: 0;
-  /* width: 115px;
-  text-align: right;
-  padding-right: 7px; */
+
   color: var(--yellow);
 }
 .info-text {
@@ -242,7 +235,7 @@ export default {
 }
 
 #rating-container {
-  border-radius: 15px;
+  /* border-radius: 15px; */
   border: 1px solid var(--yellow);
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -322,8 +315,6 @@ export default {
   }
 
   #rating-container {
-    border-radius: 15px;
-    border: 1px solid var(--yellow);
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 20px auto auto 20px;

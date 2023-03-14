@@ -9,9 +9,17 @@ import CinemaHero from "../components/CinemaHero.vue";
       <CinemaHero />
     </div>
   </body>
+  <FeedbackNavigator />
 </template>
 
-<script></script>
+<script>
+import FeedbackNavigator from "../components/FeedbackNavigator.vue";
+export default {
+  component: {
+    FeedbackNavigator,
+  },
+};
+</script>
 
 <style scoped>
 .cinemaHero {

@@ -2,33 +2,6 @@
 import axios from "axios";
 </script>
 
-<template>
-  <div class="cards-div">
-    <!--film cards todays film-->
-    <div class="row">
-      <div class="date-header">
-        <h1>
-          <span @click="previousDay"><i class="change-day left"></i></span>
-          {{ $store.state.datefixed }}
-          <span @click="nextDay"><i class="change-day right"></i></span>
-        </h1>
-      </div>
-      <div
-        class="card mb-1 col-md-4 filmcard text-white"
-        style="width: 12rem"
-        v-for="movie in movies"
-        @click="onClick(movie.titleId)"
-      >
-        <img :src="movie.img" class="card-img-top" :alt="movie.titleEnglish" />
-        <div class="card-body">
-          <h1 class="card-title">{{ movie.titleSweden }}</h1>
-          <p class="card-text">IMDB: {{ movie.imdb }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -94,15 +67,55 @@ export default {
 };
 </script>
 
+<template>
+  <div class="card-container">
+    <div class="cards-div">
+      <!--film cards todays film-->
+      <h5 class="on-cinema">På bio</h5>
+      <h6 class="date-header">
+        <span @click="previousDay"><i class="change-day left"></i></span>
+        {{ $store.state.datefixed }}
+        <span @click="nextDay"><i class="change-day right"></i></span>
+      </h6>
+      <div class="row">
+        <div
+          class="card filmcard text-white"
+          style="width: 12rem"
+          v-for="movie in movies"
+          @click="onClick(movie.titleId)"
+        >
+          <img
+            :src="movie.img"
+            class="card-img-top"
+            :alt="movie.titleEnglish"
+          />
+          <div class="card-body">
+            <h1 class="card-title">{{ movie.titleSweden }}</h1>
+            <p class="card-text">IMDB: {{ movie.imdb }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <style scoped>
-.cards-div {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.on-cinema {
+  margin-top: 10px;
+}
+
+.date-header {
+  margin-bottom: 20px;
+}
+.card {
+  margin: 0 auto;
+  float: none;
+}
+
+.card img {
+  height: 250px;
 }
 .filmcard {
-  margin: 15px;
   cursor: pointer;
   background-color: #121212 !important;
 }
@@ -110,9 +123,8 @@ export default {
   font-size: medium;
 }
 
-.date-header {
-  text-align: center;
-  margin-top: 20px;
+.card-container {
+  margin: 0 2vh;
 }
 
 /*change day buttons*/
@@ -123,7 +135,6 @@ export default {
   width: 1rem;
   display: inline-block;
   padding: 3px;
-  margin-bottom: 7px;
 }
 
 .change-day:hover {

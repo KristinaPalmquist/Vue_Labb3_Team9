@@ -63,7 +63,6 @@ export default {
   </body>
 </template>
 <style scoped>
-
 body {
   display: flex;
   justify-self: center;

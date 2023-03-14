@@ -1,12 +1,11 @@
 <script setup>
 import navBar from "./components/navBar.vue";
 import FooterFooter from "./components/FooterFooter.vue";
-import testComp from "./components/testComp.vue";
+import selectedScreenings from "./components/selectedScreenings.vue";
 </script>
-
 <template>
   <navBar @generated-date="onGeneratedDate" />
-  <testComp :dateProps="date" id="date-filter" />
+  <selectedScreenings :dateProps="date" id="date-filter" />
   <FooterFooter />
 </template>
 
@@ -28,7 +27,7 @@ export default {
 
 <style scoped>
 #date-filter {
-  top: 55px;
+  top: 70px;
   right: 0;
   left: 0;
   position: absolute;

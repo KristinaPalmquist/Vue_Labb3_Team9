@@ -27,6 +27,7 @@ body {
   text-align: center;
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 /* Headers */
@@ -53,6 +54,16 @@ h4 {
 h5 {
   font-size: 1.75rem;
   color: var(--yellow);
+  display: flex;
+  flex-direction: row;
+}
+
+h5:before,
+h5:after {
+content: "";
+flex: 1 1;
+border-bottom: 1px solid #f5c65067;
+margin: 17px;
 }
 
 h6 {

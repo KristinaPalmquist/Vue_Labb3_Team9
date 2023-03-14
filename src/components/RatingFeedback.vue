@@ -1,25 +1,20 @@
 <template>
-  <div>
-    <!-- <HeroImg /> -->
-  </div>
   <div class="feedbackBox">
-    <img src="" alt="" />
+    <!-- <img src="" alt="" /> -->
     <!-- v-html directive used to insert welcome message-->
     <div v-html="WelcomeMsg" class="WelcomeMsg"></div>
     <div class="intro-text-container">
       <p class="intro-text">
-        kan du beskriva dina upplevelser av denna app. Har du förslag på hur vi
+        Kan du beskriva dina upplevelser av denna app? Har du förslag på hur vi
         kan förbättra oss ytterligare? Saknar du något i appen? <br />
-        Vi arbetar outtröttligt för att göra upplevelsen av att använda våra
-        appar så bra som möjligt och dina idéer är viktiga!!<br />
-        Betygsätt och dela dina idéer för att vi kan förbättra appen
-        tillsammans.
+        Vi arbetar outtröttligt för att göra upplevelsen av att använda vår app
+        så bra som möjligt och dina idéer är viktiga!<br />
+        Betygsätt och dela dina idéer så att vi kan förbättra appen tillsammans.
       </p>
       <!-- Bootstrap Star icon is used to make clickable star icon for rating
       and v-for attribute is used to loop in star array index-->
       <div>
         <h6 class="FD-title">Betygsätt din upplevelse av appen</h6>
-
         <div class="star-rating">
           <span
             v-for="(star, index) in stars"
@@ -31,12 +26,20 @@
               :class="{ selected: star.selected }"
             ></i>
           </span>
+          <div>
+            <button class="btn-dark" @click="submitRating">Skicka</button>
+          </div>
+
+          <div class="popover" :class="{ show: showPopover }">
+            Betyget har lämnats!
+          </div>
+          <div>
+            <button class="btn-light" @click="showFeedback = !showFeedback">
+              Klicka här för att lämna feedback
+            </button>
+          </div>
         </div>
-        <div class="FD-btn">
-          <button @click="showFeedback = !showFeedback">
-            Klicka här för att lämna feedback
-          </button>
-        </div>
+        <!-- <SubmitFeedback /> -->
         <!-- Collapse method used to show the form when the button is clicked -->
         <div v-if="showFeedback">
           <form class="collapse-box">
@@ -50,14 +53,15 @@
 
 <script>
 import FeedbackForm from "./FeedbackForm.vue";
-//import HeroImg from "../components/HeroImg.vue";
+// import SubmitFeedback from "./SubmitFeedback.vue";
+
 export default {
   name: "RatingFeedback",
   components: { FeedbackForm },
   data() {
     return {
       WelcomeMsg: `<h5>Välkommen Till CINEMAP!</h5><Br>
-        <h6>Vi behöver eran feedBack för att bli bättre !</h6>`,
+        <h6>Vi behöver eran feedback för att bli bättre !</h6>`,
       stars: [
         { selected: false },
         { selected: false },
@@ -65,7 +69,7 @@ export default {
         { selected: false },
         { selected: false },
       ],
-
+      showPopover: false,
       showFeedback: false,
     };
   },
@@ -78,13 +82,29 @@ export default {
         this.stars[i].selected = false;
       }
     },
+    submitRating() {
+      // Create a copy of the stars array and reset the selected property to false
+      const starsCopy = [...this.stars];
+      starsCopy.forEach((star) => {
+        star.selected = false;
+      });
+
+      // Show the popover
+      this.showPopover = true;
+
+      // Wait for 2 seconds, then hide the popover and reset the stars
+      setTimeout(() => {
+        this.showPopover = false;
+        this.stars = starsCopy;
+      }, 2000);
+    },
   },
 };
 </script>
 
 <style scoped>
 .feedbackBox {
-  margin: 0px 2rem 2rem 2rem;
+  padding: 0px 2rem 2rem 2rem;
   justify-content: center;
   align-items: center;
 }
@@ -92,7 +112,7 @@ export default {
   align-items: center;
 }
 .intro-text {
-  text-align: justify;
+  text-align: center;
   font-size: medium;
 }
 .collapse-box {
@@ -103,6 +123,34 @@ export default {
   color: gold;
 }
 .FD-btn {
-  margin-top: 15px;
+  margin: 15px;
+}
+.popover {
+  display: none;
+  position: absolute;
+  left: 55%;
+  top: 111%;
+  background-color: #121212;
+  border: solid 1px gray;
+  color: white;
+  padding: 8px;
+  font-size: medium;
+}
+
+.show {
+  display: block;
+}
+@media screen and (max-width: 480px) {
+  .popover {
+    background-color: #121212;
+    border: solid 1px gray;
+    left: 12%;
+    top: 95%;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    height: auto;
+  }
 }
 </style>
