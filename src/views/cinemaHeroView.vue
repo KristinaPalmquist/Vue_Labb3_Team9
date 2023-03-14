@@ -5,9 +5,7 @@ import CinemaHero from "../components/CinemaHero.vue";
 
 <template>
   <body>
-    <div class="cinemaHero">
-      <CinemaHero />
-    </div>
+    <CinemaHero />
   </body>
   <FeedbackNavigator />
 </template>
@@ -21,8 +19,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.cinemaHero {
-  display: flex;
-}
-</style>
+<style scoped></style>

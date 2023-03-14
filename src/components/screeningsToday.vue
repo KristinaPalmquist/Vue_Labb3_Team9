@@ -24,7 +24,7 @@ export default {
   methods: {
     getScreenings() {
       axios
-        .get("screenings.json")
+        .get("/screenings.json")
         .then(
           (response) =>
             (this.todaysScreenings =
@@ -34,7 +34,7 @@ export default {
     nextDay() {
       this.$store.commit("increment");
       axios
-        .get("screenings.json")
+        .get("/screenings.json")
         .then(
           (response) =>
             (this.todaysScreenings =
@@ -44,7 +44,7 @@ export default {
     previousDay() {
       this.$store.commit("previous");
       axios
-        .get("screenings.json")
+        .get("/screenings.json")
         .then(
           (response) =>
             (this.todaysScreenings =
@@ -56,7 +56,7 @@ export default {
       this.$router.replace("film/" + titleId);
     },
     getMovies() {
-      axios.get("movies.json").then((response) => {
+      axios.get("/movies.json").then((response) => {
         this.movies = response.data;
         this.movies = this.movies.filter(
           (movie) => this.todaysScreenings.indexOf(movie.id) > -1
