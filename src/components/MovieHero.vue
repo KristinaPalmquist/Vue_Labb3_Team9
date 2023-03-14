@@ -105,6 +105,24 @@ import axios from "axios";
       </div>
     </div>
   </div>
+  <div class="tickets-div">
+    <h5 class="tickets-title">Köp biljetter</h5>
+    <li v-if="movie.ticketsSergel != ''">
+      <a class="tickets-link" :href="movie.ticketsSergel">Filmstaden Sergel </a>
+    </li>
+    <li v-if="movie.ticketsVictoria != ''">
+      <a class="tickets-link" :href="movie.ticketsVictoria">Victoria </a>
+    </li>
+    <li v-if="movie.ticketsCapitol != ''">
+      <a class="tickets-link" :href="movie.ticketsCapitol">Capitol </a>
+    </li>
+    <li v-if="movie.ticketsZita != ''">
+      <a class="tickets-link" :href="movie.ticketsZita">Zita </a>
+    </li>
+    <li v-if="movie.ticketsCinemateket != ''">
+      <a class="tickets-link" :href="movie.ticketsCinemateket">Cinemateket </a>
+    </li>
+  </div>
 </template>
 
 <script>
@@ -335,5 +353,27 @@ export default {
   #as-score {
     text-align: left;
   }
+}
+
+/*Tickets*/
+.tickets-link {
+  text-decoration: none;
+  color: var(--yellow-soft);
+}
+
+.tickets-link:hover {
+  color: var(--yellow);
+}
+
+.tickets-title {
+  margin: 30px 30px 15px 30px;
+}
+
+.tickets-div li {
+  list-style: none;
+}
+
+.tickets-div {
+  margin-bottom: 50px;
 }
 </style>
