@@ -48,7 +48,7 @@ export default {
     };
   },
   created() {
-    axios.get("../../public/cinemas.json").then((response) => {
+    axios.get("/cinemas.json").then((response) => {
       this.cinemas = response.data;
       this.cinemas = this.cinemas.filter((cinema) => {
         return cinema.nameId === this.cinemaName;
