@@ -17,7 +17,7 @@
         </p>
       </div>
       <div class="card-second">
-        <img src="/src/assets/img/film.0.jpg" class="Img-box" alt="cinema" />
+        <img src="src/assets/img/film.0.jpg" class="Img-box" alt="cinema" />
       </div>
       <div class="card-third">
         <img src="../assets/img/cinema2.jpg" class="Img-box" alt="cinema" />
