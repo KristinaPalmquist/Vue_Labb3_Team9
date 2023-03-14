@@ -19,8 +19,8 @@ import moment from "moment/min/moment-with-locales";
     <!--film cards chosen film-->
     <div class="row">
       <div class="date-header">
-        <h4 class="on-cinema">På bio</h4>
-        <h4>{{ moment(dateProps).lang("sv").format("LL") }}</h4>
+        <h5 class="on-cinema">På bio</h5>
+        <h6>{{ moment(dateProps).lang("sv").format("LL") }}</h6>
       </div>
       <div
         class="card mb-1 col-md-4 filmcard text-white"
@@ -123,7 +123,27 @@ export default {
   color: white;
   display: flex;
   flex-direction: column;
+  width: 40vh;
+  margin: auto;
+  padding: 0 10px;
 }
+
+@media screen and (min-width: 500px) and (max-width: 750px) {
+  .cards-div {
+    width: 85vh;
+    overflow-x: hidden;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .cards-div {
+    width: 140vh;
+    overflow-x: hidden;
+    padding: 0 15px;
+  }
+}
+
 .filmcard {
   cursor: pointer;
   background-color: #121212 !important;

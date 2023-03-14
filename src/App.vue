@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 #date-filter {
-  top: 55px;
+  top: 70px;
   right: 0;
   left: 0;
   position: absolute;
