@@ -217,18 +217,10 @@ export default {
   text-decoration: none;
   color: var(--blue);
 }
-/* #trailer-link:visited {
-  color: var(--red);
-} */
-
-/* #info-container > p {
-} */
 
 .info-title {
   margin: 0;
-  /* width: 115px;
-  text-align: right;
-  padding-right: 7px; */
+
   color: var(--yellow);
 }
 .info-text {
@@ -242,7 +234,7 @@ export default {
 }
 
 #rating-container {
-  border-radius: 15px;
+  /* border-radius: 15px; */
   border: 1px solid var(--yellow);
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -322,8 +314,6 @@ export default {
   }
 
   #rating-container {
-    border-radius: 15px;
-    border: 1px solid var(--yellow);
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 20px auto auto 20px;

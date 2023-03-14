@@ -58,9 +58,9 @@ export default {
         .get("cinemas.json")
         .then((response) => (this.cinemas = response.data));
     },
-    onClickOutside(event) {
-      this.filmsResult = null;
-      this.cinemasResult = null;
+    onClickOutside() {
+      this.filmsResult = "";
+      this.cinemasResult = "";
     },
     onClickOne() {
       this.cinemasResult = this.searchFilterMovies;
@@ -258,7 +258,7 @@ export default {
     >
       <i class="bi bi-x-lg close-btn"></i>
     </div>
-    <h1>Sökresultat</h1>
+    <h5 class="search-header">Sökresultat</h5>
     <div class="row">
       <div
         class="card mb-1 col-md-4 filmcard text-white"
@@ -359,6 +359,10 @@ export default {
 .searchinput:focus {
   box-shadow: none !important;
   border: solid var(--yellow-soft) !important;
+}
+
+.search-header {
+  margin-bottom: 25px;
 }
 
 .searchbar-div {

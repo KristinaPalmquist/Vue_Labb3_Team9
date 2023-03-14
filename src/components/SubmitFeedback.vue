@@ -1,5 +1,6 @@
 <template>
   <div class="star-rating">
+    <!-- v-for is used to loop through the stars array. Bootstarp library filled star code is used -->
     <span v-for="(star, index) in stars" :key="index" @click="SelectStar(index)"
       ><i
         class="bi bi-star-fill"
@@ -31,16 +32,16 @@ export default {
       });
     },
     submitRating() {
-      // Create a copy of the stars array and reset the filled property to false
+      // Creating a copy of the stars array and reset the filled property to false
       const starsCopy = [...this.stars];
       starsCopy.forEach((star) => {
         star.filled = false;
       });
 
-      // Show the popover
+      //  it Shows the popover but needs more styling.
       this.showPopover = true;
 
-      // Wait for 2 seconds, then hide the popover and reset the stars
+      // It Wait for 2 seconds, then hide the popover and reseting the stars succeded.
       setTimeout(() => {
         this.showPopover = false;
         this.stars = starsCopy;
