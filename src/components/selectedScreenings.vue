@@ -19,10 +19,8 @@ import moment from "moment/min/moment-with-locales";
     <!--film cards chosen film-->
     <div class="row">
       <div class="date-header">
-        <h2 class="on-cinema">På bio</h2>
-        <h2>
-          {{ moment(dateProps).lang("sv").format("LL") }}
-        </h2>
+        <h4 class="on-cinema">På bio</h4>
+        <h4>{{ moment(dateProps).lang("sv").format("LL") }}</h4>
       </div>
       <div
         class="card mb-1 col-md-4 filmcard text-white"
