@@ -59,8 +59,8 @@ export default {
         .then((response) => (this.cinemas = response.data));
     },
     onClickOutside(event) {
-      this.filmsResult = null;
-      this.cinemasResult = null;
+      this.filmsResult = "";
+      this.cinemasResult = "";
     },
     onClickOne() {
       this.cinemasResult = this.searchFilterMovies;
@@ -258,7 +258,7 @@ export default {
     >
       <i class="bi bi-x-lg close-btn"></i>
     </div>
-    <h3 class="search-header">Sökresultat</h3>
+    <h5 class="search-header">Sökresultat</h5>
     <div class="row">
       <div
         class="card mb-1 col-md-4 filmcard text-white"
