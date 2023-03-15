@@ -17,11 +17,9 @@
       <slide>
         <CarouselView :images="images" />
       </slide>
-      <div>
-        <button id="toFilm" class="btn-dark" @click="goToFilmPage">
-          Se filmer
-        </button>
-      </div>
+      <button id="toFilm" class="btn-dark" @click="goToFilmPage">
+        Se filmer
+      </button>
     </div>
     <div class="users-review">
       <p>
@@ -33,7 +31,11 @@
         <button id="review-btn" class="btn-dark" @click="showModal('rating')">
           Användarrecension
         </button>
-        <button id="review-btn" class="btn-dark" @click="showModal('visitors')">
+        <button
+          id="visitors-btn"
+          class="btn-dark"
+          @click="showModal('visitors')"
+        >
           Antal besökare
         </button>
       </div>
@@ -106,7 +108,7 @@ body {
 }
 
 .Review-text {
-  max-width: 370px;
+  width: 370px;
   min-height: 250px;
   margin: 10px;
   background-color: rgb(37, 36, 36);
@@ -127,16 +129,15 @@ body {
   object-fit: cover;
   background-repeat: no-repeat;
   width: 370px;
-  /* min-height: 250px; */
+  margin-top: 10px;
   height: 250px;
-  margin: 10px;
   border: solid 1px rgb(136, 124, 53);
   border-radius: 15px;
 }
 .users-review {
-  max-width: 370px;
+  width: 370px;
   margin: 10px;
-  padding: 10px;
+  padding: 8px;
   min-height: 250px;
   justify-content: center;
   align-items: center;
@@ -151,16 +152,21 @@ body {
 .review-btn-box {
   display: flex;
   flex-direction: row;
+  margin: 5px;
+  padding: 2px;
 }
 #review-btn {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  font-size: small;
   min-width: 130px;
-  height: auto;
+  height: 40px;
+  margin-right: 2px;
 }
-
+#visitors-btn {
+  font-size: small;
+  min-width: 130px;
+  height: 40px;
+  margin-left: 2px;
+}
 #toFilm {
   justify-content: end;
   margin: 15%;

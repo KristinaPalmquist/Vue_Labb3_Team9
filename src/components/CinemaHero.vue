@@ -117,8 +117,8 @@ export default {
 }
 
 .cinemaAdress p {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 @media screen and (min-width: 1000px) {
