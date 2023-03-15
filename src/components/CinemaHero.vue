@@ -15,7 +15,9 @@ import axios from "axios";
         </div>
         <div class="cinemaAdress">
           <h7>Adress</h7>
-          <p>{{ cinema.Adress }}</p>
+          <p>{{ cinema.Area }}</p>
+          <p>{{ cinema.Street }}</p>
+          <p>{{ cinema.Postal }}</p>
         </div>
         <div class="cinemaHours">
           <div id="cinemaHoursBox">
@@ -66,13 +68,14 @@ export default {
   width: 100%;
   display: grid;
   margin: 0 auto;
-  grid-template-columns: 10vw 50vw auto 10vw;
+  grid-template-columns: auto;
   grid-template-rows: min-content min-content min-content min-content;
   grid-template-areas:
-    ". cinemaName cinemaName ."
-    ". heroImage heroImage ."
-    ". cinemaAbout cinemaHours ."
-    ". cinemaAbout cinemaAdress .";
+    "cinemaName"
+    "heroImage"
+    "cinemaAbout"
+    "cinemaHours"
+    "cinemaAdress";
   grid-gap: 10px 10px;
 }
 .cinemaName {
@@ -87,19 +90,23 @@ export default {
 
 .cinemaAbout {
   grid-area: cinemaAbout;
-  max-width: 700px;
+  max-width: 75vw;
+  margin: 0 auto;
 }
 
 .cinemaAdress {
   grid-area: cinemaAdress;
+  margin-bottom: 15px;
 }
 
 .cinemaHours {
   grid-area: cinemaHours;
+  max-width: max-content;
+  margin: 0 auto;
 }
 
 #cinemaHoursBox {
-  padding: 10px 0;
+  padding: 10px 30px;
   margin: 10px;
   border: 1px solid var(--yellow);
 }
@@ -107,5 +114,30 @@ export default {
 .cinemaHours p {
   padding: 0;
   margin: 0;
+}
+
+.cinemaAdress p {
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .grid-container {
+    width: 100%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 10vw 50vw auto 10vw;
+    grid-template-rows: min-content min-content min-content min-content;
+    grid-template-areas:
+      ". cinemaName cinemaName ."
+      ". heroImage cinemaHours ."
+      ". heroImage cinemaAdress ."
+      ". cinemaAbout cinemaAbout .";
+    grid-gap: 10px 10px;
+  }
+
+  .cinemaAbout {
+    text-align: justify;
+  }
 }
 </style>

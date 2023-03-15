@@ -25,7 +25,7 @@
     </div>
     <div class="users-review">
       <p>
-        vi har samlat information om antalet besökare på fem biografer per år,
+        Vi har samlat information om antalet besökare på fem biografer per år,
         samt det genomsnittliga användarbetyget för varje biograf. Klicka på
         knapparna om du är intresserad
       </p>
@@ -34,7 +34,7 @@
           Användarrecension
         </button>
         <button id="review-btn" class="btn-dark" @click="showModal('visitors')">
-          Antal besökare per år
+          Antal besökare
         </button>
       </div>
 
@@ -106,8 +106,8 @@ body {
 }
 
 .Review-text {
-  width: 370px;
-  height: 250px;
+  max-width: 370px;
+  min-height: 250px;
   margin: 10px;
   background-color: rgb(37, 36, 36);
   justify-content: center;
@@ -120,21 +120,24 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   border: solid 1px rgb(136, 124, 53);
+  border-radius: 15px;
 }
 .ImageSlide {
   background-image: url("/src/assets/img/cinema view.1.jpg");
   object-fit: cover;
   background-repeat: no-repeat;
   width: 370px;
+  /* min-height: 250px; */
   height: 250px;
   margin: 10px;
   border: solid 1px rgb(136, 124, 53);
+  border-radius: 15px;
 }
 .users-review {
-  width: 370px;
+  max-width: 370px;
   margin: 10px;
   padding: 10px;
-  height: 250px;
+  min-height: 250px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -143,18 +146,18 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   border: solid 1px rgb(136, 124, 53);
+  border-radius: 15px;
 }
 .review-btn-box {
   display: flex;
   flex-direction: row;
 }
 #review-btn {
-  text-transform: none;
   text-align: center;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  width: 100%;
+  min-width: 130px;
   height: auto;
 }
 

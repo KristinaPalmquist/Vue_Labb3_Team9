@@ -37,6 +37,7 @@ export default {
   },
 };
 </script>
+
 <template>
   <body>
     <div class="container">
@@ -50,11 +51,17 @@ export default {
               @click="onClick(movie.titleId)"
             ></div>
           </div>
-          <div v-for="cinema in cinemas" :key="cinema.id">
-            <div v-if="cinema.movies.includes(movie.id)">
-              <h2 class="cinemaList" @click="onClickCinemaHero(cinema.nameId)">
-                {{ cinema.name }}
-              </h2>
+          <div id="text">
+            <h8 class="film-title">{{ movie.titleSweden }}</h8>
+            <div v-for="cinema in cinemas" :key="cinema.id">
+              <div v-if="cinema.movies.includes(movie.id)">
+                <h9
+                  class="cinemaList"
+                  @click="onClickCinemaHero(cinema.nameId)"
+                >
+                  {{ cinema.name }}
+                </h9>
+              </div>
             </div>
           </div>
         </div>
@@ -77,33 +84,57 @@ body {
   flex-wrap: wrap;
   z-index: 1;
 }
-.container2 .card2 {
+.card2 {
   min-width: 250px;
-  height: 400px;
-  margin: 30px;
+  height: 350px;
+  width: 240px;
   border-radius: 15px;
-  opacity: 0.7;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow: hidden;
+  opacity: 0.9;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-.container2 .card2:hover {
+.card2:hover {
   cursor: pointer;
   opacity: 1;
 }
 
 /* Innehåller texten under cards */
 .cinemaList {
-  color: rgba(255, 255, 255, 1);
-  font-size: 1em;
+  color: var(--white);
   cursor: pointer;
 }
 .cinemaList:hover {
-  color: #f5c518;
+  color: var(--yellow);
+}
+
+@media screen and (min-width: 1200px) {
+  .container2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 300px;
+    flex-wrap: wrap;
+    z-index: 1;
+  }
+  .card2 {
+    min-width: 250px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
+
+.film-title {
+  margin-top: 10px;
 }
 </style>

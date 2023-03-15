@@ -9,8 +9,7 @@
         <p>
           Du kan se nya och mest populär filmer, se på vilket datum och tid de
           visas, och i vilken biograf som visas på.
-        </p>
-        <p>
+          <br />
           Vi tillhandahåller allt information om film och biografer på ett
           ställe så att du enkelt kan få allt du behöver utan att söka på olika
           hemsidor.
@@ -50,58 +49,49 @@ export default {
 </script>
 
 <style scoped>
-/* h5 {
-  display: flex;
-  flex-direction: row;
-}
-h5:before,
-h5:after {
-  content: "";
-  flex: 1 1;
-  border-bottom: 2px solid #f5c65067;
-  margin: 15px;
-} */
 .discription-box {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  width: auto;
   height: auto;
-  margin: 20px auto;
+  margin: 20px;
   padding: 30px;
   justify-content: center;
   align-items: center;
 }
 .card-First {
   width: 370px;
-  height: 300px;
+  min-height: 300px;
   margin: 10px;
   padding: 20px;
   text-align: center;
   justify-content: center;
   border: solid 1px #f5c65067;
+  border-radius: 15px;
 }
 .card-second {
-  width: 370px;
-  height: 300px;
+  min-width: 370px;
+  min-height: 300px;
   margin: 10px;
   justify-content: center;
   border: solid 1px #f5c65067;
+  border-radius: 15px;
 }
 .card-third {
   width: 370px;
-  height: 300px;
+  min-height: 300px;
   margin: 10px;
   justify-content: center;
   border: solid 1px #f5c65067;
-  border-radius: 10px;
+  border-radius: 15px;
   object-fit: contain;
 }
 .card-fourth {
   width: 370px;
-  height: 300px;
+  min-height: 300px;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
   justify-content: center;
   border: solid 1px #f5c65067;
   padding: 20px;
@@ -109,6 +99,6 @@ h5:after {
 .Img-box {
   width: 368px;
   height: 298px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 </style>

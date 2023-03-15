@@ -58,6 +58,8 @@ export default {
               @click="onClick(movie.titleId)"
             ></div>
           </div>
+          <p class="film-title">{{ movie.titleSweden }}</p>
+          <p>IMDB: {{ movie.imdb }}</p>
         </div>
       </div>
     </div>
@@ -73,6 +75,8 @@ export default {
               @click="onClick(movie.titleId)"
             ></div>
           </div>
+          <p class="film-title">{{ movie.titleSweden }}</p>
+          <p>IMDB: {{ movie.imdb }}</p>
         </div>
       </div>
     </div>
@@ -88,6 +92,8 @@ export default {
               @click="onClick(movie.titleId)"
             ></div>
           </div>
+          <p class="film-title">{{ movie.titleSweden }}</p>
+          <p>IMDB: {{ movie.imdb }}</p>
         </div>
       </div>
     </div>
@@ -106,26 +112,33 @@ body {
   align-items: center;
   flex-wrap: wrap;
   z-index: 1;
+  margin-bottom: 10px;
 }
-.container2 .card2 {
+.card2 {
   min-width: 150px;
-  width: 250px;
+  width: 240px;
   height: 350px;
-  margin: 30px;
+  margin-top: 30px;
   border-radius: 15px;
-  opacity: 0.7;
-  background-size: contain;
-  background-repeat: no-repeat;
+  opacity: 0.9;
+  background-size: cover;
   background-position: center;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container2 .card2:hover {
+.card2:hover {
   cursor: pointer;
   opacity: 1;
 }
 
+.film-title {
+  color: var(--yellow);
+  margin-bottom: 5px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
 </style>
