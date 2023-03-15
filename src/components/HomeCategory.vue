@@ -5,13 +5,11 @@ export default {
   // förladdning av json filerna
   created() {
     this.apiCall();
-    this.cinemaSearch();
-    // this.getDramas();
   },
   methods: {
     // hämtar filmernas json
     apiCall() {
-      axios.get("movies.json").then((response) => {
+      axios.get("/movies.json").then((response) => {
         this.movies = response.data; // loading the whole film json
         // creating drama array randomising and choosing 3 movies
         this.dramas = this.movies
@@ -34,21 +32,10 @@ export default {
     onClick(titleId) {
       this.$router.replace("film/" + titleId);
     },
-    // skickar till CinemaHero sida
-    onClickCinemaHero(nameId) {
-      this.$router.replace("biograf/" + nameId);
-    },
-    // hämtar biografernas json
-    cinemaSearch() {
-      axios
-        .get("cinemas.json")
-        .then((response) => (this.cinemas = response.data));
-    },
   },
   data() {
     return {
       movies: [],
-      cinemas: [],
       dramas: [],
       comedys: [],
       documentarys: [],
@@ -72,13 +59,6 @@ export default {
             ></div>
           </div>
         </div>
-        <!-- <div v-for="cinema in cinemas" :key="cinema.id">
-          <div v-if="cinema.movies.includes(movie.id)">
-            <h2 class="cinemaList" @click="onClickCinemaHero(cinema.nameId)">
-              {{ cinema.name }}
-            </h2>
-          </div>
-        </div> -->
       </div>
     </div>
     <h5>Komedi</h5>
@@ -148,16 +128,4 @@ body {
   opacity: 1;
 }
 
-/* Innehåller texten under cards */
-.cinemaList {
-  color: rgba(255, 255, 255, 1);
-  font-size: 1em;
-  cursor: pointer;
-}
-.cinemaList:hover {
-  color: #f5c518;
-}
-.hr {
-  color: #f5c550;
-}
 </style>

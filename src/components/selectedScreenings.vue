@@ -19,15 +19,14 @@ import moment from "moment/min/moment-with-locales";
     <!--film cards chosen film-->
     <div class="row">
       <div class="date-header">
-        <h2 class="on-cinema">På bio</h2>
-        <h2>
-          {{ moment(dateProps).lang("sv").format("LL") }}
-        </h2>
+        <h5 class="on-cinema">På bio</h5>
+        <h6>{{ moment(dateProps).lang("sv").format("LL") }}</h6>
       </div>
       <div
         class="card mb-1 col-md-4 filmcard text-white"
         style="width: 12rem"
         v-for="movie in selectedMovies"
+        :key="movie.id"
         @click="onClickTwo(movie.titleId)"
       >
         <img :src="movie.img" class="card-img-top" :alt="movie.titleEnglish" />
@@ -84,14 +83,14 @@ export default {
   methods: {
     getChosenScreenings(value) {
       axios
-        .get("screenings.json")
+        .get("/screenings.json")
         .then(
           (response) =>
             (this.chosenScreenings =
               response.data[moment(value).dayOfYear()].Victoria)
         );
     },
-    onClickOutside(event) {
+    onClickOutside() {
       this.selectedMovies = "";
     },
     // skickar till IndividualMovie
@@ -100,7 +99,7 @@ export default {
       this.selectedMovies = "";
     },
     getChosenMovies() {
-      axios.get("movies.json").then((response) => {
+      axios.get("/movies.json").then((response) => {
         this.selectedMovies = response.data;
         this.selectedMovies = this.selectedMovies.filter(
           (selectedMovie) =>
@@ -125,7 +124,27 @@ export default {
   color: white;
   display: flex;
   flex-direction: column;
+  width: 40vh;
+  margin: auto;
+  padding: 0 10px;
 }
+
+@media screen and (min-width: 500px) and (max-width: 750px) {
+  .cards-div {
+    width: 85vh;
+    overflow-x: hidden;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .cards-div {
+    width: 140vh;
+    overflow-x: hidden;
+    padding: 0 15px;
+  }
+}
+
 .filmcard {
   cursor: pointer;
   background-color: #121212 !important;

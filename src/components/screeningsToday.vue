@@ -24,7 +24,7 @@ export default {
   methods: {
     getScreenings() {
       axios
-        .get("screenings.json")
+        .get("/screenings.json")
         .then(
           (response) =>
             (this.todaysScreenings =
@@ -34,7 +34,7 @@ export default {
     nextDay() {
       this.$store.commit("increment");
       axios
-        .get("screenings.json")
+        .get("/screenings.json")
         .then(
           (response) =>
             (this.todaysScreenings =
@@ -44,7 +44,7 @@ export default {
     previousDay() {
       this.$store.commit("previous");
       axios
-        .get("screenings.json")
+        .get("/screenings.json")
         .then(
           (response) =>
             (this.todaysScreenings =
@@ -55,8 +55,8 @@ export default {
     onClick(titleId) {
       this.$router.replace("film/" + titleId);
     },
-    getMovies(value) {
-      axios.get("movies.json").then((response) => {
+    getMovies() {
+      axios.get("/movies.json").then((response) => {
         this.movies = response.data;
         this.movies = this.movies.filter(
           (movie) => this.todaysScreenings.indexOf(movie.id) > -1
@@ -68,25 +68,32 @@ export default {
 </script>
 
 <template>
-  <div class="cards-div">
-    <!--film cards todays film-->
-    <h2 class="on-cinema">På bio</h2>
-    <h2>
-      <span @click="previousDay"><i class="change-day left"></i></span>
-      {{ $store.state.datefixed }}
-      <span @click="nextDay"><i class="change-day right"></i></span>
-    </h2>
-    <div class="row">
-      <div
-        class="card filmcard text-white"
-        style="width: 12rem"
-        v-for="movie in movies"
-        @click="onClick(movie.titleId)"
-      >
-        <img :src="movie.img" class="card-img-top" :alt="movie.titleEnglish" />
-        <div class="card-body">
-          <h1 class="card-title">{{ movie.titleSweden }}</h1>
-          <p class="card-text">IMDB: {{ movie.imdb }}</p>
+  <div class="card-container">
+    <div class="cards-div">
+      <!--film cards todays film-->
+      <h5 class="on-cinema">På bio</h5>
+      <h6 class="date-header">
+        <span @click="previousDay"><i class="change-day left"></i></span>
+        {{ $store.state.datefixed }}
+        <span @click="nextDay"><i class="change-day right"></i></span>
+      </h6>
+      <div class="row">
+        <div
+          class="card filmcard text-white"
+          style="width: 12rem"
+          v-for="movie in movies"
+          :key="movie.id"
+          @click="onClick(movie.titleId)"
+        >
+          <img
+            :src="movie.img"
+            class="card-img-top"
+            :alt="movie.titleEnglish"
+          />
+          <div class="card-body">
+            <h1 class="card-title">{{ movie.titleSweden }}</h1>
+            <p class="card-text">IMDB: {{ movie.imdb }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -96,6 +103,10 @@ export default {
 <style scoped>
 .on-cinema {
   margin-top: 10px;
+}
+
+.date-header {
+  margin-bottom: 20px;
 }
 .card {
   margin: 0 auto;
@@ -113,6 +124,10 @@ export default {
   font-size: medium;
 }
 
+.card-container {
+  margin: 0 2vh;
+}
+
 /*change day buttons*/
 .change-day {
   border: solid #f5c65067;
@@ -121,7 +136,6 @@ export default {
   width: 1rem;
   display: inline-block;
   padding: 3px;
-  margin-bottom: 7px;
 }
 
 .change-day:hover {
