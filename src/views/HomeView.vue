@@ -8,17 +8,17 @@ import FeedbackNavigator from "../components/FeedbackNavigator.vue";
   <div class="home-text-box">
     <h5 class="home-title">
       Cinemap <br />
-      Bästa ställe för filmälskare
+      Bästa stället för filmälskare
     </h5>
     <p class="home-text">
-      Vi har många filmer, från de senaste släppen till tidlösa klassiker som
-      visas på fem biografer i stockolm så att alla kan hitta något de gillar.
-      Det är enkelt att bläddra bland filmerna, filtrera dem och titta på
-      trailers för att hjälpa dig välja rätt.<br />
-      Vi tillhandahåller också detaljerad information om varje film och biograf
-      såsom betyg, recensioner och skådespelare. Vi kommer att komma med ännu
-      mer spännande innehåll i framtiden. Njut av det bästa av filmer, allt på
-      ett ställe!
+      Vi har ett stort utbud av filmer, från de senaste släppen till tidlösa
+      klassiker som visas på fem biografer i Stockolm så att alla kan hitta
+      något de gillar. Det är enkelt att bläddra bland filmerna, filtrera dem
+      och titta på deras trailers för att hjälpa dig välja rätt.<br />
+      Vi tillhandahåller detaljerad information om varje film och biograf såsom
+      betyg, recensioner och skådespelare. Vi kommer att komma med ännu mer
+      spännande innehåll i framtiden. Njut av det bästa av filmer, allt på ett
+      ställe!
     </p>
   </div>
   <HomeCategory />

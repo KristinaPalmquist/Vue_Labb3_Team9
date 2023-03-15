@@ -4,10 +4,9 @@
     <div class="Review-text">
       <h6 class="Review-header">Fakta om biografer</h6>
       <p>
-        Det finns gott om biosalonger i Stockholm och de största och mest kända
-        biografer i Stockholm är Filmstaden Sergel, Victoria och Filmstaden
-        Söder på Södermalm. I den här appen inkluderas fem mest kända biografer
-        i stockholm.
+        Det finns gott om biosalonger i Stockholm. De största och mest kända
+        biograferena är Filmstaden Sergel, Victoria och Filmstaden Söder. Den
+        här appen inkluderar de fem mest kända biograferna i Stockholm.
       </p>
       <button id="toCinema" class="btn-dark" @click="goToCinemaPage">
         Se biografer
@@ -23,9 +22,9 @@
     </div>
     <div class="users-review">
       <p>
-        Vi har samlat information om antalet besökare på fem biografer per år,
+        Vi har samlat information om antalet besökare per år på fem biografer,
         samt det genomsnittliga användarbetyget för varje biograf. Klicka på
-        knapparna om du är intresserad
+        knapparna om du är intresserad!
       </p>
       <div class="review-btn-box">
         <button id="review-btn" class="btn-dark" @click="showModal('rating')">

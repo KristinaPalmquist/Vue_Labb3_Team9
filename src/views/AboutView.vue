@@ -5,14 +5,13 @@
     <h5>Vad får du ut av den här appen?</h5>
     <div class="discription-box">
       <div class="card-First">
-        <h6>Alt om filmer och bigrafer</h6>
+        <h6>Allt om filmer och biografer</h6>
         <p>
-          Du kan se nya och mest populär filmer, se på vilket datum och tid de
-          visas, och i vilken biograf som visas på.
+          Ta reda på vilka nya och populära filmer som visas på bio nu. Datum,
+          tid och även vilka biografer som de visas på!
           <br />
-          Vi tillhandahåller allt information om film och biografer på ett
-          ställe så att du enkelt kan få allt du behöver utan att söka på olika
-          hemsidor.
+          Vi tillhandahåller all information om filmer och biografer på ett
+          ställe så att du enkelt kan söka och hitta det som passar dig.
         </p>
       </div>
 
@@ -23,10 +22,10 @@
       <div class="card-fourth" style="width: 370px">
         <h6>Är den här appen gratis?</h6>
         <p>
-          Cenemapp är en gratis appguide, samlas allt information som är
-          utformad för att hjälpa dig hitta var du kan se dina favoritfilmer.<br />
-          Våran app är helt kostnadsfritt. Vi kommer att lägga till andra
-          funktioner i framtiden.
+          Cinemap är en gratis appguide, som är utformad för att hjälpa dig
+          hitta var och när du kan se dina favoritfilmer på bio.<br />
+          Vår app är helt kostnadsfri och vi ser fram emot att erbjuda fler
+          funktioner i framtiden!
         </p>
       </div>
     </div>

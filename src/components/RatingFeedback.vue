@@ -7,8 +7,8 @@
       <p class="intro-text">
         Kan du beskriva dina upplevelser av denna app? Har du förslag på hur vi
         kan förbättra oss ytterligare? Saknar du något i appen? <br />
-        Vi arbetar outtröttligt för att göra upplevelsen av att använda vår app
-        så bra som möjligt och dina idéer är viktiga!<br />
+        Vi arbetar outtröttligt för att göra upplevelsen av vår app så bra som
+        möjligt och dina idéer är viktiga för oss!<br />
         Betygsätt och dela dina idéer så att vi kan förbättra appen tillsammans.
       </p>
       <!-- Bootstrap Star icon is used to make clickable star icon for rating

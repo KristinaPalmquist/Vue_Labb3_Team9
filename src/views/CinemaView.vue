@@ -4,7 +4,7 @@ import TheaterCard from "../components/TheaterCard.vue";
 
 <template>
   <h2>Biografer</h2>
-  <p>Klicka på bilden för att läsa med om biografen</p>
+  <p>Klicka på bilden för att läsa mer om biografen</p>
   <TheaterCard />
   <FeedbackNavigator />
 </template>

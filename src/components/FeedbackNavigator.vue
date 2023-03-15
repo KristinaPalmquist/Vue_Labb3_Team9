@@ -1,10 +1,10 @@
 <template>
   <div class="feedback-link">
     <div class="text-section">
-      <h7 class="">Dina idéer är viktiga för oss.</h7>
+      <h7 class="">Dina idéer är viktiga för oss</h7>
       <p class="">
         Betygsätt vår app och dela din åsikt för att bli en del av vår
-        filmälskande community som alltid hjälper oss för att förbättra appen.
+        filmälskande community. Det hjälper oss att förbättra appen!
       </p>
     </div>
 
