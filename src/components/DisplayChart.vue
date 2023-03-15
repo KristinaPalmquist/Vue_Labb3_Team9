@@ -128,9 +128,8 @@ body {
   object-fit: cover;
   background-repeat: no-repeat;
   width: 370px;
-  /* min-height: 250px; */
+  margin-top: 10px;
   height: 250px;
-  margin: 10px;
   border: solid 1px rgb(136, 124, 53);
   border-radius: 15px;
 }
