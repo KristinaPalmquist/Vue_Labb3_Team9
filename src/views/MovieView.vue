@@ -23,6 +23,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 25px;
 }
 
 h2:before,
