@@ -20,7 +20,7 @@ export default {
 }
 img {
   width: 100%;
-  height: 60vh;
+  height: 58vh;
 }
 @media screen and (max-width: 480px) {
   .heroimage {
