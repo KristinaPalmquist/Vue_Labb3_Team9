@@ -37,6 +37,7 @@ export default {
   },
 };
 </script>
+
 <template>
   <body>
     <div class="container">
@@ -49,12 +50,18 @@ export default {
               :alt="movie.titleSweden"
               @click="onClick(movie.titleId)"
             ></div>
-          </div>
-          <div v-for="cinema in cinemas" :key="cinema.id">
-            <div v-if="cinema.movies.includes(movie.id)">
-              <h2 class="cinemaList" @click="onClickCinemaHero(cinema.nameId)">
-                {{ cinema.name }}
-              </h2>
+            <div id="text">
+              <h8>{{ movie.titleSweden }}</h8>
+              <div v-for="cinema in cinemas" :key="cinema.id">
+                <div v-if="cinema.movies.includes(movie.id)">
+                  <h9
+                    class="cinemaList"
+                    @click="onClickCinemaHero(cinema.nameId)"
+                  >
+                    {{ cinema.name }}
+                  </h9>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -80,7 +87,7 @@ body {
 .container2 .card2 {
   min-width: 250px;
   height: 400px;
-  margin: 30px;
+  margin: 5px 30px 0 30px;
   border-radius: 15px;
   opacity: 0.7;
   background-size: contain;
@@ -99,11 +106,40 @@ body {
 
 /* Innehåller texten under cards */
 .cinemaList {
-  color: rgba(255, 255, 255, 1);
-  font-size: 1em;
+  color: var(--white);
   cursor: pointer;
 }
 .cinemaList:hover {
-  color: #f5c518;
+  color: var(--yellow);
+}
+
+@media screen and (min-width: 1200px) {
+  .container2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 300px;
+    flex-wrap: wrap;
+    z-index: 1;
+  }
+  .container2 .card2 {
+    min-width: 250px;
+    height: 400px;
+    margin: 5px 30px 0 30px;
+    border-radius: 15px;
+    opacity: 0.7;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
 }
 </style>
