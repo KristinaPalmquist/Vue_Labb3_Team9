@@ -116,7 +116,7 @@ body {
 }
 .card2 {
   min-width: 150px;
-  width: 250px;
+  width: 240px;
   height: 350px;
   margin-top: 30px;
   border-radius: 15px;
