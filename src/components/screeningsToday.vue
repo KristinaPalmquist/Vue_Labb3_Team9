@@ -102,7 +102,7 @@ export default {
 
 <style scoped>
 .on-cinema {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .date-header {

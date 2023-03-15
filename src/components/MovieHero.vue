@@ -108,19 +108,29 @@ import axios from "axios";
   <div class="tickets-div">
     <h5 class="tickets-title">Köp biljetter</h5>
     <li v-if="movie.ticketsSergel != ''">
-      <a class="tickets-link" :href="movie.ticketsSergel">Filmstaden Sergel </a>
+      <a class="tickets-link" target="_blank" :href="movie.ticketsSergel"
+        >Filmstaden Sergel
+      </a>
     </li>
     <li v-if="movie.ticketsVictoria != ''">
-      <a class="tickets-link" :href="movie.ticketsVictoria">Victoria </a>
+      <a class="tickets-link" target="_blank" :href="movie.ticketsVictoria"
+        >Victoria
+      </a>
     </li>
     <li v-if="movie.ticketsCapitol != ''">
-      <a class="tickets-link" :href="movie.ticketsCapitol">Capitol </a>
+      <a class="tickets-link" target="_blank" :href="movie.ticketsCapitol"
+        >Capitol
+      </a>
     </li>
     <li v-if="movie.ticketsZita != ''">
-      <a class="tickets-link" :href="movie.ticketsZita">Zita </a>
+      <a class="tickets-link" target="_blank" :href="movie.ticketsZita"
+        >Zita
+      </a>
     </li>
     <li v-if="movie.ticketsCinemateket != ''">
-      <a class="tickets-link" :href="movie.ticketsCinemateket">Cinemateket </a>
+      <a class="tickets-link" target="_blank" :href="movie.ticketsCinemateket"
+        >Cinemateket
+      </a>
     </li>
   </div>
 </template>
