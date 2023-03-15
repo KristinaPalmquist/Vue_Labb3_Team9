@@ -15,7 +15,9 @@ import axios from "axios";
         </div>
         <div class="cinemaAdress">
           <h7>Adress</h7>
-          <p>{{ cinema.Adress }}</p>
+          <p>{{ cinema.Area }}</p>
+          <p>{{ cinema.Street }}</p>
+          <p>{{ cinema.Postal }}</p>
         </div>
         <div class="cinemaHours">
           <div id="cinemaHoursBox">
@@ -94,6 +96,7 @@ export default {
 
 .cinemaAdress {
   grid-area: cinemaAdress;
+  margin-bottom: 15px;
 }
 
 .cinemaHours {
@@ -111,6 +114,11 @@ export default {
 .cinemaHours p {
   padding: 0;
   margin: 0;
+}
+
+.cinemaAdress p {
+    padding: 0;
+    margin: 0;
 }
 
 @media screen and (min-width: 1000px) {
