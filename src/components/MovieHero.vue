@@ -218,7 +218,6 @@ export default {
   color: var(--blue);
 }
 
-
 .info-title {
   margin: 0;
 

@@ -50,17 +50,7 @@ export default {
 </script>
 
 <style scoped>
-/* h5 {
-  display: flex;
-  flex-direction: row;
-}
-h5:before,
-h5:after {
-  content: "";
-  flex: 1 1;
-  border-bottom: 2px solid #f5c65067;
-  margin: 15px;
-} */
+
 .discription-box {
   display: flex;
   flex-direction: row;
@@ -72,7 +62,10 @@ h5:after {
   justify-content: center;
   align-items: center;
 }
-.card-First {
+.card-First:hover {
+  color: #75693e;
+}
+np.card-First {
   width: 370px;
   height: 300px;
   margin: 10px;
