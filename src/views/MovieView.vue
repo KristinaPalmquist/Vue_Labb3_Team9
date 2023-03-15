@@ -4,7 +4,7 @@ import MoviesList from "../components/MoviesList.vue";
 
 <template>
   <h2>Filmer</h2>
-  <p>Klicka på bilden för att läsa med om filmen</p>
+  <p>Klicka på bilden för att läsa mer om filmen</p>
   <MoviesList />
   <FeedbackNavigator />
 </template>
