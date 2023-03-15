@@ -220,7 +220,11 @@ export default {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon" v-if="this.togglerOpen != ''"></span>
+        <span
+          class="navbar-toggler-icon"
+          style="color: white"
+          v-if="this.togglerOpen != ''"
+        ></span>
       </button>
       <div
         class="collapse mobile-links"
@@ -489,5 +493,13 @@ export default {
   background-color: #121212cb;
   width: 100%;
   text-align: right;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:focus {
+  color: #aeaeae !important;
 }
 </style>
