@@ -103,7 +103,7 @@
           <p>
             Cinemap startade 2023 genom ett projekt på IT-högskolan. Vårt mål är
             att göra det enklare att hitta i biodjungeln genom att samla alla
-            biografer och filmer på en hemsida.
+            biografer och aktuella filmer på en hemsida.
           </p>
         </section>
         <!-- Section: Text -->
