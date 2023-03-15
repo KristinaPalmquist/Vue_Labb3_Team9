@@ -134,6 +134,13 @@ body {
   }
 }
 
+@media screen and (min-width: 650px) and (max-width: 991px ) {
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
 .film-title {
   margin-top: 10px;
 }
