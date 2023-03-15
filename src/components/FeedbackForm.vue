@@ -15,7 +15,7 @@
           />
         </div>
         <div class="label-box">
-          <label>Skriv ditt kommentar här:</label>
+          <label>Skriv din kommentar här:</label>
           <textarea v-model="feedback.message"></textarea>
         </div>
         <button class="btn-dark" type="submit">Skicka</button>
