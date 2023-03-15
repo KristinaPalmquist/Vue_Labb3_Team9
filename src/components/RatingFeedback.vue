@@ -60,7 +60,7 @@ export default {
   components: { FeedbackForm },
   data() {
     return {
-      WelcomeMsg: `<h5>Välkommen Till CINEMAP!</h5><Br>
+      WelcomeMsg: `<h4>Välkommen Till CINEMAP!</h4><Br>
         <h6>Vi behöver eran feedback för att bli bättre !</h6>`,
       stars: [
         { selected: false },
