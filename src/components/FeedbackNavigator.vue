@@ -40,8 +40,8 @@ export default {
   background-color: rgb(36, 36, 36, 0.5);
 }
 .btn-dark {
-  width: 300px;
-  height: 25px;
+  max-width: 300px;
+  min-height: 25px;
 }
 .text-section {
   margin-top: 10px;

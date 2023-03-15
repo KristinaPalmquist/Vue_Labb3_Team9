@@ -15,12 +15,11 @@
           hemsidor.
         </p>
       </div>
-      <div class="card-second">
-        <img src="src/assets/img/film.0.jpg" class="Img-box" alt="cinema" />
-      </div>
-      <div class="card-third">
-        <img src="../assets/img/cinema2.jpg" class="Img-box" alt="cinema" />
-      </div>
+
+      <img src="src/assets/img/film.0.jpg" class="card-second" alt="cinema" />
+
+      <img src="../assets/img/cinema2.jpg" class="card-third" alt="cinema" />
+
       <div class="card-fourth" style="width: 370px">
         <h6>Är den här appen gratis?</h6>
         <p>
@@ -61,7 +60,7 @@ export default {
   align-items: center;
 }
 .card-First {
-  width: 370px;
+  width: 360px;
   min-height: 300px;
   margin: 10px;
   padding: 20px;
@@ -71,7 +70,7 @@ export default {
   border-radius: 15px;
 }
 .card-second {
-  min-width: 370px;
+  width: 360px;
   min-height: 300px;
   margin: 10px;
   justify-content: center;
@@ -79,7 +78,7 @@ export default {
   border-radius: 15px;
 }
 .card-third {
-  width: 370px;
+  width: 360px;
   min-height: 300px;
   margin: 10px;
   justify-content: center;
@@ -88,7 +87,7 @@ export default {
   object-fit: contain;
 }
 .card-fourth {
-  width: 370px;
+  width: 360px;
   min-height: 300px;
   margin: 10px;
   border-radius: 15px;
@@ -96,9 +95,5 @@ export default {
   border: solid 1px #f5c65067;
   padding: 20px;
 }
-.Img-box {
-  width: 368px;
-  height: 298px;
-  border-radius: 15px;
-}
+
 </style>

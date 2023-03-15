@@ -13,7 +13,7 @@
       </p>
       <!-- Bootstrap Star icon is used to make clickable star icon for rating
       and v-for attribute is used to loop in star array index-->
-      <div>
+      <div class="Rating-feedback-box">
         <h6 class="FD-title">Betygsätt din upplevelse av appen</h6>
         <div class="star-rating">
           <span
@@ -29,7 +29,6 @@
           <div>
             <button class="btn-dark" @click="submitRating">Skicka</button>
           </div>
-
           <div class="popover" :class="{ show: showPopover }">
             Betyget har lämnats!
           </div>
@@ -39,7 +38,6 @@
             </button>
           </div>
         </div>
-        <!-- <SubmitFeedback /> -->
         <!-- Collapse method used to show the form when the button is clicked -->
         <div v-if="showFeedback">
           <form class="collapse-box">
@@ -53,15 +51,13 @@
 
 <script>
 import FeedbackForm from "./FeedbackForm.vue";
-// import SubmitFeedback from "./SubmitFeedback.vue";
-
 export default {
   name: "RatingFeedback",
   components: { FeedbackForm },
   data() {
     return {
-      WelcomeMsg: `<h4>Välkommen Till Cinemap!</h4><Br>
-        <h6>Vi behöver eran feedback för att bli bättre !</h6>`,
+      WelcomeMsg: `<h4>Välkommen till Cinemap</h4><Br>
+        <h6>Det bästa stället för filmälskare!</h6>`,
       stars: [
         { selected: false },
         { selected: false },
@@ -92,7 +88,7 @@ export default {
       // Show the popover
       this.showPopover = true;
 
-      // Wait for 2 seconds, then hide the popover and reset the stars
+      //  It Waits for 2 seconds, then hide the popover and reset the stars
       setTimeout(() => {
         this.showPopover = false;
         this.stars = starsCopy;
@@ -114,7 +110,9 @@ export default {
 .intro-text {
   text-align: center;
   font-size: medium;
+  padding: 10px;
 }
+
 .collapse-box {
   justify-content: center;
   margin: 10px;
@@ -125,32 +123,38 @@ export default {
 .FD-btn {
   margin: 15px;
 }
+.star-rating {
+  padding: 15px;
+}
+.btn-dark {
+  margin-top: 20px;
+}
 .popover {
   display: none;
   position: absolute;
+}
+
+.show {
+  display: block;
   left: 55%;
-  top: 111%;
+  top: 126%;
   background-color: #121212;
   border: solid 1px gray;
   color: white;
   padding: 8px;
   font-size: medium;
 }
-
-.show {
-  display: block;
-}
-@media screen and (max-width: 480px) {
-  .popover {
+@media screen and (max-width: 400px) {
+  .show {
+    display: block;
+    left: 30%;
+    top: 126%;
     background-color: #121212;
     border: solid 1px gray;
-    left: 12%;
-    top: 95%;
     color: white;
-    padding: 20px;
-    text-align: center;
-    width: 300px;
-    height: auto;
+    padding: 8px;
+    font-size: medium;
+    width: 200px;
   }
 }
 </style>
