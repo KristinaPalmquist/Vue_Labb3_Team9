@@ -110,7 +110,7 @@ body {
   width: 370px;
   min-height: 250px;
   margin: 10px;
-  background-color: rgb(37, 36, 36);
+  /* background-color: rgb(37, 36, 36); */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -141,7 +141,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgb(37, 36, 36);
+  /* background-color: rgb(37, 36, 36); */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
