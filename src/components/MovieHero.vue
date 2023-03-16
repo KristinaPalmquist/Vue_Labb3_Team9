@@ -262,8 +262,8 @@ export default {
 }
 
 #rating-container {
-  /* border-radius: 15px; */
-  border: 1px solid var(--yellow);
+  border-radius: 15px;
+  border: solid 1px var(--yellow-soft);
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: auto auto;

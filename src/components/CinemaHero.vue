@@ -109,7 +109,8 @@ export default {
 #cinemaHoursBox {
   padding: 10px 30px;
   margin: 10px;
-  border: 1px solid var(--yellow);
+  border-radius: 15px;
+  border: solid 1px var(--yellow-soft);
 }
 
 .cinemaHours p {

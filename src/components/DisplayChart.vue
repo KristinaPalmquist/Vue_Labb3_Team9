@@ -120,7 +120,7 @@ body {
   padding: 8px;
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  border: solid 1px rgb(136, 124, 53);
+  border: solid 1px var(--yellow-soft);
   border-radius: 15px;
 }
 .ImageSlide {
@@ -130,7 +130,7 @@ body {
   width: 370px;
   margin-top: 10px;
   height: 250px;
-  border: solid 1px rgb(136, 124, 53);
+  border: solid 1px var(--yellow-soft);
   border-radius: 15px;
 }
 .users-review {
@@ -141,11 +141,10 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* background-color: rgb(37, 36, 36); */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: solid 1px rgb(136, 124, 53);
+  border: solid 1px var(--yellow-soft);
   border-radius: 15px;
 }
 .review-btn-box {
@@ -154,26 +153,20 @@ body {
   margin: 10px 5px 5px;
   padding: 2px;
 }
-#review-btn {
+#review-btn,
+#visitors-btn {
   font-size: small;
   min-width: 130px;
   height: 40px;
   margin-right: 2px;
 }
-#visitors-btn {
-  font-size: small;
-  min-width: 130px;
-  height: 40px;
-  margin-left: 2px;
-}
+
 #toFilm {
   justify-content: end;
-  margin: 11%;
-  border: solid 1px #f5c65067;
+  margin: 10%;
 }
 
 #toCinema {
-  margin: 0px 5px 15px 5px;
-  border: solid 1px #f5c65067;
+  margin: 0px 5px 18px 5px;
 }
 </style>
