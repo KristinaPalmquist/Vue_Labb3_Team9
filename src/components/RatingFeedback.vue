@@ -14,37 +14,38 @@
       <!-- Bootstrap Star icon is used to make clickable star icon for rating
       and v-for attribute is used to loop in star array index-->
       <div class="Rating-feedback-box">
-      <div class="Rating-feedback-box">
-        <h6 class="FD-title">Betygsätt din upplevelse av appen</h6>
-        <div class="star-rating">
-          <span
-            v-for="(star, index) in stars"
-            :key="index"
-            @click="SelectStar(index)"
-            ><i
-              class="bi bi-star-fill"
-              style="margin: 15px"
-              :class="{ selected: star.selected }"
-            ></i>
-          </span>
-          <div>
-            <button class="btn-dark" @click="submitRating">Skicka</button>
+        <div class="Rating-feedback-box">
+          <h6 class="FD-title">Betygsätt din upplevelse av appen</h6>
+          <div class="star-rating">
+            <span
+              v-for="(star, index) in stars"
+              :key="index"
+              @click="SelectStar(index)"
+              ><i
+                class="bi bi-star-fill"
+                style="margin: 15px"
+                :class="{ selected: star.selected }"
+              ></i>
+            </span>
+            <div>
+              <button class="btn-dark" @click="submitRating">Skicka</button>
+            </div>
+            <div class="popover" :class="{ show: showPopover }">
+              Betyget har lämnats!
+            </div>
+            <div>
+              <button class="btn-light" @click="showFeedback = !showFeedback">
+                Klicka här för att lämna feedback
+              </button>
+            </div>
           </div>
-          <div class="popover" :class="{ show: showPopover }">
-            Betyget har lämnats!
+          <!-- Collapse method used to show the form when the button is clicked -->
+          <div v-if="showFeedback">
+            <form class="collapse-box">
+              <button class="close-btn" @click="showFeedback = false">X</button>
+              <FeedbackForm />
+            </form>
           </div>
-          <div>
-            <button class="btn-light" @click="showFeedback = !showFeedback">
-              Klicka här för att lämna feedback
-            </button>
-          </div>
-        </div>
-        <!-- Collapse method used to show the form when the button is clicked -->
-        <div v-if="showFeedback">
-          <form class="collapse-box">
-            <button class="close-btn" @click="showFeedback = false">X</button>
-            <FeedbackForm />
-          </form>
         </div>
       </div>
     </div>
