@@ -14,6 +14,7 @@
       <!-- Bootstrap Star icon is used to make clickable star icon for rating
       and v-for attribute is used to loop in star array index-->
       <div class="Rating-feedback-box">
+      <div class="Rating-feedback-box">
         <h6 class="FD-title">Betygsätt din upplevelse av appen</h6>
         <div class="star-rating">
           <span
@@ -41,6 +42,7 @@
         <!-- Collapse method used to show the form when the button is clicked -->
         <div v-if="showFeedback">
           <form class="collapse-box">
+            <button class="close-btn" @click="showFeedback = false">X</button>
             <FeedbackForm />
           </form>
         </div>
@@ -56,6 +58,8 @@ export default {
   components: { FeedbackForm },
   data() {
     return {
+      WelcomeMsg: `<h4>Välkommen till Cinemap</h4><Br>
+        <h6>Det bästa stället för filmälskare!</h6>`,
       WelcomeMsg: `<h4>Välkommen till Cinemap</h4><Br>
         <h6>Det bästa stället för filmälskare!</h6>`,
       stars: [
@@ -84,7 +88,6 @@ export default {
       starsCopy.forEach((star) => {
         star.selected = false;
       });
-
       // Show the popover
       this.showPopover = true;
 
@@ -99,6 +102,9 @@ export default {
 </script>
 
 <style scoped>
+.WelcomeMsg {
+  margin-top: 20px;
+}
 .feedbackBox {
   padding: 0px 2rem 2rem 2rem;
   justify-content: center;
@@ -110,6 +116,7 @@ export default {
 .intro-text {
   text-align: center;
   font-size: medium;
+  padding: 10px;
   padding: 10px;
 }
 
@@ -129,6 +136,12 @@ export default {
 .btn-dark {
   margin-top: 20px;
 }
+.star-rating {
+  padding: 15px;
+}
+.btn-dark {
+  margin-top: 20px;
+}
 .popover {
   display: none;
   position: absolute;
@@ -139,7 +152,7 @@ export default {
   left: 55%;
   top: 126%;
   background-color: #121212;
-  border: solid 1px gray;
+  border: solid 1px gold;
   color: white;
   padding: 8px;
   font-size: medium;
