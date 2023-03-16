@@ -28,14 +28,14 @@
       </p>
       <div class="review-btn-box">
         <button id="review-btn" class="btn-dark" @click="showModal('rating')">
-          Användarrecension
+          Betyg
         </button>
         <button
           id="visitors-btn"
           class="btn-dark"
           @click="showModal('visitors')"
         >
-          Antal besökare
+          Besökare
         </button>
       </div>
 

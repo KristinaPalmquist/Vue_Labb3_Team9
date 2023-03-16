@@ -35,7 +35,7 @@
             </div>
             <div>
               <button class="btn-light" @click="showFeedback = !showFeedback">
-                Klicka här för att lämna feedback
+                Lämna feedback
               </button>
             </div>
           </div>
