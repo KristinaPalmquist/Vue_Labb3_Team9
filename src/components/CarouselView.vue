@@ -49,4 +49,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 400px) {
+    
+}
 </style>

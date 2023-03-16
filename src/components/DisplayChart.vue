@@ -151,7 +151,7 @@ body {
 .review-btn-box {
   display: flex;
   flex-direction: row;
-  margin: 5px;
+  margin: 10px 5px 5px;
   padding: 2px;
 }
 #review-btn {
@@ -168,12 +168,12 @@ body {
 }
 #toFilm {
   justify-content: end;
-  margin: 15%;
+  margin: 11%;
   border: solid 1px #f5c65067;
 }
 
 #toCinema {
-  margin-top: 0px;
+  margin: 0px 5px 15px 5px;
   border: solid 1px #f5c65067;
 }
 </style>

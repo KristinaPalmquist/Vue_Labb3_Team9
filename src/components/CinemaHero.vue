@@ -1,6 +1,6 @@
 <script setup>
 import axios from "axios";
-import ReadMore from './ReadMore.vue'
+import ReadMore from "./ReadMore.vue";
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import ReadMore from './ReadMore.vue'
           <h1>{{ cinema.name }}</h1>
         </div>
         <div class="cinemaAbout">
-        <p><ReadMore /></p>
+          <p><ReadMore /></p>
         </div>
         <div class="cinemaAdress">
           <h7>Adress</h7>
@@ -63,7 +63,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped>
 .grid-container {
