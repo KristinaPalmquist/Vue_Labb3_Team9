@@ -37,7 +37,6 @@ export default {
   align-items: center;
   margin: 1.9rem;
   justify-content: center;
-  background-color: rgb(36, 36, 36, 0.5);
 }
 .btn-dark {
   max-width: 300px;
