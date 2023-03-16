@@ -61,8 +61,8 @@ export default {
     return {
       WelcomeMsg: `<h4>Välkommen till Cinemap</h4><Br>
         <h6>Det bästa stället för filmälskare!</h6>`,
-      WelcomeMsg: `<h4>Välkommen till Cinemap</h4><Br>
-        <h6>Det bästa stället för filmälskare!</h6>`,
+      /*WelcomeMsg: `<h4>Välkommen till Cinemap</h4><Br>
+        <h6>Det bästa stället för filmälskare!</h6>`,*/
       stars: [
         { selected: false },
         { selected: false },

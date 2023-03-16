@@ -12,7 +12,7 @@ import ReadMore from "./ReadMore.vue";
           <h1>{{ cinema.name }}</h1>
         </div>
         <div class="cinemaAbout">
-          <p><ReadMore /></p>
+          <p><ReadMore :bioNamn="cinema.name" /></p>
         </div>
         <div class="cinemaAdress">
           <h7>Adress</h7>
