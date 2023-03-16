@@ -118,9 +118,7 @@ export default {
   text-align: center;
   font-size: medium;
   padding: 10px;
-  padding: 10px;
 }
-
 .collapse-box {
   justify-content: center;
   margin: 10px;
@@ -137,38 +135,44 @@ export default {
 .btn-dark {
   margin-top: 20px;
 }
-.star-rating {
-  padding: 15px;
-}
-.btn-dark {
-  margin-top: 20px;
-}
 .popover {
   display: none;
   position: absolute;
 }
-
 .show {
   display: block;
   left: 55%;
-  top: 126%;
+  top: 123%;
   background-color: #121212;
   border: solid 1px gold;
   color: white;
   padding: 8px;
   font-size: medium;
 }
+.close-btn {
+  position: relative;
+  top: 40px;
+  left: 100px;
+  background-color: #121212;
+  color: white;
+}
 @media screen and (max-width: 400px) {
   .show {
     display: block;
     left: 30%;
-    top: 126%;
+    top: 106%;
     background-color: #121212;
     border: solid 1px gray;
     color: white;
     padding: 8px;
     font-size: medium;
     width: 200px;
+  }
+  .collapse-box {
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 5px;
+    padding: 10px;
   }
 }
 </style>
