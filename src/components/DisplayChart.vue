@@ -1,26 +1,48 @@
 <template>
+  <div><h5 class="review-tittle">Utforska mer</h5></div>
   <div class="Review-box">
     <div class="Review-text">
-      <h5 class="Review-header">Fakta om biografer</h5>
+      <h6 class="Review-header">Fakta om biografer</h6>
       <p>
-        Det finns gott om biosalonger i Stockholm och de största och mest kända
-        är Filmstaden Sergel i Stockholm City, Victoria och Filmstaden Söder på
-        Södermalm. I den här appen inkluderas fem mest kända biografer i
-        stockholm.
+        Det finns gott om biosalonger i Stockholm. De största och mest kända
+        biograferena är Filmstaden Sergel, Victoria och Filmstaden Söder. Den
+        här appen inkluderar de fem mest kända biograferna i Stockholm.
       </p>
-      <div class="review-btn">
-        <h6>Användare recension</h6>
-        <button class="btn" @click="showModal('rating')">Klicka här</button>
+      <button id="toCinema" class="btn-dark" @click="goToCinemaPage">
+        Se biografer
+      </button>
+    </div>
+    <div class="ImageSlide">
+      <slide>
+        <CarouselView :images="images" />
+      </slide>
+      <button id="toFilm" class="btn-dark" @click="goToFilmPage">
+        Se filmer
+      </button>
+    </div>
+    <div class="users-review">
+      <p>
+        Vi har samlat information om antalet besökare per år på fem biografer,
+        samt det genomsnittliga användarbetyget för varje biograf. Klicka på
+        knapparna om du är intresserad!
+      </p>
+      <div class="review-btn-box">
+        <button id="review-btn" class="btn-dark" @click="showModal('rating')">
+          Betyg
+        </button>
+        <button
+          id="visitors-btn"
+          class="btn-dark"
+          @click="showModal('visitors')"
+        >
+          Besökare
+        </button>
       </div>
-      <div class="review-btn">
-        <h6>Antal besökare per år</h6>
-        <button class="btn" @click="showModal('visitors')">Klicka här</button>
-      </div>
+
       <ChartModal :isModalVisible="isModalVisible" @hideModal="hideModal">
         <component :is="componentToShow" />
       </ChartModal>
     </div>
-    <!-- <img src="../assets/img/review.jpeg" alt="" /> -->
   </div>
 </template>
 
@@ -28,13 +50,22 @@
 import ChartModal from "../components/ChartModal.vue";
 import ChartApp from "../components/ChartApp.vue";
 import ChartComp from "../components/ChartComp.vue";
+import CarouselView from "../components/CarouselView.vue";
 export default {
   name: "DisplayChart",
-  components: { ChartModal, ChartApp, ChartComp },
+  components: { ChartModal, ChartApp, ChartComp, CarouselView },
   data() {
     return {
       isModalVisible: false,
       componentToShow: null,
+      images: [
+        "src/assets/img/avatar.jpeg",
+        "src/assets/img/blackpanther.jpg",
+        "src/assets/img/movie-3.jpg",
+        "src/assets/img/movie-4.jpg",
+        "src/assets/img/movie-5.jpg",
+        "src/assets/img/movie-6.jpg",
+      ],
     };
   },
   methods: {
@@ -45,6 +76,12 @@ export default {
     hideModal() {
       this.isModalVisible = false;
       this.componentToShow = null;
+    },
+    goToFilmPage() {
+      this.$router.push({ name: "film" });
+    },
+    goToCinemaPage() {
+      this.$router.push({ name: "biograf" });
     },
   },
 };
@@ -64,33 +101,72 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 20px;
-  width: auto;
-}
-.Review-text {
-  width: 370px;
+  width: 100%;
   height: auto;
-  margin: 10px;
   justify-content: center;
-  align-items: center;
-  text-align: left;
-  padding: 20px;
 }
 
-.review-btn {
+.Review-text {
+  width: 370px;
+  min-height: 250px;
+  margin: 10px;
+  /* background-color: rgb(37, 36, 36); */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   display: flex;
   flex-direction: row;
-  margin: 10px 10px 10px 0px;
+  flex-wrap: wrap;
+  padding: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  border: solid 1px var(--yellow-soft);
+  border-radius: 15px;
 }
-.btn {
-  width: 100px;
-  height: 30px;
-  align-items: center;
+.ImageSlide {
+  background-image: url("/src/assets/img/cinema view.1.jpg");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  width: 370px;
+  margin-top: 10px;
+  height: 250px;
+  border: solid 1px var(--yellow-soft);
+  border-radius: 15px;
+}
+.users-review {
+  width: 370px;
+  margin: 10px;
+  padding: 8px;
+  min-height: 250px;
   justify-content: center;
-  border: none;
+  align-items: center;
   text-align: center;
-  background-color: rgb(114, 109, 109);
-  color: white;
-  padding-bottom: 15px;
-  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: solid 1px var(--yellow-soft);
+  border-radius: 15px;
+}
+.review-btn-box {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 5px 5px;
+  padding: 2px;
+}
+#review-btn,
+#visitors-btn {
+  font-size: small;
+  min-width: 130px;
+  height: 40px;
+  margin-right: 2px;
+}
+
+#toFilm {
+  justify-content: end;
+  margin: 10%;
+}
+
+#toCinema {
+  margin: 0px 5px 18px 5px;
 }
 </style>

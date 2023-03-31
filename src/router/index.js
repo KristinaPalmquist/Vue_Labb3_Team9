@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import MovieView from "../views/MovieView.vue";
 import CinemaView from "../views/CinemaView.vue";
-import FeedbackView from "../views/FeedbackView.vue";
+import AboutView from "../views/AboutView.vue";
 import MovieHeroView from "../views/MovieHeroView.vue";
 import CinemaHeroView from "../views/CinemaHeroView.vue";
 
@@ -12,12 +12,13 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: HomeView,
+      component: HomeView, // 4 kB
+      // component: () => import("../views/HomeView.vue"),
     },
     {
       path: "/film",
       name: "film",
-      component: MovieView,
+      component: MovieView, // 1 kB size
     },
     {
       path: "/film/:id",
@@ -35,9 +36,13 @@ const router = createRouter({
       component: CinemaHeroView,
     },
     {
-      path: "/feedback",
-      name: "feedback",
-      component: FeedbackView,
+      path: "/om",
+      name: "om",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: AboutView, // 10 kB
+      // component: () => import("../views/AboutView.vue"),
     },
   ],
 });

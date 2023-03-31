@@ -8,7 +8,7 @@ export default {
   methods: {
     apiCall() {
       axios
-        .get("cinemas.json")
+        .get("/cinemas.json")
         .then((response) => (this.theaters = response.data));
     },
     onClick(nameId) {

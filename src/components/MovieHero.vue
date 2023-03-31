@@ -105,6 +105,34 @@ import axios from "axios";
       </div>
     </div>
   </div>
+  <div class="tickets-div">
+    <h5 class="tickets-title">Köp biljetter</h5>
+    <li v-if="movie.ticketsSergel != ''">
+      <a class="tickets-link" target="_blank" :href="movie.ticketsSergel"
+        >Filmstaden Sergel
+      </a>
+    </li>
+    <li v-if="movie.ticketsVictoria != ''">
+      <a class="tickets-link" target="_blank" :href="movie.ticketsVictoria"
+        >Victoria
+      </a>
+    </li>
+    <li v-if="movie.ticketsCapitol != ''">
+      <a class="tickets-link" target="_blank" :href="movie.ticketsCapitol"
+        >Capitol
+      </a>
+    </li>
+    <li v-if="movie.ticketsZita != ''">
+      <a class="tickets-link" target="_blank" :href="movie.ticketsZita"
+        >Zita
+      </a>
+    </li>
+    <li v-if="movie.ticketsCinemateket != ''">
+      <a class="tickets-link" target="_blank" :href="movie.ticketsCinemateket"
+        >Cinemateket
+      </a>
+    </li>
+  </div>
 </template>
 
 <script>
@@ -217,18 +245,10 @@ export default {
   text-decoration: none;
   color: var(--blue);
 }
-/* #trailer-link:visited {
-  color: var(--red);
-} */
-
-/* #info-container > p {
-} */
 
 .info-title {
   margin: 0;
-  /* width: 115px;
-  text-align: right;
-  padding-right: 7px; */
+
   color: var(--yellow);
 }
 .info-text {
@@ -243,7 +263,7 @@ export default {
 
 #rating-container {
   border-radius: 15px;
-  border: 1px solid var(--yellow);
+  border: solid 1px var(--yellow-soft);
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: auto auto;
@@ -322,8 +342,6 @@ export default {
   }
 
   #rating-container {
-    border-radius: 15px;
-    border: 1px solid var(--yellow);
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 20px auto auto 20px;
@@ -345,5 +363,27 @@ export default {
   #as-score {
     text-align: left;
   }
+}
+
+/*Tickets*/
+.tickets-link {
+  text-decoration: none;
+  color: var(--yellow-soft);
+}
+
+.tickets-link:hover {
+  color: var(--yellow);
+}
+
+.tickets-title {
+  margin: 30px 30px 15px 30px;
+}
+
+.tickets-div li {
+  list-style: none;
+}
+
+.tickets-div {
+  margin-bottom: 50px;
 }
 </style>

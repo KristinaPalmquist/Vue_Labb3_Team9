@@ -5,13 +5,11 @@ export default {
   // förladdning av json filerna
   created() {
     this.apiCall();
-    this.cinemaSearch();
-    // this.getDramas();
   },
   methods: {
     // hämtar filmernas json
     apiCall() {
-      axios.get("movies.json").then((response) => {
+      axios.get("/movies.json").then((response) => {
         this.movies = response.data; // loading the whole film json
         // creating drama array randomising and choosing 3 movies
         this.dramas = this.movies
@@ -34,21 +32,10 @@ export default {
     onClick(titleId) {
       this.$router.replace("film/" + titleId);
     },
-    // skickar till CinemaHero sida
-    onClickCinemaHero(nameId) {
-      this.$router.replace("biograf/" + nameId);
-    },
-    // hämtar biografernas json
-    cinemaSearch() {
-      axios
-        .get("cinemas.json")
-        .then((response) => (this.cinemas = response.data));
-    },
   },
   data() {
     return {
       movies: [],
-      cinemas: [],
       dramas: [],
       comedys: [],
       documentarys: [],
@@ -59,7 +46,10 @@ export default {
 
 <template>
   <div class="container">
+<<<<<<< HEAD
     <hr class="hr hr-blurry" />
+=======
+>>>>>>> d1adf751124c2f7ef9eb8f1e8edcdedc54c4ed05
     <h5>Drama</h5>
     <div class="row">
       <div v-for="movie in dramas" :key="movie.titleId" class="col-md-4">
@@ -72,17 +62,11 @@ export default {
               @click="onClick(movie.titleId)"
             ></div>
           </div>
+          <p class="film-title">{{ movie.titleSweden }}</p>
+          <p>IMDB: {{ movie.imdb }}</p>
         </div>
-        <!-- <div v-for="cinema in cinemas" :key="cinema.id">
-          <div v-if="cinema.movies.includes(movie.id)">
-            <h2 class="cinemaList" @click="onClickCinemaHero(cinema.nameId)">
-              {{ cinema.name }}
-            </h2>
-          </div>
-        </div> -->
       </div>
     </div>
-    <hr class="hr hr-blurry" />
     <h5>Komedi</h5>
     <div class="row">
       <div v-for="movie in comedys" :key="movie.titleId" class="col-md-4">
@@ -95,10 +79,11 @@ export default {
               @click="onClick(movie.titleId)"
             ></div>
           </div>
+          <p class="film-title">{{ movie.titleSweden }}</p>
+          <p>IMDB: {{ movie.imdb }}</p>
         </div>
       </div>
     </div>
-    <hr class="hr hr-blurry" />
     <h5>Dokumentär</h5>
     <div class="row">
       <div v-for="movie in documentarys" :key="movie.titleId" class="col-md-4">
@@ -111,6 +96,8 @@ export default {
               @click="onClick(movie.titleId)"
             ></div>
           </div>
+          <p class="film-title">{{ movie.titleSweden }}</p>
+          <p>IMDB: {{ movie.imdb }}</p>
         </div>
       </div>
     </div>
@@ -129,38 +116,33 @@ body {
   align-items: center;
   flex-wrap: wrap;
   z-index: 1;
+  margin-bottom: 10px;
 }
-.container2 .card2 {
+.card2 {
   min-width: 150px;
-  width: 250px;
+  width: 240px;
   height: 350px;
-  margin: 30px;
+  margin-top: 30px;
   border-radius: 15px;
-  opacity: 0.7;
-  background-size: contain;
-  background-repeat: no-repeat;
+  opacity: 0.9;
+  background-size: cover;
   background-position: center;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container2 .card2:hover {
+.card2:hover {
   cursor: pointer;
   opacity: 1;
 }
 
-/* Innehåller texten under cards */
-.cinemaList {
-  color: rgba(255, 255, 255, 1);
-  font-size: 1em;
-  cursor: pointer;
+.film-title {
+  color: var(--yellow);
+  margin-bottom: 5px;
 }
-.cinemaList:hover {
-  color: #f5c518;
-}
-.hr {
-  color: #f5c550;
+
+.row {
+  margin-bottom: 20px;
 }
 </style>

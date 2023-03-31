@@ -5,16 +5,18 @@ import CinemaHero from "../components/CinemaHero.vue";
 
 <template>
   <body>
-    <div class="cinemaHero">
-      <CinemaHero />
-    </div>
+    <CinemaHero />
   </body>
+  <FeedbackNavigator />
 </template>
 
-<script></script>
+<script>
+import FeedbackNavigator from "../components/FeedbackNavigator.vue";
+export default {
+  component: {
+    FeedbackNavigator,
+  },
+};
+</script>
 
-<style scoped>
-.cinemaHero {
-  display: flex;
-}
-</style>
+<style scoped></style>
