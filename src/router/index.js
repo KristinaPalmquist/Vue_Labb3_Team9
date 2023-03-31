@@ -12,12 +12,13 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: HomeView,
+      component: HomeView, // 4 kB
+      // component: () => import("../views/HomeView.vue"),
     },
     {
       path: "/film",
       name: "film",
-      component: MovieView,
+      component: MovieView, // 1 kB size
     },
     {
       path: "/film/:id",
@@ -37,7 +38,11 @@ const router = createRouter({
     {
       path: "/om",
       name: "om",
-      component: AboutView,
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: AboutView, // 10 kB
+      // component: () => import("../views/AboutView.vue"),
     },
   ],
 });

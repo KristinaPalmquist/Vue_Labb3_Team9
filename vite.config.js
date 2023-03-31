@@ -25,6 +25,20 @@ export default defineConfig({
   //     }
   //   }
   // },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "group-user": [
+            // "./src/components/navBar.vue",
+            "./src/components/screeningsToday.vue",
+            "./src/components/selectedScreenings.vue",
+          ],
+          "group-nav": ["./src/components/navBar.vue"],
+        },
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

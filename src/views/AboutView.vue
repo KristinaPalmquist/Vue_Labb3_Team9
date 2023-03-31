@@ -15,7 +15,7 @@
         </p>
       </div>
 
-      <img src="src/assets/img/film.0.jpg" class="card-second" alt="cinema" />
+      <img src="/src/assets/img/film.0.jpg" class="card-second" alt="cinema" />
 
       <img src="../assets/img/cinema2.jpg" class="card-third" alt="cinema" />
 
@@ -94,5 +94,4 @@ export default {
   border: solid 1px #f5c65067;
   padding: 20px;
 }
-
 </style>

@@ -50,6 +50,5 @@ export default {
   align-items: center;
 }
 @media screen and (max-width: 400px) {
-    
 }
 </style>
