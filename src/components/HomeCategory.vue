@@ -46,10 +46,6 @@ export default {
 
 <template>
   <div class="container">
-<<<<<<< HEAD
-    <hr class="hr hr-blurry" />
-=======
->>>>>>> d1adf751124c2f7ef9eb8f1e8edcdedc54c4ed05
     <h5>Drama</h5>
     <div class="row">
       <div v-for="movie in dramas" :key="movie.titleId" class="col-md-4">
