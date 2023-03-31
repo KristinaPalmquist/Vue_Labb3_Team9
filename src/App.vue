@@ -1,11 +1,11 @@
 <script setup>
-import navBar from "./components/navBar.vue";
+import NavBar from "./components/NavBar.vue";
 import FooterFooter from "./components/FooterFooter.vue";
-import selectedScreenings from "./components/selectedScreenings.vue";
+import SelectedScreenings from "./components/SelectedScreenings.vue";
 </script>
 <template>
-  <navBar @generated-date="onGeneratedDate" />
-  <selectedScreenings :dateProps="date" id="date-filter" />
+  <NavBar @generated-date="onGeneratedDate" />
+  <SelectedScreenings :dateProps="date" id="date-filter" />
   <FooterFooter />
 </template>
 

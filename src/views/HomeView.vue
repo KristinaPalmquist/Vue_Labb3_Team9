@@ -1,10 +1,10 @@
 <script setup>
 import HomeCategory from "../components/HomeCategory.vue";
-import screeningsToday from "../components/screeningsToday.vue";
+import ScreeningsToday from "../components/ScreeningsToday.vue";
 import FeedbackNavigator from "../components/FeedbackNavigator.vue";
 </script>
 <template>
-  <screeningsToday />
+  <ScreeningsToday />
   <div class="home-text-box">
     <h5 class="home-title">
       Cinemap <br />
