@@ -31,10 +31,10 @@ export default defineConfig({
         manualChunks: {
           "group-user": [
             // "./src/components/navBar.vue",
-            "./src/components/screeningsToday.vue",
-            "./src/components/selectedScreenings.vue",
+            "./src/components/ScreeningsToday.vue",
+            "./src/components/SelectedScreenings.vue",
           ],
-          "group-nav": ["./src/components/navBar.vue"],
+          "group-nav": ["./src/components/NavBar.vue"],
         },
       },
     },
