@@ -46,7 +46,7 @@ export default {
       chosenDate: null,
       filmIds: "",
       chosenScreenings: [],
-      selectedMovies: null,
+      selectedMovies: "",
       //click outside config
       vcoConfig: {
         handler: this.handler,
