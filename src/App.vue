@@ -1,5 +1,5 @@
 <script setup>
-import NavBar from "./components/NavBar.vue";
+import NavBar from "./components/navBar.vue";
 import FooterFooter from "./components/FooterFooter.vue";
 import SelectedScreenings from "./components/SelectedScreenings.vue";
 </script>
