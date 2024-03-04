@@ -1,6 +1,6 @@
 <script setup>
 import HomeCategory from "../components/HomeCategory.vue";
-import ScreeningsToday from "../components/ScreeningsToday.vue";
+import ScreeningsToday from "../components/screeningsToday.vue";
 import FeedbackNavigator from "../components/FeedbackNavigator.vue";
 </script>
 <template>
