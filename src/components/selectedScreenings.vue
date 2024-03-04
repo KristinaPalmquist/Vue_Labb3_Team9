@@ -12,8 +12,13 @@ import moment from "moment/min/moment-with-locales";
     <div
       class="close-btn-container"
       @click="this.selectedMovies = ''"
-      v-if="this.selectedMovies != ''"
+    
     >
+    <!-- <div
+      class="close-btn-container"
+      @click="this.selectedMovies = ''"
+      v-if="this.selectedMovies != ''"
+    > -->
       <i class="bi bi-x-lg close-btn"></i>
     </div>
     <!--film cards chosen film-->
