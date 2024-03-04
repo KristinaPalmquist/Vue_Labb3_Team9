@@ -19,7 +19,7 @@ export default {
       cinemasResult: [],
       filmsHeader: "",
       cinemasHeader: "",
-      searchOpen: "",
+      searchOpen: '',
       calendarOpen: "",
       togglerOpen: "Open",
       //click outside config
