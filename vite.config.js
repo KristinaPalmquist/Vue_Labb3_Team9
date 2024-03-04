@@ -10,7 +10,7 @@ import vue from "@vitejs/plugin-vue";
 // splitVendorChunkPlugin()
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/Team9",
+  base: "/",
   plugins: [vue()],
   // plugins: [vue(), new SplitChunksPlugin()],
   // optimization: {
