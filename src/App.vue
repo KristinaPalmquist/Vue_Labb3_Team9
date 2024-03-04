@@ -1,7 +1,7 @@
 <script setup>
 import NavBar from "./components/navBar.vue";
 import FooterFooter from "./components/FooterFooter.vue";
-import SelectedScreenings from "./components/SelectedScreenings.vue";
+import SelectedScreenings from "./components/selectedScreenings.vue";
 </script>
 <template>
   <NavBar @generated-date="onGeneratedDate" />
